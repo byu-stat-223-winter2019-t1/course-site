@@ -327,5 +327,5 @@ So He went willingly to Gethsemane.*
     + [GitHub](https://github.com)
   + [Intro survey](https://goo.gl/forms/kNZILd3zeZO5UBWI2)
 + [STAT 223 coding standards](coding-standards.html)
-+ [Review of functions in STAT 123](l01_functions.html)
-+ [Homework 1](hw1.html) is assigned (due 2018-11-01 at 8pm)
++ [Review of STAT 123](l01_review.nb.html)
++ [Homework 1](hw1.html) is assigned (due 2018-11-01 at 11:59pm)
