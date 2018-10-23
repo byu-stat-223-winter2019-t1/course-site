@@ -1,0 +1,136 @@
+---
+title: "Stat 123 Review"
+output: html_notebook
+---
+
+## Vectorization
+One of R's strengths is the fact that it is vectorized, which means that R will
+often automatically apply operations to every element of a provided vector. As
+an example, consider the vector `x <- 1:10`. If we want to add 1 to each element,
+we could do the following:
+
+```{r}
+x <- 1:10
+y <- numeric()
+for (i in 1:length(x)) {
+  y[i] <- x[i] + 1
+}
+
+y
+```
+
+However, that is bad practice in R since it does not take advantage of R's
+notion of vectorization. We could have simply done the following:
+
+```{r}
+x + 1
+```
+
+## Functions
+
+Functions are used to create pieces of code that can be re-used with different
+parameter values.
+
+Functions can be defined inline:
+```{r}
+# Function whose input is a scalar and output is square of the scalar
+square <- function(x) x^2
+square(10)
+```
+
+Or with curly braces:
+```{r}
+square <- function(x) {
+  x^2
+}
+square(10)
+```
+
+Create a function whose input is a vector of values and whose output is the
+mean, median, and variance of the vector of values.  Do this with out using
+the "mean", "median", or "var" functions
+```{r}
+mn_md_var <- function(x) {
+	n <- length(x)
+	mn <- sum(x)/n
+	var <- sum((x - mn)^2)/(n - 1)
+	sx <- sort(x)
+	md <- if (n %% 2 == 1) {
+		sx[floor(n/2) + 1]
+	} else {
+		(sx[n/2] + sx[n/2 + 1])/2
+	}
+	c(mn, md, var)	
+}
+```
+
+Write a zero function (i.e., a function that always returns 0)
+```{r}
+zero <- function(x) 0
+zero(60)
+zero(100)
+zero("a")
+```
+
+## Iteration
+Like most, if not all, programming languages, R has the ability to create loops.
+A loop simply re-executes a defined code expression a set number of times (for 
+loop) or until a specific condition is met (while loop).
+
+```{r}
+x <- FALSE
+i <- 1
+while (!x) {
+  print(paste("Try", i))
+  x <- sample(c(TRUE, FALSE), 1)
+  i <- i + 1
+}
+```
+
+The `apply` family of functions provide convenient methods for iterating over the
+elements of an object and performing some function on each element.
+
+```{r}
+x <- 1L:10L
+sapply(x, function(x) x^2)
+lapply(x, function(x) x^2)
+```
+
+Note that in the example above, we could have also simply done `x^2`, which would
+be the ideal way to accomplish this specific task in R.
+
+The `purrr` package provides additional tools for functional programming and 
+iteration in R.
+
+```{r}
+library(purrr)
+map(x, ~.^2)
+map_int(x, ~as.integer(.^2))
+```
+
+## Plotting
+There are two main conventions commonly used for plotting in R: base R graphics 
+and `ggplot2`. In this course we will use a mixture of both - base graphics at
+times for convenience and `ggplot2` when we need a better lookign and/or more 
+flexible plot.
+
+As an example, we'll create a histogram of some random values from the standard
+normal distribution.
+
+```{r}
+x <- rnorm(1000)
+```
+
+```{r}
+hist(x, main = "My Histogram", col = "grey", xlab = "X Values")
+legend("topright", "Legend")
+```
+
+```{r}
+library(ggplot2)
+ggplot(data.frame(x = x), aes(x = x)) +
+  geom_histogram(fill = "grey", col = "black") +
+  labs(title = "My Histogram",
+       x = "X Values") +
+  theme_bw()
+```
