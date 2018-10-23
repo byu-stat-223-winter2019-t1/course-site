@@ -15,7 +15,8 @@ Prerequisites: STAT 123.
 + Install R, R packages, and RStudio.
 + Advanced data management, manipulate, and transform data.
 + Solve complex problems using advanced R programming methodology.
-+ Perform simulation studies, e.g. Central Limit Theorem, confidence intervals, power, etc.
++ Perform simulation studies, e.g. Central Limit Theorem, confidence intervals, etc.
++ Gain confidence in R programming.
 
 # Computing Platform
 
@@ -28,41 +29,44 @@ please see James who can discuss options with you.
 
 You will collaborate with James, the TA's, and fellow students using
 [Git](https://git-scm.com/).  Homework and exams will be managed through [GitHub
-classroom](https://classroom.github.com/classrooms/42946451-byu-stat-223-fall-2018-term-1).  
-Each student will have their own personal repository.  The setup on your computer 
-will happen in the first lecture.  After the first lecture, please see the TAs 
-or James during office hours if you need help.
+classroom](https://classroom.github.com/classrooms/44387582-byu-stat-223-fall-2018-term-2).  
+Each student will have their own personal repository for each assignment. The setup 
+on your computer will happen in the first lecture.  After the first lecture, please 
+see the TAs or James during office hours if you need help.
 
 
 # Homework
 
 Homework will be distributed on the course webpage and is due as indicated in
-the assignment.  **Your homework must be submitted via GitHub**. This involves
-committing local changes and pushing to your repository on GitHub. Homework is 
-not submitted if you do not successfully push to your GitHub repository when due.
-Late homework is only accepted at the discretion of James and, if accepted, is
-subject to a 50% penalty. Depending on the nature of the homework, it may be 
-graded on correctness or effort.  If homework is graded on effort, the following 
-guide will be used:
+the assignment and on the [assignments](assignments.html) page. **Your homework 
+must be submitted via GitHub**. This involves committing local changes and 
+pushing to your repository on GitHub. Homework is not submitted if you do not 
+successfully push to your GitHub repository when due. Late homework is only 
+accepted at the discretion of James and, if accepted, is subject to a 50% penalty. 
+Depending on the nature of the homework, it may be graded on correctness or effort.  
+If homework is graded on effort, the following guide will be used:
 
 + 0:  Nothing submitted
 + 5:  Little effort is evident
 + 8:  Substantial effort is evident but it is not obvious that it is correct
 + 10: Substantial effort is evident and it appears to be correct
 
+Please note that solutions for homework assignments are not terribly difficult to
+find online. You are *strongly encouraged* to work through homework assignemnts 
+without relying on copied answers from external sources as this will help you
+prepare for exams.
 
 # In Class Exercises
 
-Some class periods will include an in class exercise.  You are welcome to take
-whatever notes you'd like to take in your notebook, then just write your final
-answers on your paper.  You are responsible for bring your own blank paper for
-each exercise.  You don't need to show work for credit.  The content of the
-exercise will not be graded --- placing your name on a sheet of paper will get
-you credit for the quiz -- but will be discussed in class.  It is not uncommon
-for at least some in class exercises to form the foundation of exam questions.
-Your lowest exercise score will be dropped to compensate for misses due to
-illness and other unforeseen circumstances.
-
+Some class periods may include an in class exercise.  You are welcome to take
+whatever notes you'd like to take in your notebook / on your laptop, then just 
+write your final answers on your paper.  You are responsible for bring your own 
+blank paper for each exercise.  You don't need to show work for credit.  The 
+content of the exercise will not be graded --- placing your name on a sheet of 
+paper will get you credit for the quiz -- but will be discussed in class.  It is 
+not uncommon for at least some in class exercises to form the foundation of exam 
+questions. Your lowest exercise score will be dropped to compensate for misses 
+due to illness and other unforeseen circumstances.
 
 # Exams
 
@@ -86,9 +90,30 @@ material is kept on file for one semester.  Any review or appeal must be made
 within that time frame. 
 
 # Teaching Assistants
+* [Thomas Jensen](mailto:tompjensen@gmail.com)
+  * Office Hours (235 TMCB):
+    * Monday 2 - 3 pm
+    * Wednesday 2 - 3 pm
+    * Friday 2 - 3 pm
+* [Brandon Allen](mailto:ballenor@comcast.net)
+  * Office Hours (235 TMCB):
+    * Monday 12 - 2 pm
+    * Wedesday 12 - 2 pm
+    * Additional time: Email [ballenor@comcast.net](mailto:ballenor@comcast.net) 
+    to set up a time
+* [Jacob West](mailto:jacobrobertwest@gmail.com)
+  * Office Hours (235 TMCB):
+    * Monday 10 - 11 am; 3 - 4 pm
+    * Wednesday 10 - 11 am; 3 - 4 pm
+    * Friday 10 - 11 am
+* [Adam Ott](mailto:adderotter@hotmail.com)
+  * Office Hours (235 TMCB):
+    * Monday 4 - 6 pm
+    * Thursday 10 - 11 am
+    * Friday 1 - 2 pm
 
 # Office Hours
-My office is 237 TMCB. I will hold office hours on Tuesdays from 1-2 pm and 
+My office is 237 TMCB. I will hold office hours on Tuesdays from 1:30-2:30 pm and 
 Thursdays from 12-1 pm.
 
 # Honor Code
@@ -104,7 +129,6 @@ an effective learning and working environment. It is the university's
 expectation, and every instructor's expectation in class, that each student
 will abide by all Honor Code standards. Please call the Honor Code Office at
 1-801-422-2847 if you have questions about those standards.
-
 
 # Sexual Misconduct
 
@@ -125,7 +149,6 @@ t9coordinator&#64;byu.edu or 1-801-422-2130 or Ethics Point at
 https://titleix.byu.edu/report or 1-888-238-1062 (24-hours). Additional
 information about Title IX and resources available to you can be found at
 http://titleix.byu.edu.
-
 
 # Student Disability
 

@@ -11,7 +11,7 @@ Possible R Moments:
 - h2o
 - drake
 - charlatan
----->
+
 
 #### 2018-10-18
 
@@ -305,8 +305,18 @@ in both perfect love and perfect humility. His brilliance is not the
   + Especially useful when theoretical derivations are unavailable, difficult, 
     or intractable.
 + [Flipping coins](l02_coins.nb.html)
+--->
 
-#### 2018-09-04
+#### 2018-10-25
+
+*He felt all that was sad, wicked, or bad,
+All the pain we would ever know.
+While His friends were asleep, He fought to keep
+His promise made long ago.
+Gethsemane. Jesus loves me,
+So He went willingly to Gethsemane.*
+
+\- Melanie Hoffman = [Gethsemane](https://www.lds.org/friend/2018/03/gethsemane?lang=eng)
 
 + Overview of the course.
 + Getting Started in STAT 223
@@ -318,5 +328,4 @@ in both perfect love and perfect humility. His brilliance is not the
   + [Intro survey](https://goo.gl/forms/kNZILd3zeZO5UBWI2)
 + [STAT 223 coding standards](coding-standards.html)
 + [Review of functions in STAT 123](l01_functions.html)
-+ [Homework 1](hw1.html) is assigned
-(due 2018-09-11 at 8am)
++ [Homework 1](hw1.html) is assigned (due 2018-11-01 at 8pm)

@@ -7,10 +7,10 @@ This is the homepage for BYU Stats 223: Applied R Programming.
 
 ---
 
-**Section 5** | TTh 3:25 - 4:45 | *174 TNRB*
+**Section 6** | TTh 3:25 - 4:45 | *174 TNRB*
 
 
-**Section 7** | TTh 4:55 - 6:15 | *174 TNRB*
+**Section 8** | TTh 4:55 - 6:15 | *174 TNRB*
 
 ---
 
