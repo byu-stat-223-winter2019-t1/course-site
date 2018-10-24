@@ -283,10 +283,7 @@ in both perfect love and perfect humility. His brilliance is not the
 \- Neal A. Maxwell ([GC April 1976](https://www.lds.org/general-conference/1976/04/jesus-of-nazareth-savior-and-king?lang=eng))
 
 + Announcements:
-  + [Department Opening Social](images/os-flyer.jpg)
 + R Moment: [Shiny](http://shiny.rstudio.com/gallery/)
-+ [Setup ssh keys for GitHub](http://happygitwithr.com/ssh-keys.html)
-+ Stat 123 Q&A
 + A word about [RMarkdown](https://rmarkdown.rstudio.com/) and 
 [Notebooks](https://rmarkdown.rstudio.com/r_notebooks)
 + Getting started with [Homework 1](hw1.html)
@@ -318,6 +315,7 @@ So He went willingly to Gethsemane.*
 
 \- Melanie Hoffman = [Gethsemane](https://www.lds.org/friend/2018/03/gethsemane?lang=eng)
 
++ Stat 123 Q&A
 + Overview of the course.
 + Getting Started in STAT 223
   + [R](https://cran.r-project.org) and 
@@ -325,7 +323,7 @@ So He went willingly to Gethsemane.*
   + [Version control](http://happygitwithr.com/)
     + [git](https://git-scm.com)
     + [GitHub](https://github.com)
-  + [Intro survey](https://goo.gl/forms/kNZILd3zeZO5UBWI2)
+  + [Intro survey](https://goo.gl/forms/UXP7YiTUZ7yUZqJf1)
 + [STAT 223 coding standards](coding-standards.html)
 + [Review of STAT 123](l01_review.nb.html)
 + [Homework 1](hw1.html) is assigned (due 2018-11-01 at 11:59pm)
