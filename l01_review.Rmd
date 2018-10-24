@@ -3,6 +3,11 @@ title: "Stat 123 Review"
 output: html_notebook
 ---
 
+## Using RStudio Projects
+Using RStudio projects makes life in R much easier. When done correctly, this 
+means that you will not need to use `setwd()` in your code. You can read more
+about the advantages of using Projects [here](https://www.tidyverse.org/articles/2017/12/workflow-vs-script/).
+
 ## Vectorization
 One of R's strengths is the fact that it is vectorized, which means that R will
 often automatically apply operations to every element of a provided vector. As
