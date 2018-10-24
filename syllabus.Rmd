@@ -51,6 +51,10 @@ If homework is graded on effort, the following guide will be used:
 + 8:  Substantial effort is evident but it is not obvious that it is correct
 + 10: Substantial effort is evident and it appears to be correct
 
+After your homework has been graded, a `feedback.txt` file will be added to
+your GitHub repsitory to provide specific feedback on your grade. You can
+view this file locally by performing a git pull.
+
 Please note that solutions for homework assignments are not terribly difficult to
 find online. You are *strongly encouraged* to work through homework assignemnts 
 without relying on copied answers from external sources as this will help you
