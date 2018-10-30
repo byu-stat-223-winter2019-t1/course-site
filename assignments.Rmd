@@ -27,5 +27,7 @@ output: html_document
     - Make sure that each commit contains a commit message
     - **Do not** amend previous commit
 6. Push your changes to GitHub using the Git pane in RStudio
-7. Once your assignment has been graded, perform a Git Pull using the Git pane in RStudio to pull `feedback.txt` into your local repository.
+7. Visit your GitHub repository in a web browser and ensure that your submitted files are there
+    - **If your files are not on GitHub they are not turned in**
+8. Once your assignment has been graded, perform a Git Pull using the Git pane in RStudio to pull `feedback.txt` into your local repository.
 </details>
