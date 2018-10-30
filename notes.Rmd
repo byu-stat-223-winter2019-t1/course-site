@@ -266,8 +266,8 @@ obedience precisely for these reasons.*
     + Seriously, this is the best conference ever
 + R Moment: [gganimate](https://github.com/thomasp85/gganimate)
 + Getting started with [Homework 1](hw1.html)
-
-#### 2018-09-06
+-->
+#### 2018-10-30
 
 *I testify that his intelligence is vastly superior in every field to the very 
 brightest mortals in those fields and that his intellect in scope and truth far 
@@ -277,11 +277,12 @@ in both perfect love and perfect humility. His brilliance is not the
 
 \- Neal A. Maxwell ([GC April 1976](https://www.lds.org/general-conference/1976/04/jesus-of-nazareth-savior-and-king?lang=eng))
 
-+ Announcements:
 + R Moment: [Shiny](http://shiny.rstudio.com/gallery/)
++ Finish git and GitHub setup
++ Getting started with [Homework 1](hw1.html)
++ [Review of STAT 123](l01_review.nb.html)
 + A word about [RMarkdown](https://rmarkdown.rstudio.com/) and 
 [Notebooks](https://rmarkdown.rstudio.com/r_notebooks)
-+ Getting started with [Homework 1](hw1.html)
 + Introduction to simulation studies:
   + "Simulation study" and "Monte Carlo study" are synonymous.
   + Represent a real-world process programatically in order to evaluate statistical
@@ -297,7 +298,7 @@ in both perfect love and perfect humility. His brilliance is not the
   + Especially useful when theoretical derivations are unavailable, difficult, 
     or intractable.
 + [Flipping coins](l02_coins.nb.html)
---->
+
 
 #### 2018-10-25
 
@@ -308,7 +309,7 @@ His promise made long ago.
 Gethsemane. Jesus loves me,
 So He went willingly to Gethsemane.*
 
-\- Melanie Hoffman = [Gethsemane](https://www.lds.org/friend/2018/03/gethsemane?lang=eng)
+\- Melanie Hoffman ([Gethsemane](https://www.lds.org/friend/2018/03/gethsemane?lang=eng))
 
 + Stat 123 Q&A
 + Overview of the course.

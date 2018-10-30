@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache = TRUE)
+knitr::opts_chunk$set(cache = TRUE, message = FALSE)
 set.seed(35487)
 ```
 
@@ -142,8 +142,7 @@ than 20.
 mean(heads > 20)
 ```
 
-Finally, we can ind the 20th percentile of the number of heads in 60 tosses.
+Finally, we can ind the 25th percentile of the number of heads in 60 tosses.
 ```{r}
 quantile(heads, 0.25)
 ```
-
