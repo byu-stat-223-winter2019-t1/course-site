@@ -44,8 +44,6 @@ sample(c(0, 1), 60, prob = c(3/4, 1/4), replace = TRUE)
 
 set.seed(35487)
 sample(c(0, 1), 60, prob = c(3/4, 1/4), replace = TRUE)
-
-
 ```
 
 ### Simulation study
@@ -81,7 +79,7 @@ for (i in seq_along(heads)) {
   heads[i] <- sum(flip_coins())
 }
 
-heads
+head(heads)
 ```
 
 Now that we have the number of heads that appeared in 1000 simulations of flipping
@@ -92,11 +90,11 @@ scenario.
 mean(heads)
 ```
 
-
 #### Sapply function
 
 ```{r}
 heads <- sapply(1:n_sims, function(x) sum(flip_coins()))
+head(heads)
 ```
 
 #### Replicate function
@@ -105,10 +103,11 @@ studies.
 
 ```{r}
 heads <- replicate(n = n_sims, sum(flip_coins()))
+head(heads)
 ```
 
 #### Tidyverse
-The [tidyverse](https://www.tidyverse.org/) " is an opinionated collection of R 
+The [tidyverse](https://www.tidyverse.org/) "is an opinionated collection of R 
 packages designed for data science. All packages share an underlying design 
 philosophy, grammar, and data structures."
 
