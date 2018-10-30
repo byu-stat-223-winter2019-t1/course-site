@@ -11,3 +11,21 @@ output: html_document
 #### Homework 5 | *Due 2018-12-06 at 11:59pm*
 #### Homework 6 | *Due 2018-12-13 at 11:59pm*
 #### Final Exam | *Due 2018-12-18 at 11:59pm*
+
+---
+<details>
+<summary>Assignment Checklist
+</summary>
+
+1. Setup GitHub repository through GitHub classroom (this is simply following a link in the assignment page)
+2. Copy the repository URL (make sure you are copying the SSH url, not the HTTPS url)
+3. Create a new RStudio project from Version Control (File -> New Project -> Version Control)
+    - This will create a new directory (folder) on your computer for that assignment
+    - Make sure you know where your projects / directories are being saved
+4. Begin working on the assignment
+5. As you reach saving points, save your work and use the Git pane in RStudio to commit your changes to `git`.
+    - Make sure that each commit contains a commit message
+    - **Do not** amend previous commit
+6. Push your changes to GitHub using the Git pane in RStudio
+7. Once your assignment has been graded, perform a Git Pull using the Git pane in RStudio to pull `feedback.txt` into your local repository.
+</details>
