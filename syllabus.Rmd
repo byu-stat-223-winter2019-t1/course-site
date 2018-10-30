@@ -41,10 +41,10 @@ Homework will be distributed on the course webpage and is due as indicated in
 the assignment and on the [assignments](assignments.html) page. **Your homework 
 must be submitted via GitHub**. This involves committing local changes and 
 pushing to your repository on GitHub. Homework is not submitted if you do not 
-successfully push to your GitHub repository when due. Late homework is only 
-accepted at the discretion of James and, if accepted, is subject to a 50% penalty. 
-Depending on the nature of the homework, it may be graded on correctness or effort.  
-If homework is graded on effort, the following guide will be used:
+successfully push to your GitHub repository when due. Homework may be turned in 
+late at a 2 points per 24 hours penalty. Depending on the nature of the homework, 
+it may be graded on correctness or effort. If homework is graded on effort, the 
+following guide will be used:
 
 + 0:  Nothing submitted
 + 5:  Little effort is evident
