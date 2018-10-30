@@ -279,6 +279,9 @@ in both perfect love and perfect humility. His brilliance is not the
 
 + R Moment: [Shiny](http://shiny.rstudio.com/gallery/)
 + Finish git and GitHub setup
++ RStudio House Keeping
+  + Never save `.RData`
+  + Never restore `.RData`
 + Getting started with [Homework 1](hw1.html)
 + [Review of STAT 123](l01_review.nb.html)
 + A word about [RMarkdown](https://rmarkdown.rstudio.com/) and 
