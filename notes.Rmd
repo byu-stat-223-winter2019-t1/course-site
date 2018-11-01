@@ -247,9 +247,9 @@ assess Monte Carlo (simulation) error
 + Additional simulation study examples:
   + [Demonstration of central limit theorem](l03_central_limit_theorem.nb.html)
   + [Reflipping coins when tails](l03_flipping_coins.nb.html)
+-->
 
-
-#### 2018-09-11
+#### 2018-11-01
 
 *Obedience opens the door to the constant companionship of the Holy Ghost. And 
 the spiritual gifts and abilities activated by the power of the Holy Ghost enable 
@@ -265,8 +265,17 @@ obedience precisely for these reasons.*
     + Large academic discounts available (sign up with .edu email)
     + Seriously, this is the best conference ever
 + R Moment: [gganimate](https://github.com/thomasp85/gganimate)
-+ Getting started with [Homework 1](hw1.html)
--->
++ [Homework 1](hw1.html) questions
++ [STAT 223 coding standards](coding-standards.html)
++ A word about [RMarkdown](https://rmarkdown.rstudio.com/) and 
+[Notebooks](https://rmarkdown.rstudio.com/r_notebooks)
++ [Confidence intervals](http://onlinestatbook.com/2/estimation/mean.html) to 
+assess Monte Carlo (simulation) error
++ Additional simulation study examples:
+  + [Demonstration of central limit theorem](l03_central_limit_theorem.nb.html)
+  + [Reflipping coins when tails](l03_flipping_coins.nb.html)
++ [Homework 2](hw2.html) is assigned (Due 2018-11-08 at 11:59pm)
+
 #### 2018-10-30
 
 *I testify that his intelligence is vastly superior in every field to the very 
