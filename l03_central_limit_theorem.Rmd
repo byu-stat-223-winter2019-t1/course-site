@@ -95,14 +95,14 @@ which returns the mean of `n_draws` samples of size `n` from a Binomial(`n_trial
 `pr_success`) distribution. Let `n_draws` be 1000 by default.
 
 ```{r}
-sample_dist <- function(n, n_trials, pr_success, n_draws = 1000) {
+sample_dist <- function(n = 40, n_trials = 10, pr_success = 0.1, n_draws = 1000) {
   replicate(n_draws, mean(rbinom(n, n_trials, pr_success)))
 }
 ```
 
 ```{r}
-demo_sample_dist <- function(n) {
-  hist(sample_dist(sample_size, n_trials, pr_success), breaks = 30, freq = FALSE)
+demo_sample_dist <- function(n, n_trials = 10, pr_success = 0.1, n_draws = 1000) {
+  hist(sample_dist(n, n_trials, pr_success, n_draws), breaks = 30, freq = FALSE)
   x <- seq(0, 3, length = 1000)
   pop_mean <- n_trials * pr_success
   pop_variance <- pop_mean * (1 - pr_success) / n
