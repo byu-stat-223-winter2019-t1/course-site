@@ -133,7 +133,8 @@ quantile(mc_sds, c(0.025, 0.975))
 That worked!! But, it was exceptionally computationally intensive (1000 * 1000
 simulations). Is there a better way to assess this uncertainty without going through
 all of this? Yes! We can invoke the Central Limit Theorem. Since `n_reps` is large,
-the CLT applies.
+the CLT applies. When our sample size grows large, the distribution of our sample
+means is approximately normally distributed with $\mu_{\bar{x}} = \mu$ and $\sigma_{\bar{x}} = \sigma / \sqrt{n}$.
 
 ```{r}
 simulation_ci <- function(x, confidence_level = 0.95) {
@@ -141,20 +142,27 @@ simulation_ci <- function(x, confidence_level = 0.95) {
   m <- mean(x)
   s <- sd(x)
   area <- 1 - (1 - confidence_level)/2
-  m + c(-1, 1) * qt(area, df = n - 1) * s / sqrt(n)
+  m + c(-1, 1) * qnorm(area) * s / sqrt(n)
 }
 ```
 
 The function above simply calculates a confidence interval by implementing:
 $$
-C.I. = \bar{x}\pm t_{\alpha/2} \frac{s}{\sqrt{n}}
+C.I. = \bar{x}\pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}}
 $$
 
 Where $\bar{x}$ is the sample mean and $s$ is the sample standard deviation, and
-$t_{\alpha/2}$ is the t distribution value for the desired confidence level $\alpha$.
+$z_{\alpha/2}$ is the Z score for the desired confidence level $\alpha$. This Z
+score can be calculated using `qnorm()`.
 
 ```{r}
 simulation_ci(n_heads)
+```
+
+Note that we can also extend this same formula to provide a confidence interval 
+estimate for the standard deviation of `n_heads`. Given that the standard deviation
+is defined as $\sqrt{\frac{1}{N}\sum_{i=1}^N(x_i - \mu)^2}$ then we can do the following:
+```{r}
 sqrt(simulation_ci((n_heads - mean(n_heads))^2))
 ```
 
