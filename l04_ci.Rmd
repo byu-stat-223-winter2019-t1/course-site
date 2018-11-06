@@ -99,6 +99,32 @@ coverage <- mean(contains)
 coverage
 ```
 
+#### Replicate
+```{r}
+intervals <- replicate(n_reps, {
+  data <- rnorm(n, true_mean, 1)
+  confidence_interval(data)
+})
+
+contains <- apply(intervals, 2, prod) < 0
+
+coverage <- mean(contains)
+coverage
+```
+
+#### Tidyverse
+```{r}
+library(tidyverse)
+
+intervals <- rerun(n_reps, confidence_interval(rnorm(n, true_mean)))
+
+contains <- map_lgl(intervals, ~prod(.) < 0)
+
+coverage <- mean(contains)
+coverage
+```
+
+
 Look at that! Close to .95 - illustrating exactly what the definition of a confidence interval refers to. Now, since we arrived at this calculation via a simulation, we can put a confidence interval on our coverage estimate for confidence intervals. Now, note that in this case we're creating a confidence interval for a proportion:
 
 $$
@@ -111,30 +137,30 @@ coverage + c(-1, 1) * qnorm(0.975) * sqrt(coverage * (1 - coverage)/n_reps)
 
 Now let's get some visual intuition behind this:
 ```{r}
-plot(
-  intervals[1, ],
-  c(1, 1),
-  type = 'o',
-  ylim = c(0, 100),
-  pch = 20,
-  xlim = range(intervals),
-  xlab = "",
-  ylab = "Index"
-)
-
-for (j in 1:100) {
-  lines(intervals[j,], c(j,j), type = 'o', pch = 20)
-}
-
-abline(v = 0, col = 'red')
+intervals_df <- map_df(intervals, ~tibble(lower = .["Lower Bound"], upper = .["Upper Bound"])) %>% 
+  mutate(index = 1:n(),
+         includes = lower <= true_mean & upper >= true_mean)
 ```
+
+```{r, fig.height=6, fig.width=4}
+ggplot(head(intervals_df, 100), aes(x = lower, xend = upper, y = index, yend = index)) +
+  geom_segment(lineend = "butt", aes(col = includes), show.legend = FALSE, lwd = 2) +
+  geom_vline(xintercept = true_mean, col = "red", lwd = 1.5) +
+  theme_bw() +
+  labs(title = "Confidence Interval Coverage",
+       x = "", 
+       y = "")
+```
+
 
 
 ### Expand the simulation
 ```{r}
 simulate <- function(ci_function, truth = 0, n_reps = 10000) {
+  # ci_function returns a confidence interval for a given set of data
   cov <- apply(replicate(n_reps, ci_function() - truth), 2, prod) < 0
   coverage <- mean(cov)
+  # Confidence interval for proportion
   coverage + c(-1, 1) * qnorm(0.975) * sqrt(coverage * (1 - coverage)/n_reps)
 }
 ```
