@@ -57,7 +57,7 @@ less than the promised blessings.*
   + f1a9we_.ain ([Data](f1a9we_.ain.afasta) | [Code](l11_fasta.R))
   + Version Number ([lib1.jar](lib1.jar) | [lib2.jar](lib2.jar) | [Code](l11_version_number.R))
 
-#### 2018-10-11
+#### 2018-12-13
 
 *The Lord is with us, mindful of us and blessing us in ways only He can do. Prayer can call down the strength and the revelation that we need to center our thoughts on Jesus Christ and His atoning sacrifice. The Lord knew that at times we would feel fear. I have been there and so have you, which is why the scriptures are replete with the Lord’s counsel:
 “Be of good cheer, and do not fear.”*
@@ -77,7 +77,7 @@ less than the promised blessings.*
   + [GPA](l10_gpa.nb.html)
 + [Homework 6](hw6.html) Assigned (Due 2018-10-18 at 8pm)
 
-#### 2018-10-09
+#### 2018-12-11
 
 *“All that we call human history -- money, poverty, ambition, war, prostitution, 
 classes, empires, slavery -- [is] the long terrible story of man trying to find 
@@ -98,7 +98,7 @@ something other than God which will make him happy.”*
   + [Bootstrap troubles](l09_bs_troubles.nb.html)
 + [Homework 5](hw5.html) questions
 
-#### 2018-10-04
+#### 2018-12-06
 
 *Jesus provides the ultimate example of righteous responsiveness and willing submission as He suffered intense agony in Gethsemane.
 “And when he was at the place, he said unto [His disciples], Pray that ye enter not into temptation.
@@ -122,7 +122,7 @@ The Savior’s meekness in this eternally essential and excruciating experience 
 + [Homework 5](hw5.html) Assigned (Due 2018-10-11 at 8pm)
 
 
-#### 2018-10-02
+#### 2018-12-04
 
 *Therefore, dearly beloved brethren, let us cheerfully do all things that lie in
 our power; and then may we stand still, with the utmost assurance, to see the 
@@ -132,7 +132,9 @@ salvation of God, and for his arm to be revealed.*
 
 + [Midterm Exam](exam1.html) (Due 2018-10-04 at 8am)
 
-#### 2018-09-27
+#### 2018-11-27
+
++ Class canceled on the 29th for the exam
 
 *in coming days, it will not be possible to survive spiritually without the 
 guiding, directing, comforting, and constant influence of the Holy Ghost.*
@@ -166,7 +168,7 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
 + [Homework 4](hw4.html) Assigned (Due 2018-10-04 at 8pm)
 
 
-#### 2018-09-25
+#### 2018-11-15
 
 *Thus we may see that the Lord is merciful unto all who will, in the sincerity of
 their hearts, call upon his holy name.
@@ -189,7 +191,7 @@ believe on the name of Jesus Christ, who is the Son of God.*
 + [Hypothesis Testing for Population Mean](l05_mean.nb.html)
 + [Simulation study for simple linear regression](l06_regression.nb.html)
 
-#### 2018-09-20
+#### 2018-11-13
 
 *If sometimes the harder you try, the harder it gets, take heart. So it has been
 with the best people who ever lived.*
@@ -206,8 +208,9 @@ with the best people who ever lived.*
 + [Homework 2](hw2.html) Questions
 + [Hypothesis Test](l05_mean.nb.html)
 + [Homework 3](hw3.html) Assigned (Due 2018-09-27 at 8pm)
+-->
 
-#### 2018-09-18
+#### 2018-11-08
 
 *Face your doubts. Master your fears. “Cast not away therefore your confidence.”
 Stay the course and see the beauty of life unfold for you.*
@@ -215,15 +218,13 @@ Stay the course and see the beauty of life unfold for you.*
 \- Jeffrey R. Holland ([BYU Devotional March 2, 1999](https://speeches.byu.edu/talks/jeffrey-r-holland_cast-not-away-therefore-your-confidence/))
 
 + Announcements:
-  + [BYU beats Wisconsin](http://www.espn.com/video/clip?id=24690467)
-  + [Alabama beats Ole Miss](http://www.espn.com/video/clip?id=24691552)
-  + Office Hours update
-  + git pull
+  + Updated HW late policy in [syllabus](syllabus.html)
 + R Moment: [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-+ [Confidence Intervals](l04_ci.nb.html)
-+ [Homework 1 Solutions](hw1_solutions.html)
-+ [Homework 2 Preview](hw2.html)
--->
++ [Homework 2](hw2.html) questions
++ [Simulation Study Outline](sim-study-outline.html)
++ [In class exercise](l05_practice.nb.html)
++ [Hypothesis Test](l05_mean.nb.html)
++ [Homework 3](hw3.html) Assigned (Due 2018-11-15 at 11:59pm)
 
 #### 2018-11-06
 
