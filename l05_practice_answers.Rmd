@@ -32,9 +32,10 @@ same costume? Be sure to assess the monte carlo error of your estimate.
 # Write a function with the following parameters:
 #   n: the number of people at the party (not counting yourself)
 #   n_reps: the number of times to run the simulation
-# This function should return a numeric vector of length 3 containing an estimate
-# of the probability that someone is wearing your same costume for the given value
-# of n along with the upper and lower bounds of your confidence interval.
+# This function should return a numeric vector (or data.frame) of length 3 
+# containing an estimate of the probability that someone is wearing your same 
+# costume for the given value of n along with the upper and lower bounds of your 
+# confidence interval.
 
 costume_party <- function(n, n_reps = 1000) {
   my_costume <- sample(1:10, 1)
@@ -44,19 +45,34 @@ costume_party <- function(n, n_reps = 1000) {
              lower_bound = proportion - ci,
              upper_bound = proportion + ci)
 }
-
-purrr::map_df(1:10, costume_party)
 ```
 
+
+```{r, eval = FALSE}
+results <- purrr::map_df(1:10, costume_party)
+results
+```
+
+
+```{r}
+# Create a plot that shows the probability of someone sharing your costume as guests
+# arrive at the party, along with your upper and lower bounds.
+
+library(tidyverse)
+
+results %>% 
+  mutate(n = 1:n()) %>% 
+  ggplot(aes(x = n, y = proportion)) +
+  geom_ribbon(aes(ymin = lower_bound, ymax = upper_bound), fill = "grey70", alpha = .5) +
+  geom_line() +
+  theme_bw()
+```
 
 ## Rolling in the deep
 Suppose you're playing a game using a six sided dice. The object of the game is 
 to roll each number at least once. What's the expected number of rolls it takes
 until each number has been rolled once? Be sure to assess the monte carlo error 
 of your estimate.
-
-Now, what happens in this scenario with a 10 sided dice? What about a 20 sided 
-dice?
 
 ```{r, eval = FALSE}
 # Write a function with the following parameters:
@@ -78,6 +94,27 @@ roll_dice <- function(n = 6) {
 # Assess the monte carlo error of the estimate.
 n_reps <- 1000
 sim_results <- replicate(n_reps, roll_dice())
-mean(sim_results)
+
+ci_mean <- function(x, level = 0.95) {
+  alpha <- 1 - level
+  estimate <- mean(x)
+  ci <- qnorm(1 - alpha/2)  * sd(x) / sqrt(length(x))
+  c(lower = estimate - ci,
+    estimate = estimate,
+    upper = estimate + ci)
+}
+
+ci_mean(sim_results)
+```
+
+Now, what happens in this scenario with a 10 sided dice? What about a 20 sided 
+dice?
+
+```{r}
+simulate <- function(n = 6, n_reps = 1000) {
+  ci_mean(replicate(n_reps, roll_dice(n)))
+}
+simulate(10)
+simulate(20)
 ```
 
