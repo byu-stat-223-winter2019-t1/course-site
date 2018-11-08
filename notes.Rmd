@@ -134,24 +134,19 @@ salvation of God, and for his arm to be revealed.*
 
 #### 2018-11-27
 
-+ Class canceled on the 29th for the exam
-
 *in coming days, it will not be possible to survive spiritually without the 
 guiding, directing, comforting, and constant influence of the Holy Ghost.*
 
 \- Russel M. Nelson ([GC April 2018](https://www.lds.org/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng))
 
 + Announcements
-  + Homework Feedback
-    + Git Pull old repositories to see specific feedback (`feedback.txt`)
-  + First exam takes place next Tuesday (2018-10-02) starting at 8am
+  + First exam starts at 7:00pm after class today
     + Exam administered and submitted through GitHub
     + Commit and push early, and often
     + Open notes, open internet - not open neighbor
-    + 48 hours to complete
+    + Due 11:59pm on Thursday (2018-11-29)
     + Plan on ~2 hours
-    + 2 multi-part simulation studies
-    + No class next Tuesday (2018-10-02)
+    + No class Thursday (2018-11-29)
   + Reminders:
     + Ensure that you double check your HW in a clean environment before submitting
     + If you're using RStudio Projects (as recommended) there is no need for `setwd()`
@@ -160,13 +155,12 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
     + If you find yourself copying and pasting code, think about whether or not
     you can create a function for what you're trying to do.
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com)
-+ [Homework 3](hw3.html) Questions
-+ Finish [simulation study for linear regression](l06_regression.nb.html)
-+ Simulation studies for hypothesis testing:
-  + [Z-test on proportions](l07_ztest_prop.nb.html)
-  + [M&M Experiment](l07_mm.nb.html)
-+ [Homework 4](hw4.html) Assigned (Due 2018-10-04 at 8pm)
-
++ [Homework 4](hw3.html) Questions
++ Exam Review
+  + Ideas: 
+    Thanksgiving themed simulation study
+    Election themed simulation study
+      
 
 #### 2018-11-15
 
@@ -178,18 +172,20 @@ believe on the name of Jesus Christ, who is the Son of God.*
 \- [Helaman 3:27-28](https://www.lds.org/languages/eng/content/scriptures/bofm/hel/3)
 
 + Announcements:
-  + Tom office hours update
-  + First exam takes place next Tuesday (2018-10-02) starting at 8am
+  + First exam starts at 7:00pm after class on Tuesday (2018-11-27)
+    + In class review on Tuesday (2018-11-27)
     + Exam administered and submitted through GitHub
     + Commit and push early, and often
     + Open notes, open internet - not open neighbor
-    + 48 hours to complete
+    + Due 11:59pm on Thursday (2018-11-29)
     + Plan on ~2 hours
-    + No class next Tuesday (2018-10-02)
+    + No class Thursday (2018-11-29)
 + R Moment: [blogdown](https://bookdown.org/yihui/blogdown/)  
 + [Homework 3](hw3.html) Questions
-+ [Hypothesis Testing for Population Mean](l05_mean.nb.html)
-+ [Simulation study for simple linear regression](l06_regression.nb.html)
++ Simulation studies for hypothesis testing:
+  + [Z-test on proportions](l07_ztest_prop.nb.html)
+  + [M&M Experiment](l07_mm.nb.html)
++ [Homework 4](hw4.html) Assigned (Due 2018-11-27 at 11:59pm)
 
 #### 2018-11-13
 
@@ -200,14 +196,10 @@ with the best people who ever lived.*
 
 + Announcements:
 
-  [![](https://imgs.xkcd.com/comics/curve_fitting.png)](https://xkcd.com/2048/)
-  + Come during scheduled office hours or email ahead of time
+  
 + R Moment: [Local Interpretable Model-agnostic Explanations (lime)](https://github.com/thomasp85/lime)
-+ [Simulation Study Outline](sim-study-outline.html)
-+ [In class exercise](l05_practice.nb.html)
-+ [Homework 2](hw2.html) Questions
-+ [Hypothesis Test](l05_mean.nb.html)
-+ [Homework 3](hw3.html) Assigned (Due 2018-09-27 at 8pm)
++ [Homework 3](hw3.html) questions
++ [Simulation study for simple linear regression](l06_regression.nb.html)
 -->
 
 #### 2018-11-08
@@ -219,6 +211,7 @@ Stay the course and see the beauty of life unfold for you.*
 
 + Announcements:
   + Updated HW late policy in [syllabus](syllabus.html)
+  + Upcoming schedule ([BYU Calendar](https://registrar.byu.edu/academic-calendar))
 + R Moment: [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 + [Homework 2](hw2.html) questions
 + [Simulation Study Outline](sim-study-outline.html)
