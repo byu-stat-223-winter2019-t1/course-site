@@ -3,6 +3,12 @@ title: "Resources"
 output: html_document
 ---
 
+## Course Resources
+### [Confidence Interval Formulas](ci_formulas.html)
++ Handy reference for confidence interval formulas for both mean and proportion 
+estimates.
+
+## Additional Resources
 While not required, these resources will help you grow in your understanding of
 R.
 

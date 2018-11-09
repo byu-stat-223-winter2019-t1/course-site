@@ -1,0 +1,41 @@
+---
+title: "Confidence Interval Formulas"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+---
+
+## Confidence Interval for a Mean
+$$
+CI_{mean} = \bar{x}\pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}}
+$$
+
+This can be implemented with the following R code, where `x` is a vector of numerical values:
+```{r, eval = FALSE}
+x_bar <- mean(x)
+sd_x <- sd(x)
+sqrt_n <- sqrt(length(x))
+alpha <- 0.05
+
+ci <- x_bar + c(-1, 1) * qnorm(1 - alpha/2) * sd_x / sqrt(n)
+```
+
+---
+
+## Confidence Interval for a Proportion
+$$
+CI_{proportion} = \hat{p} \pm Z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{N}}
+$$
+
+This can be implemented with the following R code, where `x` is a vector of logical values (or numeric values in the set [0,1]):
+```{r, eval = FALSE}
+p_hat <- mean(x)
+n <- length(x)
+alpha <- 0.05
+
+ci <- p_hat + c(-1, 1) * qnorm(1 - alpha/2) * sqrt(p_hat * (1 - p_hat) / n)
+```

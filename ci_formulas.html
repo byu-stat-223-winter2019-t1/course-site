@@ -11,7 +11,7 @@
 
 
 
-<title>Resources</title>
+<title>Confidence Interval Formulas</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -217,61 +217,37 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Resources</h1>
+<h1 class="title toc-ignore">Confidence Interval Formulas</h1>
 
 </div>
 
 
-<div id="course-resources" class="section level2">
-<h2>Course Resources</h2>
-<div id="confidence-interval-formulas" class="section level3">
-<h3><a href="ci_formulas.html">Confidence Interval Formulas</a></h3>
-<ul>
-<li>Handy reference for confidence interval formulas for both mean and proportion estimates.</li>
-</ul>
+<hr />
+<div id="confidence-interval-for-a-mean" class="section level2">
+<h2>Confidence Interval for a Mean</h2>
+<p><span class="math display">\[
+CI_{mean} = \bar{x}\pm Z_{\alpha/2} \frac{\sigma}{\sqrt{n}}
+\]</span></p>
+<p>This can be implemented with the following R code, where <code>x</code> is a vector of numerical values:</p>
+<pre class="r"><code>x_bar &lt;- mean(x)
+sd_x &lt;- sd(x)
+sqrt_n &lt;- sqrt(length(x))
+alpha &lt;- 0.05
+
+ci &lt;- x_bar + c(-1, 1) * qnorm(1 - alpha/2) * sd_x / sqrt(n)</code></pre>
+<hr />
 </div>
-</div>
-<div id="additional-resources" class="section level2">
-<h2>Additional Resources</h2>
-<p>While not required, these resources will help you grow in your understanding of R.</p>
-<div id="hands-on-programming-with-r" class="section level3">
-<h3><a href="https://rstudio-education.github.io/hopr/">Hands-On Programming with R</a></h3>
-<ul>
-<li>New resource that teaches basic R programming in a very aproachable manner.</li>
-</ul>
-</div>
-<div id="r-for-data-science" class="section level3">
-<h3><a href="http://r4ds.had.co.nz">R for Data Science</a></h3>
-<ul>
-<li>Great resource for learning modern data science techniques using R.</li>
-<li>Focusses on the <a href="https://www.tidyverse.org">tidyverse</a> and how various tools enable different aspects of the Data Science process.</li>
-</ul>
-</div>
-<div id="introduction-to-r" class="section level3">
-<h3><a href="https://colinfay.me/intro-to-r/">Introduction to R</a></h3>
-<ul>
-<li>Generally approachable introduction to the R language.</li>
-</ul>
-</div>
-<div id="efficient-r-programming" class="section level3">
-<h3><a href="https://csgillespie.github.io/efficientR/">Efficient R Programming</a></h3>
-<ul>
-<li>Great resource for becoming more familiar with R and using it more effectively.</li>
-</ul>
-</div>
-<div id="advanced-r" class="section level3">
-<h3><a href="https://adv-r.hadley.nz">Advanced R</a></h3>
-<ul>
-<li>Work in progress 2nd edition.</li>
-<li>Great for a deep dive into R.</li>
-</ul>
-</div>
-<div id="datacamp" class="section level3">
-<h3><a href="https://www.datacamp.com">DataCamp</a></h3>
-<ul>
-<li>Interactive code lessons in various languages / technologies.</li>
-</ul>
-</div>
+<div id="confidence-interval-for-a-proportion" class="section level2">
+<h2>Confidence Interval for a Proportion</h2>
+<p><span class="math display">\[
+CI_{proportion} = \hat{p} \pm Z_{\alpha/2} \sqrt{\frac{\hat{p}(1-\hat{p})}{N}}
+\]</span></p>
+<p>This can be implemented with the following R code, where <code>x</code> is a vector of logical values (or numeric values in the set [0,1]):</p>
+<pre class="r"><code>p_hat &lt;- mean(x)
+n &lt;- length(x)
+alpha &lt;- 0.05
+
+ci &lt;- p_hat + c(-1, 1) * qnorm(1 - alpha/2) * sqrt(p_hat * (1 - p_hat) / n)</code></pre>
 </div>
 
 
