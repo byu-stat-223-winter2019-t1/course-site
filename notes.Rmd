@@ -215,7 +215,7 @@ Stay the course and see the beauty of life unfold for you.*
 + R Moment: [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 + [Homework 2](hw2.html) questions
 + [Simulation Study Outline](sim-study-outline.html)
-+ [In class exercise](l05_practice.nb.html)
++ [In class exercise](l05_practice.nb.html) ([Solutions](l05_practice_answers.nb.html))
 + [Hypothesis Test](l05_mean.nb.html)
 + [Homework 3](hw3.html) Assigned (Due 2018-11-15 at 11:59pm)
 

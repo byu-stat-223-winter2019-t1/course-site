@@ -28,7 +28,7 @@ As guests arrive, you grow nervous that someone will be wearing your same costum
 As the number of guests grows, what's the probability that someone is waering your
 same costume? Be sure to assess the monte carlo error of your estimate.
 
-```{r, eval = FALSE}
+```{r}
 # Write a function with the following parameters:
 #   n: the number of people at the party (not counting yourself)
 #   n_reps: the number of times to run the simulation
@@ -48,7 +48,7 @@ costume_party <- function(n, n_reps = 1000) {
 ```
 
 
-```{r, eval = FALSE}
+```{r}
 results <- purrr::map_df(1:10, costume_party)
 results
 ```
@@ -64,7 +64,9 @@ results %>%
   mutate(n = 1:n()) %>% 
   ggplot(aes(x = n, y = proportion)) +
   geom_ribbon(aes(ymin = lower_bound, ymax = upper_bound), fill = "grey70", alpha = .5) +
-  geom_line() +
+  geom_line(col = "blue") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_x_continuous(breaks = 1:nrow(results)) +
   theme_bw()
 ```
 
@@ -74,14 +76,14 @@ to roll each number at least once. What's the expected number of rolls it takes
 until each number has been rolled once? Be sure to assess the monte carlo error 
 of your estimate.
 
-```{r, eval = FALSE}
+```{r}
 # Write a function with the following parameters:
 #   n: number of sides on the dice
 # This function should return the number of rolls it took to roll all n sides at
 # least once.
 roll_dice <- function(n = 6) {
   numbers_rolled <- numeric(n)
-  while(any(numbers_rolled == 0)) {
+  while (any(numbers_rolled == 0)) {
     i <- sample(1:n, 1)
     numbers_rolled[i] <- numbers_rolled[i] + 1
   }
