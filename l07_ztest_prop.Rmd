@@ -28,6 +28,16 @@ Assess the Monte Carlo error with a 95% confidence interval for each combination
 of $p$ and $n$. For which combinations does the lower bound on the confidence
 interval exceed $\alpha = 0.05$?
 
+```{r}
+simulate_s <- function(n, p, alpha = 0.05, n_reps = 100000) {
+  x <- replicate(n_reps, sum(sample(c(0, 1), n, replace = TRUE, prob = c(1 - p, p))))
+  p_hat <- x / n
+  z <- (p_hat - p) / sqrt(p * (1 - p)/n)
+  # What proportion of times did we commit a Type I error at the given alpha level
+  mean(abs(z) >= qnorm(1 - alpha/2))
+}
+```
+
 
 ```{r}
 simulate <- function(n, p, alpha = 0.05, n_reps = 100000) {
@@ -40,8 +50,16 @@ simulate <- function(n, p, alpha = 0.05, n_reps = 100000) {
 ```
 
 ```{r}
+simulate_s(30, .3)
 simulate(30, .3)
 ```
+
+```{r}
+microbenchmark::microbenchmark(simulate_s(30, .3),
+                               simulate(30, .3),
+                               times = 20)
+```
+
 
 ```{r}
 p_seq <- c(0.1, 0.3, 0.5)
