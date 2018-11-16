@@ -1,6 +1,5 @@
 ---
-title: "Exam 1"
-date: "Due 2018-10-04 at 8am"
+title: "Practice Midterm"
 output: html_document
 ---
 
@@ -8,32 +7,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ Follow [this link](https://classroom.github.com/a/MIxuMKHo) to create your 
-repository for Exam 1.
-
-+ Once your repository is created, create a new RStudio project based on that
-repository.
-
-+ There are two questions for this exam, each with multiple parts. Please look
-through each question to make sure you understand what is being asked. If you need
-further clarification, please reach out to James or one of the TAs.
-
-+ Before you start, please do the following to ensure that everything is working
-properly with git and GitHub:
-    + Create two files in your repository called `drips.R` and `march.R`
-    + Add a single comment to the top of each file (ie `# This is exam 1` or 
-    something like that)
-    + Save your files and commit the changes to git using RStudio
-    + Push your committed changes to GitHub
-    + **Verify that your files have been successfully pushed to GitHub.** You
-    can do this by visiting your GitHub repository in a web browser and making
-    sure you see the two files you just created, committed, and pushed.
-    + If you have any issues with the steps above, please reach out to James
-    
-+ Make sure that you follow proper [coding standards](coding-standards.html).
-Pay particularly close attention to code formatting (it should look nice) and don't
-duplicate code - look to create functions whenever you can.
-    
 ## Drips (60 points)
 
 You notice that the sink in your bathroom has an annoying drip. The number of drips
@@ -105,5 +78,3 @@ of years until a 16 seed beats a 1 seed given the calculated odds ratio. (10 poi
 Calculate the estimate for the number of years until a 16 seed beats a 1 seed for
 both the `historical_odds` and `calculated_odds` vectors. *Make sure that you 
 assess and report your Monte Carlo (simulation) error for each estimate*. (10 points)
-
-#### **Make sure you commit your changes to git and push to GitHub**
