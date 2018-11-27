@@ -131,10 +131,11 @@ salvation of God, and for his arm to be revealed.*
 \- [Doctrine and Covenants 123:17](https://www.lds.org/scriptures/dc-testament/dc/123.17)
 
 + [Midterm Exam](exam1.html) (Due 2018-10-04 at 8am)
+-->
 
 #### 2018-11-27
 
-*in coming days, it will not be possible to survive spiritually without the 
+*In coming days, it will not be possible to survive spiritually without the 
 guiding, directing, comforting, and constant influence of the Holy Ghost.*
 
 \- Russel M. Nelson ([GC April 2018](https://www.lds.org/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng))
@@ -148,19 +149,15 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
     + Plan on ~2 hours
     + No class Thursday (2018-11-29)
   + Reminders:
-    + Ensure that you double check your HW in a clean environment before submitting
+    + Ensure that you double check your assignments in a clean environment before submitting
     + If you're using RStudio Projects (as recommended) there is no need for `setwd()`
     + Make sure you know when to use the mean confidence interval formula and when 
     to use the proportion confidence interval formula.
     + If you find yourself copying and pasting code, think about whether or not
     you can create a function for what you're trying to do.
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com)
-+ [Homework 4](hw3.html) Questions
-+ Exam Review
-  + Ideas: 
-    Thanksgiving themed simulation study
-    Election themed simulation study
--->
++ [Homework 4](hw4.html) Questions
++ [Exam Review](practice-midterm.html)
 
 #### 2018-11-15
 
