@@ -8,7 +8,6 @@ output: html_document
 + Handy reference for confidence interval formulas for both mean and proportion 
 estimates.
 
-
 ### [Simulation Study Outline](sim-study-outline.html)
 + General guideline for performing simulation studies.
 
