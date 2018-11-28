@@ -57,10 +57,10 @@ definitely be late to class.*
   + Random values from a normal distribution can be found using `rnorm()`
   
 Third, the bus takes 10 minutes to get to campus with no red lights. However,
-there four traffic lights, each with a 30% chance of being red when we get to
-it. For each light that is red, it adds 2 minutes to the bus ride time to campus
-(if all four happened to be red, then that would add 8 minutes to the time and
-the total bus ride would take 18 minutes).
+there are four traffic lights, each with a 30% chance of being red when we get
+to it. For each light that is red, it adds 2 minutes to the bus ride time to
+campus (if all four happened to be red, then that would add 8 minutes to the
+time and the total bus ride would take 18 minutes).
 
 Finally, once I get to campus, it takes 5 minutes to walk to class.
 
