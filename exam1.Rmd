@@ -127,6 +127,6 @@ January 2019. (10 points)
 4. Build a 95% confidence interval on the estimate you just calculated. (10
 points)
 5. What is the anticipated growth percentage (January 2019 prediction / January
-2018 actual) and it's 95% confidence interval? (10 points)
+2018 actual) and its 95% confidence interval? (10 points)
 
 #### **Make sure you commit your changes to git and push to GitHub**
