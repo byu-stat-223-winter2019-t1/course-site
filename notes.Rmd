@@ -157,7 +157,7 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
     you can create a function for what you're trying to do.
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com)
 + [Homework 4](hw4.html) Questions
-+ [Exam Review](practice-midterm.html)
++ [Exam Review](practice-midterm.html) | [Solutions](practice-midterm-solutions.html)
 
 #### 2018-11-15
 
