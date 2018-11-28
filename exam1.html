@@ -218,44 +218,86 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Exam 1</h1>
-<h4 class="date"><em>Due 2018-10-04 at 8am</em></h4>
+<h4 class="date"><em>Due 2018-11-29 at 11:59pm</em></h4>
 
 </div>
 
 
 <ul>
-<li><p>Follow <a href="https://classroom.github.com/a/MIxuMKHo">this link</a> to create your repository for Exam 1.</p></li>
+<li><p>Follow <a href="https://classroom.github.com/a/SNOajqnN">this link</a> to create your repository for Exam 1.</p></li>
 <li><p>Once your repository is created, create a new RStudio project based on that repository.</p></li>
 <li><p>There are two questions for this exam, each with multiple parts. Please look through each question to make sure you understand what is being asked. If you need further clarification, please reach out to James or one of the TAs.</p></li>
 <li>Before you start, please do the following to ensure that everything is working properly with git and GitHub:
 <ul>
-<li>Create two files in your repository called <code>drips.R</code> and <code>march.R</code></li>
+<li>Create the following files your repository:
+<ul>
+<li><code>late.R</code> or <code>late.Rmd</code></li>
+<li><code>bikes.R</code> or <code>bikes.Rmd</code></li>
+</ul></li>
 <li>Add a single comment to the top of each file (ie <code># This is exam 1</code> or something like that)</li>
 <li>Save your files and commit the changes to git using RStudio</li>
 <li>Push your committed changes to GitHub</li>
-<li><strong>Verify that your files have been successfully pushed to GitHub.</strong> You can do this by visiting your GitHub repository in a web browser and making sure you see the two files you just created, committed, and pushed.</li>
+<li><strong>Verify that your files have been successfully pushed to GitHub.</strong> You can do this by visiting your GitHub repository in a web browser and making sure you see the three files you just created, committed, and pushed.</li>
 <li>If you have any issues with the steps above, please reach out to James</li>
 </ul></li>
 <li><p>Make sure that you follow proper <a href="coding-standards.html">coding standards</a>. Pay particularly close attention to code formatting (it should look nice) and don’t duplicate code - look to create functions whenever you can.</p></li>
 </ul>
-<div id="drips-60-points" class="section level2">
-<h2>Drips (60 points)</h2>
-<p>You notice that the sink in your bathroom has an annoying drip. The number of drips every minute is random. Specifically, suppose that the number of drips in a minute is initially a Poisson random variable with a rate parameter <code>rate</code>. (You don’t need to know anything about the Poisson distribution except that you can sample a random value from the Poisson distribution with parameter <code>rate</code> in R with the code: <code>rpois(1, rate)</code>.) Unfortunately, the severity of the leak is increasing.<br />
-Specifically, with each passing minute, the rate parameter increases by x%, where x is a random value from the uniform distribution on the interval 0 to 5. (Note that the value of x changes every minute!) You can sample a random value from this uniform distribution using <code>runif(1,0,5)</code>.</p>
-<p>Write a function called <code>drip</code> that takes 2 parameters: <code>rate</code> and <code>minutes</code>. <code>rate</code> is the initial poisson rate parameter of the drips. <code>minutes</code> is the number of minutes the sink is dripping. This function should return the total number of drips in the provided <code>minutes</code>. (15 points)</p>
-<p>Using the <code>drips</code> function you just defined, perform a simulation with 10,000 repetitions with an initial <code>rate</code> of 1 for 120 <code>minutes</code> (2 hours). Assign the results of your simulation into a vector called <code>drip_counts</code>. At the end of this step, the <code>drip_counts</code> vector should contain 10,000 values, each representing the total number of drips after 2 hours with an initial <code>rate</code> parameter of 1. (10 points)</p>
-<p>Using the <code>drip_counts</code> vector, calculate the probability that the total number of drips exceeds 700 after 2 hours. <em>Make sure you assess and report your Monte Carlo (simulation) error (build a confidence interval).</em> (20 points)</p>
-<p>Suppose you are interested in testing the null hypothesis that the initial rate parameter is 1 versus the alternative hypothesis that the initial rate is larger than 1. You observe 876 drips in 2 hours. What is the associated p-value? <em>Again make sure that you assess and report your Monte Carlo (simulation) error.</em> (10 points)</p>
-<p>Using a 0.05 level of significance, what conclusion do you make regarding the null hypothesis? (5 points)</p>
+<div id="late-55-points" class="section level2">
+<h2>Late (55 points)</h2>
+<p>I want to know if I will make it to my 9:00am class on time at least 70% of the time. I decided that if I’m on time less than 70% of the time, then I will need to wake up earlier. I want to run a simulation based on my current process for getting to school to see how often I make it on time.</p>
+<p>First, I walk to the bus station. I leave my apartment between 8:30am and 8:35am. The time I leave my apartment is completely random and follows a uniform distribution. It takes me 5 minutes to walk to the bus station.</p>
+<ul>
+<li>Random uniform numbers can be found using <code>runif()</code></li>
+</ul>
+<p>Second, the bus arrives around 8:39am, but it’s random when it arrives. In fact, it arrives randomly based on a normal distribution with a mean at 8:39am and a standard deviation of 2 minutes. After the bus arrives, it waits 30 seconds until it leaves, with or without me (rude, right?). <em>If I miss the bus, I will definitely be late to class.</em></p>
+<ul>
+<li>Random values from a normal distribution can be found using <code>rnorm()</code></li>
+</ul>
+<p>Third, the bus takes 10 minutes to get to campus with no red lights. However, there four traffic lights, each with a 30% chance of being red when we get to it. For each light that is red, it adds 2 minutes to the bus ride time to campus (if all four happened to be red, then that would add 8 minutes to the time and the total bus ride would take 18 minutes).</p>
+<p>Finally, once I get to campus, it takes 5 minutes to walk to class.</p>
+<ol style="list-style-type: decimal">
+<li>Create a function called <code>on_time</code>. This function should simulate a single instance of going to class and return either <code>TRUE</code> or <code>FALSE</code>, indicating whether or not I was on time to class. (20 points)</li>
+<li>Use the <code>on_time</code> function you just created and run this simulation 10,000 times. Store the results in a vector called <code>on_time_results</code>. (10 points)</li>
+<li>Using the <code>on_time_results</code> vector you just created, calculate the proportion of times that you will be on time. (10 points)</li>
+<li>Build a 95% confidence interval around the value you calculated in step 3. (10 points)</li>
+<li>Do I need to wake up earlier? (5 points)</li>
+</ol>
 </div>
-<div id="march-madness-45-points" class="section level2">
-<h2>March Madness (45 points)</h2>
-<p>The NCAA tournament (fondly referred to as March Madness) is a collegiate basketball tournament that takes place every spring. The tournament is made up of 64 teams who play a single-elimination tournament to determine the national champion. The tournament is divided into 4 regions of 16 teams, and teams are ranked 1 - 16 in each region.</p>
-<p>In the first round of the tournament, each number 1 ranked team plays the number 16 ranked team in their region (So there are 4 games played between 1 and 16 seeded teams). This year, For the first time ever, a 16 ranked team actually beat a number 1 ranked team. The victory brings the historical win-loss record for 16 seeds vs. 1 seeds to 1-135. Even though this had never previously occurred, odds makers had calculated the likelihood of this event to be 1:54.</p>
-<p>Write a function called <code>tournament</code> that takes 1 parameter: <code>odds</code>. <code>odds</code> represents the likelihood of a 16 seed beating a 1 seed. This function should return the number of years (tournaments) that it takes before a 16 seed beats a 1 seed. (15 points)</p>
-<p>Using the <code>tournament</code> function defined above, perform a simulation with 10,000 repetitions with the historical odds ratio (1/136). Assign the results of your simulation into a vector called <code>historical_odds</code>. At the end of this step, the <code>historical_odds</code> vector should contain 10,000 values, each representing the number of years until a 16 seed beats a 1 seed given the historical odds ratio. (10 points)</p>
-<p>Using the <code>tournament</code> function defined above, perform a simulation with 10,000 repetitions with the calculated odds ratio (1/54). Assign the results of your simulation into a vector called <code>calculated_odds</code>. At the end of this step, the <code>calculated_odds</code> vector should contain 10,000 values, each representing the number of years until a 16 seed beats a 1 seed given the calculated odds ratio. (10 points)</p>
-<p>Calculate the estimate for the number of years until a 16 seed beats a 1 seed for both the <code>historical_odds</code> and <code>calculated_odds</code> vectors. <em>Make sure that you assess and report your Monte Carlo (simulation) error for each estimate</em>. (10 points)</p>
+<div id="bikes-50-points" class="section level2">
+<h2>Bikes (50 points)</h2>
+<p>You work as a supply chain manager at a up-and-coming bicycle manufacturing company. One of the main functions of your job is to forecast the demand for your bicycles so you can purchase enough tires from your suppliers in time to sell the completed bikes to your distributors. The function that the supply chain team has derived for forecasting an arbitrary month’s bicycle demand is: <span class="math display">\[
+FD_m = (1 + (G / 12)) * (AD_{m-1} + AD_{m-12}) / 2
+\]</span></p>
+<ul>
+<li><span class="math inline">\(FD_m\)</span> is the forecasted demand for the month in question</li>
+<li><span class="math inline">\(G\)</span> is the forecasted yearly growth rate</li>
+<li><span class="math inline">\(AD_{m-1}\)</span> is the previous month’s actual demand</li>
+<li><span class="math inline">\(AD_{m-12}\)</span> is the month in question’s actual demand from the previous year</li>
+</ul>
+<p>It is now December 2018 and you are preparing to forecast the demand for January 2019. The actual monthly demand for 2018 was as follows:</p>
+<pre class="r"><code>actual_2018 &lt;- c(
+  jan = 200,
+  feb = 305,
+  mar = 352,
+  apr = 327,
+  may = 375,
+  jun = 407,
+  jul = 330,
+  aug = 295,
+  sep = 275,
+  oct = 255,
+  nov = 230,
+  dec = 450
+)</code></pre>
+<p>You know that <span class="math inline">\(G\)</span> (the yearly growth rate) is impossible to predict due to recent volatile growth. However, you know that <span class="math inline">\(G\)</span> has historically followed a normal distribution with <span class="math inline">\(\mu = 0.25\)</span> and <span class="math inline">\(\sigma = 0.15\)</span>.</p>
+<p>Your team would like to estimate the forecasted demand for January 2019 and find a 95% confidence interval on the estimate.</p>
+<ol style="list-style-type: decimal">
+<li>Write a function called <code>jan_pred</code> that returns a single estimate for the forecasted demand in January 2019. You’ll use the forecasting function defined above. (10 points)</li>
+<li>Use the <code>jan_pred</code> function you just created and run this simulation 10,000 times. Store the results in a vector called <code>jan_forecasts</code>. (10 points)</li>
+<li>Using the <code>jan_forecasts</code> vector, calculate the estimated forecast for January 2019. (10 points)</li>
+<li>Build a 95% confidence interval on the estimate you just calculated. (10 points)</li>
+<li>What is the anticipated growth percentage (January 2019 prediction / January 2018 actual) and it’s 95% confidence interval? (10 points)</li>
+</ol>
 <div id="make-sure-you-commit-your-changes-to-git-and-push-to-github" class="section level4">
 <h4><strong>Make sure you commit your changes to git and push to GitHub</strong></h4>
 </div>

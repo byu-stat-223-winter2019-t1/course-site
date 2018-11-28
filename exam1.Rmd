@@ -1,0 +1,132 @@
+---
+title: "Exam 1"
+date: "Due 2018-11-29 at 11:59pm"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
++ Follow [this link](https://classroom.github.com/a/SNOajqnN) to create your 
+repository for Exam 1.
+
++ Once your repository is created, create a new RStudio project based on that
+repository.
+
++ There are two questions for this exam, each with multiple parts. Please look
+through each question to make sure you understand what is being asked. If you need
+further clarification, please reach out to James or one of the TAs.
+
++ Before you start, please do the following to ensure that everything is working
+properly with git and GitHub:
+    + Create the following files your repository:
+        + `late.R` or `late.Rmd`
+        + `bikes.R` or `bikes.Rmd`
+    + Add a single comment to the top of each file (ie `# This is exam 1` or 
+    something like that)
+    + Save your files and commit the changes to git using RStudio
+    + Push your committed changes to GitHub
+    + **Verify that your files have been successfully pushed to GitHub.** You
+    can do this by visiting your GitHub repository in a web browser and making
+    sure you see the three files you just created, committed, and pushed.
+    + If you have any issues with the steps above, please reach out to James
+    
++ Make sure that you follow proper [coding standards](coding-standards.html).
+Pay particularly close attention to code formatting (it should look nice) and
+don't duplicate code - look to create functions whenever you can.
+    
+## Late (55 points)
+I want to know if I will make it to my 9:00am class on time at least 70% of the
+time. I decided that if I’m on time less than 70% of the time, then I will need
+to wake up earlier. I want to run a simulation based on my current process for
+getting to school to see how often I make it on time.
+
+First, I walk to the bus station. I leave my apartment between 8:30am and
+8:35am. The time I leave my apartment is completely random and follows a uniform
+distribution. It takes me 5 minutes to walk to the bus station.
+
+  + Random uniform numbers can be found using `runif()`
+  
+Second, the bus arrives around 8:39am, but it’s random when it arrives. In fact,
+it arrives randomly based on a normal distribution with a mean at 8:39am and a
+standard deviation of 2 minutes. After the bus arrives, it waits 30 seconds
+until it leaves, with or without me (rude, right?). *If I miss the bus, I will
+definitely be late to class.*
+
+  + Random values from a normal distribution can be found using `rnorm()`
+  
+Third, the bus takes 10 minutes to get to campus with no red lights. However,
+there four traffic lights, each with a 30% chance of being red when we get to
+it. For each light that is red, it adds 2 minutes to the bus ride time to campus
+(if all four happened to be red, then that would add 8 minutes to the time and
+the total bus ride would take 18 minutes).
+
+Finally, once I get to campus, it takes 5 minutes to walk to class.
+
+1. Create a function called `on_time`. This function should simulate a single
+instance of going to class and return either `TRUE` or `FALSE`, indicating
+whether or not I was on time to class. (20 points)
+2. Use the `on_time` function you just created and run this simulation 10,000
+times. Store the results in a vector called `on_time_results`. (10 points)
+3. Using the `on_time_results` vector you just created, calculate the proportion
+of times that you will be on time. (10 points)
+4. Build a 95% confidence interval around the value you calculated in step 3.
+(10 points)
+5. Do I need to wake up earlier? (5 points)
+
+## Bikes (50 points)
+You work as a supply chain manager at a up-and-coming bicycle manufacturing
+company. One of the main functions of your job is to forecast the demand for
+your bicycles so you can purchase enough tires from your suppliers in time to
+sell the completed bikes to your distributors. The function that the supply
+chain team has derived for forecasting an arbitrary month's bicycle demand is:
+$$
+FD_m = (1 + (G / 12)) * (AD_{m-1} + AD_{m-12}) / 2
+$$
+
+  + $FD_m$ is the forecasted demand for the month in question
+  + $G$ is the forecasted yearly growth rate
+  + $AD_{m-1}$ is the previous month's actual demand
+  + $AD_{m-12}$ is the month in question's actual demand from the previous year
+  
+It is now December 2018 and you are preparing to forecast the demand for January
+2019. The actual monthly demand for 2018 was as follows:
+
+```{r, eval = FALSE}
+actual_2018 <- c(
+  jan = 200,
+  feb = 305,
+  mar = 352,
+  apr = 327,
+  may = 375,
+  jun = 407,
+  jul = 330,
+  aug = 295,
+  sep = 275,
+  oct = 255,
+  nov = 230,
+  dec = 450
+)
+```
+
+You know that $G$ (the yearly growth rate) is impossible to predict due to
+recent volatile growth. However, you know that $G$ has historically followed a
+normal distribution with $\mu = 0.25$ and $\sigma = 0.15$.
+
+Your team would like to estimate the forecasted demand for January 2019 and find
+a 95% confidence interval on the estimate.
+
+1. Write a function called `jan_pred` that returns a single estimate for the
+forecasted demand in January 2019. You'll use the forecasting function defined
+above. (10 points) 
+2. Use the `jan_pred` function you just created and run this simulation 10,000
+times. Store the results in a vector called `jan_forecasts`. (10 points)
+3. Using the `jan_forecasts` vector, calculate the estimated forecast for
+January 2019. (10 points)
+4. Build a 95% confidence interval on the estimate you just calculated. (10
+points)
+5. What is the anticipated growth percentage (January 2019 prediction / January
+2018 actual) and it's 95% confidence interval? (10 points)
+
+#### **Make sure you commit your changes to git and push to GitHub**
