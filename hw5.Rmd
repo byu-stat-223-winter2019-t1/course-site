@@ -8,7 +8,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ Follow [this link](https://classroom.github.com/a/vbOtC-cU) to create your 
++ Follow [this link](https://classroom.github.com/a/pnJRZwAT) to create your 
 repository for homework 5.
 
 + Once your repository is created, create a new RStudio project based on that
