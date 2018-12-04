@@ -118,9 +118,9 @@ The Savior’s meekness in this eternally essential and excruciating experience 
 + [Homework 4](hw4_solutions.html) Walkthrough
 + Introduction to [Bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
   + [Bootstrap confidence interval on mean](l08_mean.nb.html)
-  
-+ [Homework 5](hw5.html) Assigned (Due 2018-10-11 at 8pm)
+  + [Bootstrap coverage](l09_bs_coverage.nb.html)
 
+-->
 
 #### 2018-12-04
 
@@ -130,8 +130,22 @@ salvation of God, and for his arm to be revealed.*
 
 \- [Doctrine and Covenants 123:17](https://www.lds.org/scriptures/dc-testament/dc/123.17)
 
-+ [Midterm Exam](exam1.html) (Due 2018-10-04 at 8am)
--->
++ Announcements
+  + [CAPS Resources](https://caps.byu.edu/walk-in-options)
+  + Schedule updates | [Assignments](assignments.html)
++ R Moment: [reticulate](https://rstudio.github.io/reticulate/)
++ [Homework 4](hw4_solutions.html) Walkthrough
++ Introduction to [Bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
+
+    "Bootstrapping is the practice of estimating properties of an estimator
+    (such as its variance) by measuring those properties when sampling from an
+    approximating distribution." -
+    [Wikipedia](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
+
+  + [Bootstrap confidence interval on mean](l08_mean.nb.html)
+  + [Memory loss](l08_memory.nb.html)
+  + [Confidence interval](l08_ci.nb.html)
++ [Homework 5](hw5.html) Assigned (Due 2018-12-11 at 11:59pm)
 
 #### 2018-11-27
 
