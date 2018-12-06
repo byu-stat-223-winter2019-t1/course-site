@@ -106,13 +106,22 @@ toc()
 length(bs_ci_list)
 ```
 
+```{r}
+head(bs_ci_list)
+```
+
+
 Now that we have these confidence interval values, we can estimate coverage by
 determining what proportion of intervals contain the true value.
 
 ```{r}
-coverage <- mean(purrr::map_lgl(bs_ci_list, ~.[1] <= truth & .[2] >= truth))
-coverage
+(coverage <- mean(purrr::map_lgl(bs_ci_list, ~.[1] <= truth & .[2] >= truth)))
 ```
+
+```{r}
+(coverage <- mean(purrr::map_lgl(bs_ci_list, ~prod(. - truth) < 0)))
+```
+
 
 ```{r}
 coverage_ci <- coverage + c(-1, 1)*qnorm(0.975)*sqrt(coverage*(1 - coverage)/n_reps)
