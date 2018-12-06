@@ -97,6 +97,7 @@ something other than God which will make him happy.”*
   + [Bootstrap coverage](l09_bs_coverage.nb.html)
   + [Bootstrap troubles](l09_bs_troubles.nb.html)
 + [Homework 5](hw5.html) questions
+-->
 
 #### 2018-12-06
 
@@ -109,19 +110,18 @@ The Savior’s meekness in this eternally essential and excruciating experience 
 \- David A. Bednar ([GC April 2018](https://www.lds.org/general-conference/2018/04/meek-and-lowly-of-heart?lang=eng))
 
 + Announcements
-  + [General Conference](https://www.lds.org/liahona/2018/10/youth/5-ways-to-learn-from-general-conference?lang=eng&_r=1&cid=HP_FR-28-9-2018_dPTH_fLHNAxLIDyL2_) this weekend
-  + Homework feedback
-    + Git Pull
-  + Avoid "Ammend previous commit"
-  + [Big Mountain Data & Dev conference](https://www.utahgeekevents.com/events/big-mountain-data-dev/)
-+ R Moment: [reticulate](https://rstudio.github.io/reticulate/)
-+ [Homework 4](hw4_solutions.html) Walkthrough
-+ Introduction to [Bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
-  + [Bootstrap confidence interval on mean](l08_mean.nb.html)
+  + [Department Christmas Breakfast](department-christmas-breakfast.jpg): Friday, December 14 at 8:30am
+  + [Midterm Solutions](exam1_solutions.html)
++ R Moment: [plumber](https://www.rplumber.io/)
++ Bootstrap Continued
   + [Bootstrap coverage](l09_bs_coverage.nb.html)
-
--->
-
+  + [Bootstrap troubles](l09_bs_troubles.nb.html)
++ Introduction to [Permutation Tests](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests)
+  + [Brothers](l10_brothers.nb.html)
+  + [Faithful](l10_faithful.nb.html)
+  + [GPA](l10_gpa.nb.html)
++ [Homework 6](hw6.html) Assigned (Due 2018-12-13 at 11:59pm)
+  
 #### 2018-12-04
 
 *Therefore, dearly beloved brethren, let us cheerfully do all things that lie in
