@@ -16,7 +16,22 @@ theta <- 2
 x <- runif(1000, min = 0, max = theta)
 ```
 
+```{r}
+hist(x)
+```
+
+
 Given these samples, we'd like to estimate `theta`.
+
+```{r}
+(theta_est <- max(x))
+```
+
+
+```{r}
+max(sample(x, replace = TRUE))
+```
+
 
 ```{r}
 n_samples <- 10000
