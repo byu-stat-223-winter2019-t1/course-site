@@ -76,6 +76,7 @@ less than the promised blessings.*
   + [Faithful](l10_faithful.nb.html)
   + [GPA](l10_gpa.nb.html)
 + [Homework 6](hw6.html) Assigned (Due 2018-10-18 at 8pm)
+-->
 
 #### 2018-12-11
 
@@ -85,19 +86,18 @@ something other than God which will make him happy.”*
 
 \- C.S. Lewis ([Mere Christianity](https://www.goodreads.com/quotes/401009-all-that-we-call-human-history--money-poverty-ambition-war-prostitution))
 
-+ Announcements
-  + [Big Mountain Data & Dev conference](https://www.utahgeekevents.com/events/big-mountain-data-dev/)
-    + I'm speaking Friday morning at 10:45
-  + I'm out of town next Tuesday (October 16) - you will have a guest lecture
-+ R Moment: [plumber](https://www.rplumber.io/)
-+ [Exam Walkthrough](exam1_solutions.html)
-+ Bootstrap continued
-  + [Memory loss](l08_memory.nb.html)
-  + [Confidence interval](l08_ci.nb.html)
-  + [Bootstrap coverage](l09_bs_coverage.nb.html)
-  + [Bootstrap troubles](l09_bs_troubles.nb.html)
-+ [Homework 5](hw5.html) questions
--->
++ Announcements:
+  + Final exam opens 8:00am Saturday, 2018-12-15
+    + Exam administered and submitted through GitHub
+    + Commit and push early, and often
+    + Open notes, open internet - not open neighbor
+    + Due 11:59pm on Tuesday (2018-12-18)
+    + Plan on ~2-3 hours
++ R Moment: [h2o](https://www.h2o.ai/)
++ [Homework 5](hw5.html) and [Homework 6](hw6.html) questions
++ Permutation Tests Continued
+  + [Faithful](l10_faithful.nb.html)
++ [Practice Final Exam](practice-final.html)
 
 #### 2018-12-06
 

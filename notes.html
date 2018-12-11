@@ -22,9 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -99,6 +98,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -113,7 +115,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -133,6 +134,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -154,18 +192,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -295,29 +392,33 @@ less than the promised blessings.*
   + [Faithful](l10_faithful.nb.html)
   + [GPA](l10_gpa.nb.html)
 + [Homework 6](hw6.html) Assigned (Due 2018-10-18 at 8pm)
-
-#### 2018-12-11
-
-*“All that we call human history -- money, poverty, ambition, war, prostitution, 
-classes, empires, slavery -- [is] the long terrible story of man trying to find 
-something other than God which will make him happy.”*
-
-\- C.S. Lewis ([Mere Christianity](https://www.goodreads.com/quotes/401009-all-that-we-call-human-history--money-poverty-ambition-war-prostitution))
-
-+ Announcements
-  + [Big Mountain Data & Dev conference](https://www.utahgeekevents.com/events/big-mountain-data-dev/)
-    + I'm speaking Friday morning at 10:45
-  + I'm out of town next Tuesday (October 16) - you will have a guest lecture
-+ R Moment: [plumber](https://www.rplumber.io/)
-+ [Exam Walkthrough](exam1_solutions.html)
-+ Bootstrap continued
-  + [Memory loss](l08_memory.nb.html)
-  + [Confidence interval](l08_ci.nb.html)
-  + [Bootstrap coverage](l09_bs_coverage.nb.html)
-  + [Bootstrap troubles](l09_bs_troubles.nb.html)
-+ [Homework 5](hw5.html) questions
 -->
 <div id="section" class="section level4">
+<h4>2018-12-11</h4>
+<p><em>“All that we call human history – money, poverty, ambition, war, prostitution, classes, empires, slavery – [is] the long terrible story of man trying to find something other than God which will make him happy.”</em></p>
+<p>- C.S. Lewis (<a href="https://www.goodreads.com/quotes/401009-all-that-we-call-human-history--money-poverty-ambition-war-prostitution">Mere Christianity</a>)</p>
+<ul>
+<li>Announcements:
+<ul>
+<li>Final exam opens 8:00am Saturday, 2018-12-15
+<ul>
+<li>Exam administered and submitted through GitHub</li>
+<li>Commit and push early, and often</li>
+<li>Open notes, open internet - not open neighbor</li>
+<li>Due 11:59pm on Tuesday (2018-12-18)</li>
+<li>Plan on ~2-3 hours</li>
+</ul></li>
+</ul></li>
+<li>R Moment: <a href="https://www.h2o.ai/">h2o</a></li>
+<li><a href="hw5.html">Homework 5</a> and <a href="hw6.html">Homework 6</a> questions</li>
+<li>Permutation Tests Continued
+<ul>
+<li><a href="l10_faithful.nb.html">Faithful</a></li>
+</ul></li>
+<li><a href="practice-final.html">Practice Final Exam</a></li>
+</ul>
+</div>
+<div id="section-1" class="section level4">
 <h4>2018-12-06</h4>
 <p><em>Jesus provides the ultimate example of righteous responsiveness and willing submission as He suffered intense agony in Gethsemane. “And when he was at the place, he said unto [His disciples], Pray that ye enter not into temptation. “And he … kneeled down, and prayed, “Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done.” The Savior’s meekness in this eternally essential and excruciating experience demonstrates for each of us the importance of putting the wisdom of God above our own wisdom.</em></p>
 <p>- David A. Bednar (<a href="https://www.lds.org/general-conference/2018/04/meek-and-lowly-of-heart?lang=eng">GC April 2018</a>)</p>
@@ -342,7 +443,7 @@ something other than God which will make him happy.”*
 <li><a href="hw6.html">Homework 6</a> Assigned (Due 2018-12-13 at 11:59pm)</li>
 </ul>
 </div>
-<div id="section-1" class="section level4">
+<div id="section-2" class="section level4">
 <h4>2018-12-04</h4>
 <p><em>Therefore, dearly beloved brethren, let us cheerfully do all things that lie in our power; and then may we stand still, with the utmost assurance, to see the salvation of God, and for his arm to be revealed.</em></p>
 <p>- <a href="https://www.lds.org/scriptures/dc-testament/dc/123.17">Doctrine and Covenants 123:17</a></p>
@@ -364,7 +465,7 @@ something other than God which will make him happy.”*
 <li><p><a href="hw5.html">Homework 5</a> Assigned (Due 2018-12-11 at 11:59pm)</p></li>
 </ul>
 </div>
-<div id="section-2" class="section level4">
+<div id="section-3" class="section level4">
 <h4>2018-11-27</h4>
 <p><em>In coming days, it will not be possible to survive spiritually without the guiding, directing, comforting, and constant influence of the Holy Ghost.</em></p>
 <p>- Russel M. Nelson (<a href="https://www.lds.org/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng">GC April 2018</a>)</p>
@@ -393,7 +494,7 @@ something other than God which will make him happy.”*
 <li><a href="practice-midterm.html">Exam Review</a> | <a href="practice-midterm-solutions.html">Solutions</a></li>
 </ul>
 </div>
-<div id="section-3" class="section level4">
+<div id="section-4" class="section level4">
 <h4>2018-11-15</h4>
 <p><em>Thus we may see that the Lord is merciful unto all who will, in the sincerity of their hearts, call upon his holy name. Yea, thus we see that the gate of heaven is open unto all, even to those who will believe on the name of Jesus Christ, who is the Son of God.</em></p>
 <p>- <a href="https://www.lds.org/languages/eng/content/scriptures/bofm/hel/3">Helaman 3:27-28</a></p>
@@ -424,7 +525,7 @@ something other than God which will make him happy.”*
 <li><a href="practice-midterm.html">Practice Midterm</a></li>
 </ul>
 </div>
-<div id="section-4" class="section level4">
+<div id="section-5" class="section level4">
 <h4>2018-11-13</h4>
 <p><em>If sometimes the harder you try, the harder it gets, take heart. So it has been with the best people who ever lived.</em></p>
 <p>- Jeffrey R. Holland (<a href="https://www.lds.org/languages/eng/content/ensign/1984/02/the-inconvenient-messiah">Ensign February 1984</a>)</p>
@@ -435,7 +536,7 @@ something other than God which will make him happy.”*
 <li><a href="l06_regression.nb.html">Simulation study for simple linear regression</a></li>
 </ul>
 </div>
-<div id="section-5" class="section level4">
+<div id="section-6" class="section level4">
 <h4>2018-11-08</h4>
 <p><em>Face your doubts. Master your fears. “Cast not away therefore your confidence.” Stay the course and see the beauty of life unfold for you.</em></p>
 <p>- Jeffrey R. Holland (<a href="https://speeches.byu.edu/talks/jeffrey-r-holland_cast-not-away-therefore-your-confidence/">BYU Devotional March 2, 1999</a>)</p>
@@ -453,7 +554,7 @@ something other than God which will make him happy.”*
 <li><a href="hw3.html">Homework 3</a> Assigned (Due 2018-11-15 at 11:59pm)</li>
 </ul>
 </div>
-<div id="section-6" class="section level4">
+<div id="section-7" class="section level4">
 <h4>2018-11-06</h4>
 <p><em>And it came to pass that the voice of the Lord came to them in their afflictions, saying: Lift up your heads and be of good comfort, for I know of the covenant which ye have made unto me; and I will covenant with my people and deliver them out of bondage. And I will also ease the burdens which are put upon your shoulders, that even you cannot feel them upon your backs, even while you are in bondage; and this will I do that ye may stand as witnesses for me hereafter, and that ye may know of a surety that I, the Lord God, do visit my people in their afflictions.</em></p>
 <p>- <a href="https://www.lds.org/scriptures/bofm/mosiah/24.13-14?lang=eng">Mosiah 24:13-14</a></p>
@@ -471,7 +572,7 @@ something other than God which will make him happy.”*
 <li><a href="l04_ci.nb.html">Confidence Intervals</a></li>
 </ul>
 </div>
-<div id="section-7" class="section level4">
+<div id="section-8" class="section level4">
 <h4>2018-11-01</h4>
 <p><em>Obedience opens the door to the constant companionship of the Holy Ghost. And the spiritual gifts and abilities activated by the power of the Holy Ghost enable us to avoid deception—and to see, to feel, to know, to understand, and to remember things as they really are. You and I have been endowed with a greater capacity for obedience precisely for these reasons.</em></p>
 <p>- David A. Bednar (<a href="https://www.lds.org/ensign/2010/06/things-as-they-really-are?lang=eng">Ensign June 2010</a>)</p>
@@ -498,7 +599,7 @@ something other than God which will make him happy.”*
 <li><a href="hw2.html">Homework 2</a> is assigned (Due 2018-11-08 at 11:59pm)</li>
 </ul>
 </div>
-<div id="section-8" class="section level4">
+<div id="section-9" class="section level4">
 <h4>2018-10-30</h4>
 <p><em>I testify that his intelligence is vastly superior in every field to the very brightest mortals in those fields and that his intellect in scope and truth far exceeds all human intellects. I thank him for encapsulating that exquisite mind in both perfect love and perfect humility. His brilliance is not the “catch-me-if-you-can” kind, but a pleading and patient, “Come, follow me.”</em></p>
 <p>- Neal A. Maxwell (<a href="https://www.lds.org/general-conference/1976/04/jesus-of-nazareth-savior-and-king?lang=eng">GC April 1976</a>)</p>
@@ -531,7 +632,7 @@ something other than God which will make him happy.”*
 <li><a href="l02_coins.nb.html">Flipping coins</a></li>
 </ul>
 </div>
-<div id="section-9" class="section level4">
+<div id="section-10" class="section level4">
 <h4>2018-10-25</h4>
 <p><em>He felt all that was sad, wicked, or bad, All the pain we would ever know. While His friends were asleep, He fought to keep His promise made long ago. Gethsemane. Jesus loves me, So He went willingly to Gethsemane.</em></p>
 <p>- Melanie Hoffman (<a href="https://www.lds.org/friend/2018/03/gethsemane?lang=eng">Gethsemane</a>)</p>
