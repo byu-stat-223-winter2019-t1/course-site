@@ -15,7 +15,7 @@ and is a measure of spread.
 argument and returns the interquartile range of `x`. You should **not** use the
 built in `IQR()` function in R (10 points).
 2. Use your function defined above to calculate the IQR for the data provided
-in `iqr.R` (5 points).
+in [`iqr.R`](iqr.R) (5 points).
 3. Use bootstrap sampling to build a 95% confidence interval around the IQR value
 you calculated in step 2 (15 points).
 4. Plot a histogram of your bootstrap sample IQRs. Add red vertical lines that
