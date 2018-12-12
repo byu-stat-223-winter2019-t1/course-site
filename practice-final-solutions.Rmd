@@ -1,0 +1,11 @@
+---
+title: "Practice Final Solutions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
++ [IQR](exam2_iqr_sol.R)
++ [Alabama](exam2_alabama_sol.R)

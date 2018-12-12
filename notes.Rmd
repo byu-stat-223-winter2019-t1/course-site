@@ -97,7 +97,7 @@ something other than God which will make him happy.”*
 + [Homework 5](hw5.html) and [Homework 6](hw6.html) questions
 + Permutation Tests Continued
   + [Faithful](l10_faithful.nb.html)
-+ [Practice Final Exam](practice-final.html)
++ [Practice Final Exam](practice-final.html) | [Solutions](practice-final-solutions.html)
 
 #### 2018-12-06
 
