@@ -74,7 +74,7 @@ fear.”*
   + [Department Christmas Breakfast](department-christmas-breakfast.jpg): Tomorrow, December 14 at 8:30am
 + R Moment: [h2o](https://www.h2o.ai/)
 + [Enter the Tidyverse](https://www.tidyverse.org/)
-  + [Tidy Tuesday Data](https://www.tidyverse.org/)
+  + [Tidy Tuesday Data](https://github.com/rfordatascience/tidytuesday)
 
 #### 2018-12-11
 
