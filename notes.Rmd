@@ -75,6 +75,11 @@ fear.”*
 + R Moment: [h2o](https://www.h2o.ai/)
 + [Enter the Tidyverse](https://www.tidyverse.org/)
   + [Tidy Tuesday Data](https://github.com/rfordatascience/tidytuesday)
+    + [Cats vs. Dogs & College Majors](dogs-and-majors.nb.html)
+    + [Russian Troll
+    Tweets](https://github.com/byu-stat-223-fall2018-t2/russian-troll-tweets) |
+    [RMarkdown
+    Notebook](https://github.com/byu-stat-223-fall2018-t2/russian-troll-tweets/blob/master/tweets-eda.Rmd)
 
 #### 2018-12-11
 

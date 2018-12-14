@@ -1,0 +1,211 @@
+---
+title: "Cats vs. Dogs"
+output: html_notebook
+---
+
+To install missing packages, run `install.packages("package_name")`
+```{r setup}
+# Packages ----
+library(tidyverse)
+library(plotly)
+
+# Plot settings ----
+theme_set(theme_bw())
+
+# Knitr options ----
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+```
+
+# Cats vs. Dogs
+## Data
+Read data in from URL.
+```{r data}
+catsvdogs <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-09-11/cats_vs_dogs.csv") %>% 
+  select(-X1)
+```
+
+Check data names.
+```{r}
+names(catsvdogs)
+```
+
+Look at first 6 rows of data.
+```{r}
+head(catsvdogs)
+```
+
+## EDA
+Which state has the highest `avg_dogs_per_household`?
+```{r}
+catsvdogs %>% 
+  arrange(desc(avg_dogs_per_household)) %>% 
+  select(state, avg_dogs_per_household)
+```
+
+Which state has the highest `avg_cats_per_household`?
+```{r}
+catsvdogs %>% 
+  arrange(desc(avg_cats_per_household)) %>% 
+  select(state, avg_cats_per_household)
+```
+
+Is there a correlation between dog ownership and cat ownership?
+```{r}
+percent_owners_plot <- catsvdogs %>% 
+  filter(state != "District of Columbia") %>% 
+  ggplot(aes(x = percent_dog_owners, y = percent_cat_owners)) +
+  geom_point(aes(col = state), show.legend = FALSE) +
+  geom_smooth(se = FALSE, method = "lm")
+
+ggplotly(percent_owners_plot)
+```
+
+How do we represent this geographically? (follow example outlined [here](https://plot.ly/r/choropleth-maps/))
+```{r}
+# Add state code to the data
+catsvdogs <- catsvdogs %>% 
+  merge(
+    tibble(state = state.name,
+           code = state.abb)
+  )
+
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('blue')
+)
+
+catsvdogs %>% 
+  plot_geo(locationmode = 'USA-states') %>%
+  add_trace(
+    z = ~percent_cat_owners, locations = ~code,
+    color = ~percent_cat_owners, colors = 'Reds'
+  ) %>%
+  colorbar() %>%
+  layout(
+    title = 'Cat Ownership in the USA',
+    geo = g
+  )
+```
+
+```{r}
+catsvdogs %>% 
+  plot_geo(locationmode = 'USA-states') %>%
+  add_trace(
+    z = ~percent_dog_owners, locations = ~code,
+    color = ~percent_dog_owners, colors = 'Blues'
+  ) %>%
+  colorbar() %>%
+  layout(
+    title = 'Dog Ownership in the USA',
+    geo = g
+  )
+```
+
+Calculate and plot rankings based on difference between `percent_dog_owners` and
+`percent_cat_owners`.
+```{r}
+catsvdogs %>% 
+  mutate(perc_diff = percent_dog_owners - percent_cat_owners,
+         color = perc_diff > 0) %>% 
+  arrange(desc(perc_diff)) %>% 
+  mutate(row_num = row_number(),
+         state = glue::glue("{state} ({row_num})")) %>% 
+  ggplot(aes(x = fct_reorder(state, perc_diff), y = perc_diff, fill = color)) +
+  geom_col(show.legend = FALSE) +
+  labs(x = "",
+       y = "Percent difference in dog owners and cat owners",
+       title = "Dog lovers of America unite") +
+  coord_flip()
+```
+
+What's going on with Delaware?
+```{r}
+catsvdogs %>% 
+  filter(state == "Delaware") %>% 
+  select(contains("percent"))
+```
+
+# College Majors
+## Data
+Read in data from URL and clean up names using the
+[`janitor`](https://github.com/sfirke/janitor) package
+```{r}
+college_majors <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-10-16/recent-grads.csv") %>% 
+  janitor::clean_names(case = "snake")
+```
+
+Check data for any problems with parsing
+```{r}
+problems(college_majors)
+```
+
+Take a look at the data using `View()`
+```{r}
+View(college_majors)
+```
+
+What are the highest/lowest earning majors?
+```{r}
+earnings_order <- college_majors %>% 
+  select(major, median) %>% 
+  arrange(desc(median))
+
+earnings_order %>% 
+  head() %>% 
+  bind_rows(
+    earnings_order %>% 
+      tail()
+  )
+```
+
+What about Statistics?
+```{r}
+college_majors %>% 
+  filter(str_detect(tolower(major), "stat")) %>% 
+  select(major, median)
+```
+
+Plot median salary by major.
+```{r}
+college_majors %>% 
+  ggplot(aes(x = fct_reorder(major, median), y = median)) + 
+  geom_col() + 
+  scale_y_continuous(labels = scales::dollar) +
+  labs(y = "Median Salary",
+       x = "",
+       title = "Major Median Salaries") +
+  coord_flip()
+
+```
+
+How many of each `major_category` are there?
+```{r}
+college_majors %>% 
+  count(major_category, sort = TRUE)
+```
+
+What's the distribution of median income across each `major_category`?
+```{r}
+college_majors %>% 
+  ggplot(aes(x = fct_reorder(major_category, median), y = median)) +
+  geom_boxplot() +
+  scale_y_continuous(labels = scales::dollar) +
+  labs(y = "Median Income",
+       x = "",
+       title = "Income Distribution across Major Categories") +
+  coord_flip()
+```
+
+```{r}
+college_majors %>% 
+  ggplot(aes(x = fct_reorder(major_category, share_women, na.rm = TRUE), y = share_women)) +
+  geom_boxplot() +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "% Women",
+       x = "",
+       title = "Percentage of Women by Major Category") +
+  coord_flip()
+```
+
