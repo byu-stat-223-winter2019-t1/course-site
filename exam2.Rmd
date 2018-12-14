@@ -8,16 +8,15 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-<!--
-Points Possible: 120
--->
-
 + Follow [this link](https://classroom.github.com/a/Kbc4Q27I) to create your 
 repository for Exam 2.
 
 + Once your repository is created, create a new RStudio project based on that
 repository. Note: There will be two files already in your repository -
-`fishing.csv` and `tj.csv`.
+`fishing.csv` and `tj.csv`. Since these files are already in your repository,
+you will need to click on ![](clone-or-download.png) in order to get the URL
+to create your RStudio project with.
+
 
 + There are three questions for this exam, each with multiple parts. Please look
 through each question to make sure you understand what is being asked. If you
