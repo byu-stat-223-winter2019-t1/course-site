@@ -22,9 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -99,6 +98,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -113,7 +115,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -133,6 +134,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -154,18 +192,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -218,18 +315,21 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Exam 2</h1>
-<h4 class="date"><em>Due 2018-10-22 at 11:59pm</em></h4>
+<h4 class="date"><em>Due 2018-12-18 at 11:59pm</em></h4>
 
 </div>
 
 
+<!--
+Points Possible: 120
+-->
 <ul>
-<li><p>Follow <a href="https://classroom.github.com/a/BuYpBXRu">this link</a> to create your repository for Exam 2.</p></li>
-<li><p>Once your repository is created, create a new RStudio project based on that repository. Note: There will be two files already in your repository - <code>alabama.csv</code> and <code>iqr.R</code>.</p></li>
-<li><p>There are two questions for this exam, each with multiple parts. Please look through each question to make sure you understand what is being asked. If you need further clarification, please reach out to James or one of the TAs.</p></li>
+<li><p>Follow <a href="https://classroom.github.com/a/Kbc4Q27I">this link</a> to create your repository for Exam 2.</p></li>
+<li><p>Once your repository is created, create a new RStudio project based on that repository. Note: There will be two files already in your repository - <code>fishing.csv</code> and <code>tj.csv</code>.</p></li>
+<li><p>There are three questions for this exam, each with multiple parts. Please look through each question to make sure you understand what is being asked. If you need further clarification, please reach out to James or one of the TAs.</p></li>
 <li>Before you start, please do the following to ensure that everything is working properly with git and GitHub:
 <ul>
-<li>Create a file in your repository called <code>alabama.R</code> or <code>alabama.Rmd</code>. If you would like you can also change <code>iqr.R</code> into <code>iqr.Rmd</code>.</li>
+<li>Create one file for each questions (either <code>.R</code> or <code>.Rmd</code> files)</li>
 <li>Add a single comment to the top of each file (ie <code># This is exam 2</code> or something like that)</li>
 <li>Save your files and commit the changes to git using RStudio</li>
 <li>Push your committed changes to GitHub</li>
@@ -238,51 +338,45 @@ $(document).ready(function () {
 </ul></li>
 <li><p>Make sure that you follow proper <a href="coding-standards.html">coding standards</a>. Pay particularly close attention to code formatting (it should look nice) and don’t duplicate code - look to create functions whenever you can.</p></li>
 </ul>
-<div id="iqr-45-points" class="section level2">
-<h2>IQR (45 points)</h2>
-<p>The interquartile range (IQR) is the 75th percentile minus the 25th percentile and is a measure of spread.</p>
+<div id="fishing-50-points" class="section level2">
+<h2>Fishing (50 points)</h2>
+<p>My Grandpa Jasperson (Grandpa J as I’ve always known him) is an avid fisherman, and he’s passed that love along to me. We both agree that <a href="http://www.utahfishinginfo.com/utahlakes/uintas/mirrorlake.php">Mirror Lake</a> and <a href="http://www.utahfishinginfo.com/utahlakes/strawberry.php">Strawberry Reservoir</a> are two of the best places in Utah to go fishing. However, we weren’t certain which place was the best. This past year, we decided to perform a little experiment. We went fishing 20 times over the summer, and each time we went, one of us went to Mirror Like while the other went to Strawberry. We counted the number of fish we caught each trip, and now we’d like to know which is the better fishing spot.</p>
+<p><img src="grandpa-j.jpeg" /></p>
 <ol style="list-style-type: decimal">
-<li>Create a function called <code>iqr</code> that takes a single numeric vector, <code>x</code>, as an argument and returns the interquartile range of <code>x</code>. You should <strong>not</strong> use the built in <code>IQR()</code> function in R (10 points).</li>
-<li>Use your function defined above to calculate the IQR for the data provided in <code>iqr.R</code> (5 points).</li>
-<li>Use bootstrap sampling to build a 95% confidence interval around the IQR value you calculated in step 2 (15 points).</li>
-<li>Plot a histogram of your bootstrap sample IQRs. Add red vertical lines that represent the lower and upper bounds of the confidence interval (10 points).</li>
-<li>If someone said that the IQR of the population from which this data was sampled is 0.25, what would you say about this claim (5 points)? (Answer in comments if you’re using an R script, or answer in plain text if you are using Rmarkdown)</li>
+<li>Using the data provided in <code>fishing.csv</code>, calculate the observed difference in medians between the two fishing locations (5 points).</li>
+<li>Using bootstrap sampling with 10,000 samples, calculate a 95% confidence interval on the observed difference in medians (15 points).</li>
+<li>Based on your results, which fishing spot is the best (5 points)?</li>
+<li>Based on bootstrap sampling, who is the better fisherman (25 points)?</li>
 </ol>
 </div>
-<div id="alabama-75-points" class="section level2">
-<h2>Alabama (75 points)</h2>
-<p>Alabama has been a college football dynasty for the past decade. Over that time frame, the program has built a legacy of strong defense that has led to multiple national championships. Now, this year, Alabama is experiencing an offensive resurgence led by sophomore quarterback Tua Tagovailoa. Tua’s rise to the top of the nation’s premier program hasn’t been without controversy. At the start of this season Tua replaced Jalen Hurts as Alabama’s starting quarterback. Jalen has been an excellent quarterback for the Crimson Tide and owns a 26-2 record as a starter. As a true freshman Jalen was named the SEC Offensive Player of the year.</p>
-<p>As this current season continues, both quarterbacks remain on the roster, and both have seen meaningful playing time. The question we want to answer is this: <em>does starting Tua make Alabama a better team than starting Jalen?</em> Now, the notion of what makes a “better” team is certainly one that can be debated. In this scenario, we’re going to use Yards Per Point (YPP) Differential, as introduced at the <a href="http://www.sloansportsconference.com/wp-content/uploads/2013/Slides/EOS/Identifying%20an%20accurate%20metric%20for%20football%20efficiency.pdf">MIT Sloan Sports Analytics Conference in 2013</a>.</p>
-<p>Yards Per Point Differential is calculated based on Yards Per Point Defense minus Yards Per Point Offense. Yards Per Point Defense is the total yards allowed by a team divided by the total points scored against a team. Yards Per Point Offense is the total number of yards gained by a team divided by the total number of points a team scores. This metric provides a measure of team efficiency - a high Yards Per Point Differential indicates that a team was, on average, more efficient than its opponents.</p>
-<p>The <code>alabama.csv</code> file contained in your repository contains the following columns:</p>
-<ul>
-<li><code>date</code>: date of the game</li>
-<li><code>opponent</code>: team Alabama played against</li>
-<li><code>starter</code>: name of Alabama’s starting quarterback for the game</li>
-<li><code>yards</code>: number of yards gained by Alabama</li>
-<li><code>yards_against</code>: number of yards gained by the other team</li>
-<li><code>points</code>: number of points scored by Alabama</li>
-<li><code>points_against</code>: number of points scored by the other team</li>
-</ul>
-<p>Given this dataset, the following can be used to calculate Yards Per Point Differential:</p>
+<div id="tommy-john-30-points" class="section level2">
+<h2>Tommy John (30 points)</h2>
+<p>You work in the front office of a professional baseball team. You are faced with the task of deciding whether to sign a pitcher who recently underwent <a href="https://en.wikipedia.org/wiki/Ulnar_collateral_ligament_reconstruction">Tommy John</a> surgery. Because your team values strikeouts, you wish to perform a study on the impact of Tommy John surgery on the Strikeout per 9 inning (k/9) statistic of a pitcher. You have the k/9 statistic both 2 years before surgery and 2 years after surgery for 15 pitchers.</p>
+<p>Perform a a permutation test under the null hypothesis that Tommy John surgery has no effect on a pitcher’s strikeout statistics and the alternative hypothesis that having the surgery makes pitchers worse.</p>
 <p><span class="math display">\[
-YPP_{diff} = YPP_{defense} - YPP_{offense}\\
-YPP_{defense} = \frac{\sum \text{yards_against}}{\sum \text{points_against}}\\
-YPP_{offense} = \frac{\sum \text{yards}}{\sum \text{points}}
+H_0 = \text{k9}_{pre} = \text{k9}_{post}\\
+H_a = \text{k9}_{pre} &gt; \text{k9}_{post}
 \]</span></p>
-<p>With this setup, we have the following hypotheses:</p>
-<p><span class="math display">\[
-H_0 = \text{Tua }YPP_{diff} = \text{Jalen } YPP_{diff}\\
-H_a = \text{Tua }YPP_{diff} \gt \text{Jalen } YPP_{diff}
-\]</span></p>
+<p>Use the mean difference in k/9 as your test statistic.</p>
 <ol style="list-style-type: decimal">
-<li>Read the <code>alabama.csv</code> file in your repository into R (10 points).</li>
-<li>Calculate the observed test statistic. That is, Tua’s Yards Per Point Differential minus Jalen’s Yards Per Point Differential. The starter for each game is identified in the <code>starter</code> column (15 points).</li>
-<li>Conduct a permutation test of 10,000 permutations to build a distribution of this test statistic under the null hypothesis (20 points).</li>
-<li>Create a histogram of your results from step 3. Include a vertical red line indicating the original observed test statistic calculated in step 1 (10 points).</li>
-<li>Using the values derived in step 3, calculate the p-value associated with the original observed test statistic calculated in step 1 (10 points).</li>
-<li>Build a 95% confidence interval around this p-value (5 points).</li>
-<li>Based on the results of your permutation test, what do you conclude (5 points)? (Answer in comments if you’re using an R script, or answer in plain text if you are using Rmarkdown)</li>
+<li>Using the data provided in <code>tj.csv</code>, calculate the observed test statistic (5 points).</li>
+<li>Perform a permutation test with 10,000 repetitions and store the results in a vector (10 points).</li>
+<li>Plot a histogram of your results from step 2 with a vertical red line that represents the result from part 1 (5 points).</li>
+<li>Calculate the P value for the observed test statistic and its 95% confidence interval (5 points).</li>
+<li>Based on your results, is it worth it to sign a pitcher coming off of Tommy John surgery (5 points)?</li>
+</ol>
+</div>
+<div id="bootstrapped-coverage-40-points" class="section level2">
+<h2>Bootstrapped Coverage (40 points)</h2>
+<p>The <code>USArrests</code> data built into R contains arrest statistics for each of the 50 US states in 1973. In this problem, we’re interested in looking at the <code>Assault</code> column, which can be extracted with the following code:</p>
+<pre class="r"><code>assault &lt;- USArrests$Assault</code></pre>
+<p>We’re going to treat these 50 observations as the population. The population mean can be calculated with <code>mean(assault)</code> and is 170.76. We want to determine the coverage of a 90% bootstrapped confidence interval built on a random sample of 10 observations from the <code>assault</code> data.</p>
+<ol style="list-style-type: decimal">
+<li>Create a function that takes in a vector (<code>p</code>) and returns a 90% bootstrapped confidence interval on the mean of a random sample of size 10 taken from the vector <code>p</code>. Note that this function should return results <em>based on a single sample of size 10 taken from <code>p</code></em>. Use 1,000 bootstrap samples (10 points).</li>
+<li>Using the function defined above, calculate 5,000 bootstrapped confidence intervals and store the results (10 points).</li>
+<li>Using the results from step 2, calculate the coverage of the bootstrapped confidence interval (5 points).</li>
+<li>Calculate a 95% confidence interval on your estimate of coverage (5 points).</li>
+<li>Interpret your results. If coverage is not what you would expect, what could be done differently to improve the results (10 points)?</li>
 </ol>
 <div id="make-sure-you-commit-your-changes-to-git-and-push-to-github" class="section level4">
 <h4><strong>Make sure you commit your changes to git and push to GitHub</strong></h4>
