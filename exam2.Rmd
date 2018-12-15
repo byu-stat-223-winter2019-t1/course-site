@@ -100,9 +100,13 @@ assault <- USArrests$Assault
 We're going to treat these 50 observations as the population. The population mean can be calculated with `mean(assault)` and is `r mean(assault)`. We want to determine the coverage of a 90% bootstrapped confidence interval built on a random sample of 10 observations from the `assault` data.
 
 1. Create a function that takes in a vector (`p`) and returns a 90% bootstrapped
-confidence interval on the mean of a random sample of size 10 taken from the
-vector `p`. Note that this function should return results *based on a single
-sample of size 10 taken from `p`*. Use 1,000 bootstrap samples (10 points).
+confidence interval on the mean using a random sample of size 10 taken from the
+vector `p`. Use 1,000 bootstrap samples (10 points). This function should do two 
+things:
+    1. Sample 10 random values from `p`.
+    2. Using those 10 random values, calculate and return a 90% bootstrapped
+    confidence interval on the mean of `p`.
+
 2. Using the function defined above, calculate 5,000 bootstrapped confidence
 intervals and store the results (10 points).
 3. Using the results from step 2, calculate the coverage of the bootstrapped
