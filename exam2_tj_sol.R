@@ -18,7 +18,7 @@ abline(v = test_stat, col = "red")
 
 # Part 4 ----
 p_value <- mean(tj_results >= test_stat)
-ci <- p_value + c(-1, 1) * qnorm(.975) * sqrt(p * (1 - p) / 10000)
+ci <- p_value + c(-1, 1) * qnorm(.975) * sqrt(p_value * (1 - p_value) / 10000)
 c(
   lower = ci[1],
   p_value = p_value,
