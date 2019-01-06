@@ -4,6 +4,12 @@ output: html_document
 ---
 
 ## Course Resources
+### [Setup](setup.html)
++ Reference for setting up git and GitHub.
+
+### [Happy Git and GitHub for the UseR](https://happygitwithr.com/)
++ In depth resource for using git and GitHub with R.
+
 ### [Confidence Interval Formulas](ci_formulas.html)
 + Handy reference for confidence interval formulas for both mean and proportion 
 estimates.
