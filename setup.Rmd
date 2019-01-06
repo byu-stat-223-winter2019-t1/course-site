@@ -1,0 +1,116 @@
+---
+title: "Computer Setup"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This document will guide you through the setup of [git](https://git-scm.com/)
+and [GitHub](https://github.com/), which we will use for all assignments and
+exams. For an indepth look at git and GitHub for the R user, consider this 
+[article](talk-about-version-control.pdf).
+
+## git
+[git](https://git-scm.com/) is a version control system. In other words, git 
+provides a mechanism for keeping track of different versions of files. This 
+allows users to be intentional about changes made, and allows for quick 
+experimentation of new ideas without fear of irreparably breaking things. It is
+also a powerful tool for collaboration.
+
+### Install {.tabset}
+#### MacOS
+1. Pick the option you are most comfortable with [here](https://happygitwithr.com/install-git.html#macos)
+    - If you don't know, choose option 1. The shell can be accessed by using the 
+    Terminal application on your Mac
+2. Open the Terminal
+3. Enter the following to ensure git was correctly installed:  
+  `which git; git --version`
+4. Introduce yourself to git with the following commands:  
+  `git config --global user.name 'Jane Doe'`  
+  `git config --global user.email 'jane@example.com'`  
+  Your user name can be whatever you want (I recommend first and last name).
+  Make sure you use a valid email address - you will need to use this same email
+  in a moment to signup for a GitHub account.
+5. Confirm that the previous commands worked by entering the following:  
+  `git config --global --list`
+  
+#### Windows
+1. Follow Option 1 [here](https://happygitwithr.com/install-git.html#install-git-windows)
+2. Open GitBash ![](git-bash.png)
+3. Enter the following to ensure git was correctly installed:  
+  `which git; git --version`
+4. Introduce yourself to git with the following commands:  
+  `git config --global user.name 'Jane Doe'`  
+  `git config --global user.email 'jane@example.com'`  
+  Your user name can be whatever you want (I recommend first and last name).
+  Make sure you use a valid email address - you will need to use this same email
+  in a moment to signup for a GitHub account.
+5. Confirm that the previous commands worked by entering the following:  
+  `git config --global --list`
+
+## GitHub
+[GitHub](https://github.com/) provides a place to host git repositories. This
+makes it easy to collaborate and work together on code projects. In this course,
+GitHub is where you will submit your homework assignments. James and the TAs
+will review your homework and provide feedback through GitHub.
+
+1. Create an account at GitHub.com
+    - Please use the same email address that you used to setup in git
+    - Choose a professional and brief username - this is an account you could 
+    end up using for years to come.
+    
+Once you have your GitHub account setup, you will be able to access and host 
+remote repositories. In order to enable you to commit and push assignments 
+without needing to enter your username and password each time, we are going to 
+use SSH keys. These will be setup in the next step.
+  
+## RStudio
+1. Open RStudio (if you already have it open, close it completely and re-open)
+    - I recommend installing the Preview version of RStudio available
+    [here](https://www.rstudio.com/products/rstudio/download/preview/)
+2. Go to Tools -> Global Options
+3. Select Git/SVN on the lefthand side  
+4. Check for something in the Git executable (doesn't need to be identical to 
+this)  
+![](git-executable.png)
+5. Check for something in SSH RSA key  
+![](ssh-rsa-key.png)
+    - It's likely that you don't have anything here - that's ok.
+    - Click on Create RSA Key...
+    - Don't use a password
+    - Click View public key
+    - Copy to Clipboard
+6. Go to your GitHub account in a web browser
+7. Click on the icon in the top right corner and select Settings  
+![](gh-settings.png)
+8. Click on SSH and GPG keys on the lefthand side
+    - Click on ![](gh-new-ssh.png)
+    - Give it a meaningful title (Something like "My Laptop" or "Stat 223")
+    - Paste in the key you copied from RStudio
+9. Follow OS specific instructions 
+[here](https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent)
+
+## Confirm setup
+Confirm things are working by creating a new RStudio project for [HW1](hw1.html)
+
+1. Follow the link at the top of [HW1](hw1.html) to create your GitHub 
+repository for HW1
+2. Click on link to view your repository  
+![](gh-repo-creation.png)
+3. Copy the repository URL  
+![](repo-url.png)
+    - Make sure you select SSH instead of HTTPS
+4. Open RStudio
+5. Go to File -> New Project
+6. Select Version Control  
+![](new-project.png)
+7. Choose git
+8. Paste the repository URL in  
+![](new-project-clone.png)
+    - You can adjust the name of the directory that is created by changing 
+    Project directory name
+    - Make sure you pay attention to where the project is created. This is where
+    your repository/directory/project will live
+9. Click Create Project

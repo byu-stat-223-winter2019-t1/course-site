@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Computer Setup</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Stat 223</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    Home
+  </a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
+</li>
+<li>
+  <a href="notes.html">Notes</a>
+</li>
+<li>
+  <a href="assignments.html">Assignments</a>
+</li>
+<li>
+  <a href="resources.html">Resources</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Computer Setup</h1>
+
+</div>
+
+
+<p>This document will guide you through the setup of <a href="https://git-scm.com/">git</a> and <a href="https://github.com/">GitHub</a>, which we will use for all assignments and exams. For an indepth look at git and GitHub for the R user, consider this <a href="talk-about-version-control.pdf">article</a>.</p>
+<div id="git" class="section level2">
+<h2>git</h2>
+<p><a href="https://git-scm.com/">git</a> is a version control system. In other words, git provides a mechanism for keeping track of different versions of files. This allows users to be intentional about changes made, and allows for quick experimentation of new ideas without fear of irreparably breaking things. It is also a powerful tool for collaboration.</p>
+<div id="install" class="section level3 tabset">
+<h3>Install</h3>
+<div id="macos" class="section level4">
+<h4>MacOS</h4>
+<ol style="list-style-type: decimal">
+<li>Pick the option you are most comfortable with <a href="https://happygitwithr.com/install-git.html#macos">here</a>
+<ul>
+<li>If you don’t know, choose option 1. The shell can be accessed by using the Terminal application on your Mac</li>
+</ul></li>
+<li>Open the Terminal</li>
+<li>Enter the following to ensure git was correctly installed:<br />
+<code>which git; git --version</code></li>
+<li>Introduce yourself to git with the following commands:<br />
+<code>git config --global user.name 'Jane Doe'</code><br />
+<code>git config --global user.email 'jane@example.com'</code><br />
+Your user name can be whatever you want (I recommend first and last name). Make sure you use a valid email address - you will need to use this same email in a moment to signup for a GitHub account.</li>
+<li>Confirm that the previous commands worked by entering the following:<br />
+<code>git config --global --list</code></li>
+</ol>
+</div>
+<div id="windows" class="section level4">
+<h4>Windows</h4>
+<ol style="list-style-type: decimal">
+<li>Follow Option 1 <a href="https://happygitwithr.com/install-git.html#install-git-windows">here</a></li>
+<li>Open GitBash <img src="git-bash.png" /></li>
+<li>Enter the following to ensure git was correctly installed:<br />
+<code>which git; git --version</code></li>
+<li>Introduce yourself to git with the following commands:<br />
+<code>git config --global user.name 'Jane Doe'</code><br />
+<code>git config --global user.email 'jane@example.com'</code><br />
+Your user name can be whatever you want (I recommend first and last name). Make sure you use a valid email address - you will need to use this same email in a moment to signup for a GitHub account.</li>
+<li>Confirm that the previous commands worked by entering the following:<br />
+<code>git config --global --list</code></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="github" class="section level2">
+<h2>GitHub</h2>
+<p><a href="https://github.com/">GitHub</a> provides a place to host git repositories. This makes it easy to collaborate and work together on code projects. In this course, GitHub is where you will submit your homework assignments. James and the TAs will review your homework and provide feedback through GitHub.</p>
+<ol style="list-style-type: decimal">
+<li>Create an account at GitHub.com
+<ul>
+<li>Please use the same email address that you used to setup in git</li>
+<li>Choose a professional and brief username - this is an account you could end up using for years to come.</li>
+</ul></li>
+</ol>
+<p>Once you have your GitHub account setup, you will be able to access and host remote repositories. In order to enable you to commit and push assignments without needing to enter your username and password each time, we are going to use SSH keys. These will be setup in the next step.</p>
+</div>
+<div id="rstudio" class="section level2">
+<h2>RStudio</h2>
+<ol style="list-style-type: decimal">
+<li>Open RStudio (if you already have it open, close it completely and re-open)
+<ul>
+<li>I recommend installing the Preview version of RStudio available <a href="https://www.rstudio.com/products/rstudio/download/preview/">here</a></li>
+</ul></li>
+<li>Go to Tools -&gt; Global Options</li>
+<li>Select Git/SVN on the lefthand side<br />
+</li>
+<li>Check for something in the Git executable (doesn’t need to be identical to this)<br />
+<img src="git-executable.png" /></li>
+<li>Check for something in SSH RSA key<br />
+<img src="ssh-rsa-key.png" />
+<ul>
+<li>It’s likely that you don’t have anything here - that’s ok.</li>
+<li>Click on Create RSA Key…</li>
+<li>Don’t use a password</li>
+<li>Click View public key</li>
+<li>Copy to Clipboard</li>
+</ul></li>
+<li>Go to your GitHub account in a web browser</li>
+<li>Click on the icon in the top right corner and select Settings<br />
+<img src="gh-settings.png" /></li>
+<li>Click on SSH and GPG keys on the lefthand side
+<ul>
+<li>Click on <img src="gh-new-ssh.png" /></li>
+<li>Give it a meaningful title (Something like “My Laptop” or “Stat 223”)</li>
+<li>Paste in the key you copied from RStudio</li>
+</ul></li>
+<li>Follow OS specific instructions <a href="https://happygitwithr.com/ssh-keys.html#add-key-to-ssh-agent">here</a></li>
+</ol>
+</div>
+<div id="confirm-setup" class="section level2">
+<h2>Confirm setup</h2>
+<p>Confirm things are working by creating a new RStudio project for <a href="hw1.html">HW1</a></p>
+<ol style="list-style-type: decimal">
+<li>Follow the link at the top of <a href="hw1.html">HW1</a> to create your GitHub repository for HW1</li>
+<li>Click on link to view your repository<br />
+<img src="gh-repo-creation.png" /></li>
+<li>Copy the repository URL<br />
+<img src="repo-url.png" />
+<ul>
+<li>Make sure you select SSH instead of HTTPS</li>
+</ul></li>
+<li>Open RStudio</li>
+<li>Go to File -&gt; New Project</li>
+<li>Select Version Control<br />
+<img src="new-project.png" /></li>
+<li>Choose git</li>
+<li>Paste the repository URL in<br />
+<img src="new-project-clone.png" />
+<ul>
+<li>You can adjust the name of the directory that is created by changing Project directory name</li>
+<li>Make sure you pay attention to where the project is created. This is where your repository/directory/project will live</li>
+</ul></li>
+<li>Click Create Project</li>
+</ol>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
