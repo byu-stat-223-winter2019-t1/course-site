@@ -3,48 +3,48 @@ title: "Syllabus"
 output: html_document
 ---
 
-# Course Description
+## Course Description
 
 Advanced R programming skills, advanced data techniques, simulation studies.
 
 Prerequisites: STAT 123.
 
-
-# Learning Outcomes
+## Learning Outcomes
 
 + Install R, R packages, and RStudio.
 + Advanced data management, manipulate, and transform data.
 + Solve complex problems using advanced R programming methodology.
-+ Perform simulation studies, e.g. Central Limit Theorem, confidence intervals, etc.
-+ Gain confidence in R programming.
++ Perform simulation studies, e.g. Central Limit Theorem, confidence intervals,
+etc.
++ **Gain confidence in R programming.**
 
-# Computing Platform
+## Computing Platform
 
 The computing platform for STAT 223 is your own laptop computer, desktop
 computer, or a University-owned computer.  If you do not have your own computer,
 please see James who can discuss options with you.
 
 
-# Git for Homework and Exams
+## Git for Homework and Exams
 
 You will collaborate with James, the TA's, and fellow students using
 [Git](https://git-scm.com/).  Homework and exams will be managed through [GitHub
-classroom](https://classroom.github.com/classrooms/44387582-byu-stat-223-fall-2018-term-2).  
-Each student will have their own personal repository for each assignment. The setup 
-on your computer will happen in the first lecture.  After the first lecture, please 
-see the TAs or James during office hours if you need help.
+classroom](https://classroom.github.com/classrooms/44387582-byu-stat-223-fall-2018-term-2).
+Each student will have their own personal repository for each assignment. The
+setup on your computer will happen in the first lecture.  After the first
+lecture, please see the TAs or James during office hours if you need help.
 
 
-# Homework
+## Homework
 
 Homework will be distributed on the course webpage and is due as indicated in
-the assignment and on the [assignments](assignments.html) page. **Your homework 
-must be submitted via GitHub**. This involves committing local changes and 
-pushing to your repository on GitHub. Homework is not submitted if you do not 
-successfully push to your GitHub repository when due. Homework may be turned in 
-late at a 2 points per 24 hours penalty. Depending on the nature of the homework, 
-it may be graded on correctness or effort. If homework is graded on effort, the 
-following guide will be used:
+the assignment and on the [assignments](assignments.html) page. **Your homework
+must be submitted via GitHub**. This involves committing local changes and
+pushing to your repository on GitHub. Homework is not submitted if you do not
+successfully push to your GitHub repository when due. Homework may be turned in
+late at a 2 points per 24 hours penalty. Depending on the nature of the
+homework, it may be graded on correctness or effort. If homework is graded on
+effort, the following guide will be used:
 
 + 0:  Nothing submitted
 + 5:  Little effort is evident
@@ -55,35 +55,32 @@ After your homework has been graded, a `feedback.txt` file will be added to
 your GitHub repsitory to provide specific feedback on your grade. You can
 view this file locally by performing a git pull.
 
-Please note that solutions for homework assignments are not terribly difficult to
-find online. You are *strongly encouraged* to work through homework assignemnts 
-without relying on copied answers from external sources as this will help you
-prepare for exams.
+Please note that solutions for homework assignments are not terribly difficult
+to find online. While you are free to use any resources available to complete
+your homework, homework submissions that are copies of existing solutions will
+not receive any credit. If your homework appears suspiciously similar to
+existing solutions, you will not receive any credit unless you can prove
+originality. Simply changing variable names does not make it your own. *You are
+responsible for submitting homework that reflects your efforts and understanding
+of the material.*
 
-# In Class Exercises
 
-Some class periods may include an in class exercise.  You are welcome to take
-whatever notes you'd like to take in your notebook / on your laptop, then just 
-write your final answers on your paper.  You are responsible for bring your own 
-blank paper for each exercise.  You don't need to show work for credit.  The 
-content of the exercise will not be graded --- placing your name on a sheet of 
-paper will get you credit for the quiz -- but will be discussed in class.  It is 
-not uncommon for at least some in class exercises to form the foundation of exam 
-questions. Your lowest exercise score will be dropped to compensate for misses 
-due to illness and other unforeseen circumstances.
-
-# Exams
+## Exams
 
 There will be a take-home midterm exam on a date to be announced later.  The
 final exam will also be take-home.  Exams are designed to assess a student's 
-mastery of concepts, skills, and connections between lecture and homework.
+mastery of concepts, skills, and connections between lecture and homework. You 
+are allowed to use course notes and resources from the internet to assist you
+during the exams. However, you are not allowed to discuss the exam with other
+students or work on the exam together. Exams must be individually completed and
+submitted.
 
 
-# Grading
+## Grading
 
 Item               | Weight
 -------------------|------:
-In-Class Exercises |     5%
+Participation      |     5%
 Homework           |    20%
 Midterm Exam       |    35%
 Final Exam         |    40%
@@ -93,33 +90,27 @@ may be used in determining final grades in extreme situations.  All course
 material is kept on file for one semester.  Any review or appeal must be made
 within that time frame. 
 
-# Teaching Assistants
+## Teaching Assistants
+
 * [Thomas Jensen](mailto:tompjensen@gmail.com)
   * Office Hours (235 TMCB):
-    * Tuesday 2 - 3:30 pm
-    * Thursday 2 - 3:30 pm
+    * Monday 9 - 10 am
+    * Wednesday 9 - 10 am
+    * Friday 9 - 10 am
 * [Brandon Allen](mailto:ballenor@comcast.net)
-  * Office Hours (235 TMCB):
-    * Monday 12 - 2 pm
-    * Wedesday 12 - 2 pm
-    * Additional time: Email [ballenor@comcast.net](mailto:ballenor@comcast.net) 
-    to set up a time
-* [Jacob West](mailto:jacobrobertwest@gmail.com)
-  * Office Hours (235 TMCB):
-    * Monday 10 - 11 am; 3 - 4 pm
-    * Wednesday 10 - 11 am; 3 - 4 pm
-    * Friday 10 - 11 am
 * [Adam Ott](mailto:adderotter@hotmail.com)
+* [Taiki Wada](mailto:tykiwada@gmail.com)
   * Office Hours (235 TMCB):
-    * Monday 4 - 6 pm
-    * Thursday 10 - 11 am
-    * Friday 1 - 2 pm
+    * Monday 10 - 11 am
+    * Wednesday 10 - 11 am
+    * Friday 3 - 4 pm
 
-# Office Hours
-My office is 237 TMCB. I will hold office hours on Tuesdays from 1:30-2:30 pm and 
-Thursdays from 12-1 pm.
+## Office Hours
 
-# Honor Code
+My office is 237 TMCB. I will hold office hours on Mondays from 1:30-2:30 pm and 
+Wednesdays from 12-1 pm.
+
+## Honor Code
 
 In keeping with the principles of the BYU Honor Code, students are expected to
 be honest in all of their academic work. Academic honesty means, most
@@ -133,7 +124,7 @@ expectation, and every instructor's expectation in class, that each student
 will abide by all Honor Code standards. Please call the Honor Code Office at
 1-801-422-2847 if you have questions about those standards.
 
-# Sexual Misconduct
+## Sexual Misconduct
 
 As required by Title IX of the Education Amendments of 1972, the university
 prohibits sex discrimination against any participant in its education programs
@@ -153,7 +144,7 @@ https://titleix.byu.edu/report or 1-888-238-1062 (24-hours). Additional
 information about Title IX and resources available to you can be found at
 http://titleix.byu.edu.
 
-# Student Disability
+## Student Disability
 
 Brigham Young University is committed to providing a working and learning
 atmosphere that reasonably accommodates qualified persons with disabilities. If
