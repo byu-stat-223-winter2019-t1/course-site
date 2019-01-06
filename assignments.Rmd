@@ -3,31 +3,38 @@ title: "Assignments"
 output: html_document
 ---
 
-#### [Homework 1](hw1.html) | *Due 2018-11-01 at 11:59pm* | [Solutions](hw1_solutions.html)
-#### [Homework 2](hw2.html) | *Due 2018-11-08 at 11:59pm* | [Solutions](hw2_solutions.html)
-#### [Homework 3](hw3.html) | *Due 2018-11-15 at 11:59pm* | [Solutions](hw3_solutions.html)
-#### [Homework 4](hw4.html) | *Due 2018-11-29 at 11:59pm* | [Solutions](hw4_solutions.html)
-#### [Midterm Exam](exam1.html) | *Due 2018-11-29 at 11:59pm* | [Solutions](exam1_solutions.html)
-#### [Homework 5](hw5.html) | *Due 2018-12-11 at 11:59pm* | [Solutions](hw5_solutions.html)
-#### [Homework 6](hw6.html) | *Due 2018-12-13 at 11:59pm* | [Solutions](hw6_solutions.html)
-#### [Final Exam](exam2.html) | *Due 2018-12-18 at 11:59pm* | [Solutions](exam2_solutions.html)
+#### [Homework 1](hw1.html) | *Due 2019-01-14 at 11:59pm*
+#### Homework 2 | *Due 2019-01-22 at 11:59pm*
+#### Homework 3 | *Due 2019-01-28 at 11:59pm*
+#### Homework 4 | *Due 2019-02-04 at 11:59pm*
+#### Midterm Exam | *Due 2019-02-06 at 11:59pm*
+#### Homework 5 | *Due 2019-02-19 at 11:59pm*
+#### Homework 6 | *Due 2019-02-25 at 11:59pm*
+#### Final Exam | *Due 2019-02-27 at 11:59pm*
 
 ---
 <details>
 <summary>Assignment Checklist
 </summary>
 
-1. Setup GitHub repository through GitHub classroom (this is simply following a link in the assignment page)
-2. Copy the repository URL (make sure you are copying the SSH url, not the HTTPS url)
-3. Create a new RStudio project from Version Control (File -> New Project -> Version Control)
-    - This will create a new directory (folder) on your computer for that assignment
+1. Setup GitHub repository through GitHub classroom (this is simply following a
+link in the assignment page)
+2. Copy the repository URL (make sure you are copying the SSH url, not the HTTPS
+url)
+3. Create a new RStudio project from Version Control (File -> New Project ->
+Version Control)
+    - This will create a new directory (folder) on your computer for that
+    assignment
     - Make sure you know where your projects / directories are being saved
 4. Begin working on the assignment
-5. As you reach saving points, save your work and use the Git pane in RStudio to commit your changes to `git`.
+5. As you reach saving points, save your work and use the Git pane in RStudio to
+commit your changes to `git`.
     - Make sure that each commit contains a commit message
     - **Do not** amend previous commit
 6. Push your changes to GitHub using the Git pane in RStudio
-7. Visit your GitHub repository in a web browser and ensure that your submitted files are there
+7. Visit your GitHub repository in a web browser and ensure that your submitted
+files are there
     - **If your files are not on GitHub they are not turned in**
-8. Once your assignment has been graded, perform a Git Pull using the Git pane in RStudio to pull `feedback.txt` into your local repository.
+8. Once your assignment has been graded, perform a Git Pull using the Git pane
+in RStudio to pull `feedback.txt` into your local repository.
 </details>
