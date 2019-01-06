@@ -7,40 +7,32 @@ This is the homepage for BYU Stats 223: Applied R Programming.
 
 ---
 
-**Section 6** | TTh 3:25 - 4:45 | *174 TNRB*
+**Section 001** | MW 3:00 - 4:20 | *2104 JKB*
 
 
-**Section 8** | TTh 4:55 - 6:15 | *174 TNRB*
+**Section 003** | MW 4:30 - 5:50 | *2104 JKB*
 
 ---
 
 ### Instructor
 The instructor for this course is James Blair.
 
-* Office: 237 TMCB (On campus Tue and Thur only)
+* Office: 237 TMCB (On campus Mon and Wed only)
   * Office Hours:
-    * Tuesday 1:30-2:30 pm
-    * Thursday 12-1 pm
+    * Monday 1:30-2:30 pm
+    * Wednesday 12-1 pm
 * Email: [blair@stat.byu.edu](mailto:blair@stat.byu.edu)
 
 ### TAs
 * [Thomas Jensen](mailto:tompjensen@gmail.com)
   * Office Hours (235 TMCB):
-    * Tuesday 2 - 3:30 pm
-    * Thursday 2 - 3:30 pm
+    * Monday 9 - 10 am
+    * Wednesday 9 - 10 am
+    * Friday 9 - 10 am
 * [Brandon Allen](mailto:ballenor@comcast.net)
-  * Office Hours (235 TMCB):
-    * Monday 12 - 2 pm
-    * Wedesday 12 - 2 pm
-    * Additional time: Email [ballenor@comcast.net](mailto:ballenor@comcast.net) 
-    to set up a time
-* [Jacob West](mailto:jacobrobertwest@gmail.com)
-  * Office Hours (235 TMCB):
-    * Monday 10 - 11 am; 3 - 4 pm
-    * Wednesday 10 - 11 am; 3 - 4 pm
-    * Friday 10 - 11 am
 * [Adam Ott](mailto:adderotter@hotmail.com)
+* [Taiki Wada](mailto:tykiwada@gmail.com)
   * Office Hours (235 TMCB):
-    * Monday 4 - 6 pm
-    * Thursday 10 - 11 am
-    * Friday 1 - 2 pm
+    * Monday 10 - 11 am
+    * Wednesday 10 - 11 am
+    * Friday 3 - 4 pm
