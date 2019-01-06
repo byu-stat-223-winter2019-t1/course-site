@@ -56,7 +56,6 @@ less than the promised blessings.*
   + Hotdog ([Data](hotdog.txt) | [Code](l11_hotdog.R))
   + f1a9we_.ain ([Data](f1a9we_.ain.afasta) | [Code](l11_fasta.R))
   + Version Number ([lib1.jar](lib1.jar) | [lib2.jar](lib2.jar) | [Code](l11_version_number.R))
--->
 
 #### 2018-12-13
 
@@ -308,9 +307,9 @@ in both perfect love and perfect humility. His brilliance is not the
   + Especially useful when theoretical derivations are unavailable, difficult, 
     or intractable.
 + [Flipping coins](l02_coins.nb.html)
+-->
 
-
-#### 2018-10-25
+#### 2019-01-07
 
 *He felt all that was sad, wicked, or bad,
 All the pain we would ever know.
@@ -326,10 +325,8 @@ So He went willingly to Gethsemane.*
 + Getting Started in STAT 223
   + [R](https://cran.r-project.org) and 
   [RStudio](https://www.rstudio.com/products/rstudio/download/preview/)
-  + [Version control](http://happygitwithr.com/)
-    + [git](https://git-scm.com)
-    + [GitHub](https://github.com)
+  + [Computer Setup](setup.html)
   + [Intro survey](https://goo.gl/forms/UXP7YiTUZ7yUZqJf1)
 + [STAT 223 coding standards](coding-standards.html)
 + [Review of STAT 123](l01_review.nb.html)
-+ [Homework 1](hw1.html) is assigned (due 2018-11-01 at 11:59pm)
++ [Homework 1](hw1.html) is assigned (due 2019-01-14 at 11:59pm)
