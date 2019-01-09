@@ -272,8 +272,9 @@ assess Monte Carlo (simulation) error
   + [Demonstration of central limit theorem](l03_central_limit_theorem.nb.html)
   + [Reflipping coins when tails](l03_flipping_coins.nb.html)
 + [Homework 2](hw2.html) is assigned (Due 2018-11-08 at 11:59pm)
+-->
 
-#### 2018-10-30
+#### 2019-01-09
 
 *I testify that his intelligence is vastly superior in every field to the very 
 brightest mortals in those fields and that his intellect in scope and truth far 
@@ -284,7 +285,7 @@ in both perfect love and perfect humility. His brilliance is not the
 \- Neal A. Maxwell ([GC April 1976](https://www.lds.org/general-conference/1976/04/jesus-of-nazareth-savior-and-king?lang=eng))
 
 + R Moment: [Shiny](http://shiny.rstudio.com/gallery/)
-+ Finish git and GitHub setup
++ [Finish git and GitHub setup](setup.html)
 + RStudio House Keeping
   + Never save `.RData`
   + Never restore `.RData`
@@ -307,7 +308,6 @@ in both perfect love and perfect humility. His brilliance is not the
   + Especially useful when theoretical derivations are unavailable, difficult, 
     or intractable.
 + [Flipping coins](l02_coins.nb.html)
--->
 
 #### 2019-01-07
 
