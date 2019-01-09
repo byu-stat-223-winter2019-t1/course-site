@@ -8,6 +8,14 @@ knitr::opts_chunk$set(cache = TRUE, message = FALSE)
 set.seed(35487)
 ```
 
+In this example we'll work with the idea of flipping a coin. We're interested in
+the number of heads that are flipped in `n` flips. We can flip a virtual coin
+[here](https://justflipacoin.com/?c=black). If we flip this "coin" `n` times, we
+would expect the number of heads to be approximately `n/2`, especially as `n`
+gets large. This is straightforward enough, and with our understanding of
+probability we can answer this question without ever flipping a coin. However,
+what if we suddenly forgot all of our probability theory? Is there still a way
+to calculate this answer *without* manually flipping a coin hundreds of times?
 
 ### Single coin
 Randomly sample one value from the set [0, 1] where the probability of 0 is 3/4
