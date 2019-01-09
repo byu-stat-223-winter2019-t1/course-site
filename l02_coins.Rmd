@@ -141,7 +141,7 @@ than 20.
 mean(heads > 20)
 ```
 
-Finally, we can ind the 25th percentile of the number of heads in 60 tosses.
+Finally, we can find the 25th percentile of the number of heads in 60 tosses.
 ```{r}
 quantile(heads, 0.25)
 ```
