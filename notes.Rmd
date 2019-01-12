@@ -230,22 +230,26 @@ Stay the course and see the beauty of life unfold for you.*
 + [In class exercise](l05_practice.nb.html) ([Solutions](l05_practice_answers.nb.html))
 + [Hypothesis Test](l05_mean.nb.html)
 + [Homework 3](hw3.html) Assigned (Due 2018-11-15 at 11:59pm)
+-->
 
-#### 2018-11-06
+#### 2019-01-16
 
-*And it came to pass that the voice of the Lord came to them in their afflictions, saying: Lift up your heads and be of good comfort, for I know of the covenant which ye have made unto me; and I will covenant with my people and deliver them out of bondage. And I will also ease the burdens which are put upon your shoulders, that even you cannot feel them upon your backs, even while you are in bondage; and this will I do that ye may stand as witnesses for me hereafter, and that ye may know of a surety that I, the Lord God, do visit my people in their afflictions.*
+*And it came to pass that the voice of the Lord came to them in their
+afflictions, saying: Lift up your heads and be of good comfort, for I know of
+the covenant which ye have made unto me; and I will covenant with my people and
+deliver them out of bondage. And I will also ease the burdens which are put upon
+your shoulders, that even you cannot feel them upon your backs, even while you
+are in bondage; and this will I do that ye may stand as witnesses for me
+hereafter, and that ye may know of a surety that I, the Lord God, do visit my
+people in their afflictions.*
 
 \- [Mosiah 24:13-14](https://www.lds.org/scriptures/bofm/mosiah/24.13-14?lang=eng)
 
 + Announcements:
-  + [Valley United Against Hunger](http://studentalumni.byu.edu/events/valley-united-against-hunger)
+  + No class next Monday for Martin Luther King Jr. Day
+  + [Homework 2](hw2.html) is due Tuesday at 11:59pm
 + R Moment: [r2d3](https://rstudio.github.io/r2d3/)
-+ [Homework 1 Solutions](hw1_solutions.html)
-+ [Confidence intervals](http://onlinestatbook.com/2/estimation/mean.html) to 
-assess Monte Carlo (simulation) error
-  + [Reflipping coins when tails](l03_flipping_coins.nb.html)
 + [Confidence Intervals](l04_ci.nb.html)
--->
 
 #### 2019-01-14
 
