@@ -245,34 +245,32 @@ Stay the course and see the beauty of life unfold for you.*
 assess Monte Carlo (simulation) error
   + [Reflipping coins when tails](l03_flipping_coins.nb.html)
 + [Confidence Intervals](l04_ci.nb.html)
+-->
 
-#### 2018-11-01
+#### 2019-01-14
 
-*Obedience opens the door to the constant companionship of the Holy Ghost. And 
-the spiritual gifts and abilities activated by the power of the Holy Ghost enable 
-us to avoid deception—and to see, to feel, to know, to understand, and to remember 
-things as they really are. You and I have been endowed with a greater capacity for 
-obedience precisely for these reasons.*
+*Obedience opens the door to the constant companionship of the Holy Ghost. And
+the spiritual gifts and abilities activated by the power of the Holy Ghost
+enable us to avoid deception—and to see, to feel, to know, to understand, and 
+to remember things as they really are. You and I have been endowed with a greater
+capacity for obedience precisely for these reasons.*
 
 \- David A. Bednar ([Ensign June 2010](https://www.lds.org/ensign/2010/06/things-as-they-really-are?lang=eng))
 
 + Announcements:
-  + [rstudio::conf](https://www.rstudio.com/conference/)
-    + January 15 - 18 in Austin, TX
-    + Large academic discounts available (sign up with .edu email)
-    + Seriously, this is the best conference ever
+  + [Homework 1](hw1.html) due today at 11:59pm
 + R Moment: [gganimate](https://github.com/thomasp85/gganimate)
 + [Homework 1](hw1.html) questions
 + [STAT 223 coding standards](coding-standards.html)
 + A word about [RMarkdown](https://rmarkdown.rstudio.com/) and 
 [Notebooks](https://rmarkdown.rstudio.com/r_notebooks)
++ [Flipping Coins](l02_coins.nb.html)
 + [Confidence intervals](http://onlinestatbook.com/2/estimation/mean.html) to 
 assess Monte Carlo (simulation) error
 + Additional simulation study examples:
   + [Demonstration of central limit theorem](l03_central_limit_theorem.nb.html)
   + [Reflipping coins when tails](l03_flipping_coins.nb.html)
-+ [Homework 2](hw2.html) is assigned (Due 2018-11-08 at 11:59pm)
--->
++ [Homework 2](hw2.html) is assigned (Due 2019-01-22 at 11:59pm)
 
 #### 2019-01-09
 
