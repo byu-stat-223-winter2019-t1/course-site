@@ -4,7 +4,7 @@ date: "Due 2018-09-20 at 8pm"
 output: html_document
 ---
 
-+ Follow [this link](https://classroom.github.com/a/WlNDfCvD) to create your 
++ Follow [this link](https://classroom.github.com/a/5nHEMUFp) to create your 
 repository for homework 2.
 
 + Once your repository is created, create a new RStudio project based on that
