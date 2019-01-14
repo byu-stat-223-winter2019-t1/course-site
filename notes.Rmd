@@ -250,6 +250,7 @@ people in their afflictions.*
   + [Homework 2](hw2.html) is due Tuesday at 11:59pm
 + R Moment: [r2d3](https://rstudio.github.io/r2d3/)
 + [Confidence Intervals](l04_ci.nb.html)
++ [Simulation Study Outline](sim-study-outline.html)
 
 #### 2019-01-14
 
