@@ -248,6 +248,9 @@ people in their afflictions.*
 + Announcements:
   + No class next Monday for Martin Luther King Jr. Day
   + [Homework 2](hw2.html) is due Tuesday at 11:59pm
+  + [RStudio::conf live stream](http://Rstd.io/livestream) starts tomorrow!
+    + [Schedule](http://www.cvent.com/events/rstudio-conf-austin/agenda-dd6d75526f3c4554b67c4de32aeffb47.aspx)
+    + I speak from 2:08pm - 2:28pm
 + R Moment: [r2d3](https://rstudio.github.io/r2d3/)
 + [Confidence Intervals](l04_ci.nb.html)
 + [Simulation Study Outline](sim-study-outline.html)
