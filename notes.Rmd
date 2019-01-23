@@ -226,7 +226,7 @@ Stay the course and see the beauty of life unfold for you.*
 + [Simulation Study Outline](sim-study-outline.html)
 + [In class exercise](l05_practice.nb.html) ([Solutions](l05_practice_answers.nb.html))
 + [Hypothesis Test](l05_mean.nb.html)
-+ [Homework 3](hw3.html) Assigned (Due 2018-11-15 at 11:59pm)
++ [Homework 3](hw3.html) Assigned (Due 2019-01-28 at 11:59pm)
 
 #### 2019-01-16
 
