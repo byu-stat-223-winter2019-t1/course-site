@@ -213,24 +213,20 @@ with the best people who ever lived.*
 + [Homework 3](hw3.html) questions
 + [Hypothesis Test](l05_mean.nb.html)
 + [Simulation study for simple linear regression](l06_regression.nb.html)
+-->
 
-#### 2018-11-08
+#### 2019-01-23
 
 *Face your doubts. Master your fears. “Cast not away therefore your confidence.”
 Stay the course and see the beauty of life unfold for you.*
 
 \- Jeffrey R. Holland ([BYU Devotional March 2, 1999](https://speeches.byu.edu/talks/jeffrey-r-holland_cast-not-away-therefore-your-confidence/))
 
-+ Announcements:
-  + Updated HW late policy in [syllabus](syllabus.html)
-  + Upcoming schedule ([BYU Calendar](https://registrar.byu.edu/academic-calendar))
 + R Moment: [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
-+ [Homework 2](hw2.html) questions
 + [Simulation Study Outline](sim-study-outline.html)
 + [In class exercise](l05_practice.nb.html) ([Solutions](l05_practice_answers.nb.html))
 + [Hypothesis Test](l05_mean.nb.html)
 + [Homework 3](hw3.html) Assigned (Due 2018-11-15 at 11:59pm)
--->
 
 #### 2019-01-16
 
@@ -252,6 +248,7 @@ people in their afflictions.*
     + [Schedule](http://www.cvent.com/events/rstudio-conf-austin/agenda-dd6d75526f3c4554b67c4de32aeffb47.aspx)
     + I speak from 2:08pm - 2:28pm
 + R Moment: [r2d3](https://rstudio.github.io/r2d3/)
++ <iframe src="https://drive.google.com/file/d/1BqSUcnygOdVSSwmPxAVmLbiJZM2fTuaa/preview" width="640" height="480"></iframe>
 + [Confidence Intervals](l04_ci.nb.html)
 + [Simulation Study Outline](sim-study-outline.html)
 
@@ -269,6 +266,7 @@ capacity for obedience precisely for these reasons.*
   + [Homework 1](hw1.html) due today at 11:59pm
 + R Moment: [gganimate](https://github.com/thomasp85/gganimate)
 + [Homework 1](hw1.html) questions
++ <iframe src="https://drive.google.com/file/d/1BqSUcnygOdVSSwmPxAVmLbiJZM2fTuaa/preview" width="640" height="480"></iframe>
 + [STAT 223 coding standards](coding-standards.html)
 + A word about [RMarkdown](https://rmarkdown.rstudio.com/) and 
 [Notebooks](https://rmarkdown.rstudio.com/r_notebooks)
