@@ -222,6 +222,8 @@ Stay the course and see the beauty of life unfold for you.*
 
 \- Jeffrey R. Holland ([BYU Devotional March 2, 1999](https://speeches.byu.edu/talks/jeffrey-r-holland_cast-not-away-therefore-your-confidence/))
 
++ Announcements
+  + [Utah County R User Group](https://www.meetup.com/utah-county-rug/)
 + R Moment: [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 + [Simulation Study Outline](sim-study-outline.html)
 + [In class exercise](l05_practice.nb.html)
