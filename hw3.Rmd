@@ -1,6 +1,6 @@
 ---
 title: "Homework 3"
-date: "Due 2018-11-15 at 11:59pm"
+date: "Due 2019-01-28 at 11:59pm"
 output: html_document
 ---
 
@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ Follow [this link](https://classroom.github.com/a/kznEI9RO) to create your 
++ Follow [this link](https://classroom.github.com/a/QW9WYqlh) to create your 
 repository for homework 3.
 
 + Once your repository is created, create a new RStudio project based on that
