@@ -248,7 +248,7 @@ people in their afflictions.*
     + [Schedule](http://www.cvent.com/events/rstudio-conf-austin/agenda-dd6d75526f3c4554b67c4de32aeffb47.aspx)
     + I speak from 2:08pm - 2:28pm
 + R Moment: [r2d3](https://rstudio.github.io/r2d3/)
-+ <iframe src="https://drive.google.com/file/d/1BqSUcnygOdVSSwmPxAVmLbiJZM2fTuaa/preview" width="640" height="480"></iframe>
++ <iframe src="https://drive.google.com/file/d/1KM98keBVdjT2FVjl-2wuXXS6IBgZWyUA/preview" width="640" height="480"></iframe>
 + [Confidence Intervals](l04_ci.nb.html)
 + [Simulation Study Outline](sim-study-outline.html)
 
