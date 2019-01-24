@@ -25,6 +25,8 @@ x <- c(2.11,
        -0.01,
        0.95,
        -1.95)
+
+length(x)
 ```
 
 Given this data, we have the following assumptions:
@@ -72,19 +74,16 @@ z_test_stat <- function(x, mu, sigma) {
 Now we'll conduct the hypothesis test.
 
 ```{r}
-z <- z_test_stat(x, 0, 1)
-z
+(z <- z_test_stat(x, 0, 1))
 ```
 
 ```{r}
-p_val <- pnorm(z, mean = 0, sd = 1, lower.tail = FALSE)
-p_val
+(p_val <- pnorm(z, mean = 0, sd = 1, lower.tail = FALSE))
 ```
 
 What is the critical value (how big does `z` need to be)?
 ```{r}
-critical_val <- qnorm(alpha, mean = 0, sd = 1, lower.tail = FALSE)
-critical_val
+(critical_val <- qnorm(alpha, mean = 0, sd = 1, lower.tail = FALSE))
 ```
 
 Conclusion: Fail to reject $H_0$ since p-value is greater than $\alpha = 0.05$.
