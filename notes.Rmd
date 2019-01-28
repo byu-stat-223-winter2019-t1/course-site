@@ -212,7 +212,7 @@ is part of our nature—a part of who we are that does not change.*
 \- Kevin J. Worthen ([BYU Devotional January 8, 2019](https://speeches.byu.edu/talks/kevin-j-worthen_knowing-who-you-are/){target="_blank"})
 
 + Announcements:
-  + RStudio::conf talks are now [online](https://resources.rstudio.com/rstudio-conf-2019)
+  + RStudio::conf talks are now [online](https://resources.rstudio.com/rstudio-conf-2019){target="_blank"}
 + R Moment: [Local Interpretable Model-agnostic Explanations (lime)](https://github.com/thomasp85/lime){target="_blank"}
 + [Homework 3](hw3.html) questions
 + [Simulation study for simple linear regression](l06_regression.nb.html)
