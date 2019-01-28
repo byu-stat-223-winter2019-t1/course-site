@@ -1,6 +1,6 @@
 ---
 title: "Homework 4"
-date: "Due 2018-11-29 at 11:59pm"
+date: "Due 2019-02-04 at 11:59pm"
 output: html_document
 ---
 
@@ -8,7 +8,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ Follow [this link](https://classroom.github.com/a/KTZobhHF) to create your 
++ Follow [this link](https://classroom.github.com/a/Usr4ZeSC) to create your 
 repository for homework 4.
 
 + Once your repository is created, create a new RStudio project based on that
@@ -25,14 +25,14 @@ about the probability distributions of the responses:
 + Normality: Observations are sampled from normally distributed populations.
 + Homoscedasticity: The variances in the K populations are equal.
 
-+ In this homework assignment, you will explore the statistical properties
-of one-way ANOVA, including situations in which the assumptions are
-violated. For each simulation scenario described below, use 5,000 repetitions
-for your final results. This may be computationally demanding (perhaps taking 
-many minutes to complete all the calculations), so it is recommended that you 
-develop your code using fewer repetitions. Write R code in a file `anova-simulation.R`
-(or `anova-simulation.Rmd`) to answer the following and summarize your findings 
-in a file called `memo.txt`. 
++ In this homework assignment, you will explore the statistical properties of
+one-way ANOVA, including situations in which the assumptions are violated. For
+each simulation scenario described below, use 5,000 repetitions for your final
+results. This may be computationally demanding (perhaps taking many minutes to
+complete all the calculations), so it is recommended that you develop your code
+using fewer repetitions. Write R code in a file `anova-simulation.R` (or
+`anova-simulation.Rmd`) to answer the following and summarize your findings in a
+file called `memo.txt`.
 
 * Hint: If you have a data.frame `my_data` with variables `response` (giving 
 the measurement) and `treatment` (giving the label for the population), you 
