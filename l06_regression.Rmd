@@ -4,7 +4,7 @@ output: html_notebook
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache = TRUE)
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE, message = FALSE)
 ```
 
 Recall that the simple linear regression model is:
@@ -19,14 +19,14 @@ and identically distributed random variables.
 Let $\hat{\beta}_1$ denote the parameter estimate of $\beta_1$. The bias
 $\hat{\beta}_1$ in estimating $\beta_1$ is defined as the expected (i.e., mean)
 value of $\hat{\beta}_1 - \beta_1$. A $100(1-\alpha_1)$% confidence interval for
-the slope $\beta_1$ (assuming independent, normally distributed errors) is 
-$\hat{\beta}_1 \pm t_{\alpha_1/2,\text{df}} ~ \hat{\sigma}_{\hat{\beta}_1}$, 
-where $\text{df}$ is
-the residual (a.k.a., error) degrees of freedom, $\hat{\sigma}_{\hat{\beta}_1}$
-is the standard error of the slope estimate, and $t_{\alpha_1/2,df}$ is the
-$\alpha_1/2$ upper quantile of the $t$-distribution with $\text{df}$ degrees of freedom.
-The coverage of a confidence interval estimator is the long-run relative
-frequency that the procedure generates intervals that contain the true value.
+the slope $\beta_1$ (assuming independent, normally distributed errors) is
+$\hat{\beta}_1 \pm t_{\alpha_1/2,\text{df}} ~ \hat{\sigma}_{\hat{\beta}_1}$,
+where $\text{df}$ is the residual (a.k.a., error) degrees of freedom,
+$\hat{\sigma}_{\hat{\beta}_1}$ is the standard error of the slope estimate, and
+$t_{\alpha_1/2,df}$ is the $\alpha_1/2$ upper quantile of the $t$-distribution
+with $\text{df}$ degrees of freedom. The coverage of a confidence interval
+estimator is the long-run relative frequency that the procedure generates
+intervals that contain the true value.
 
 The regression coefficients $\beta_0$ and $\beta_1$ can be estimated using the
 method of least-squares. In R, if x and y are numeric vectors of the same
@@ -74,11 +74,17 @@ intervals of the bias and coverage probabilities. For example, for a 90%
 confidence interval on the bias, alpha2 = 0.10.
 
 ```{r}
-x <- seq(-2, 2, length = 50)
-intercept <- 42
-slope <- 3/8
+(x <- seq(-2, 2, length = 50))
+intercept <- 57
+slope <- 112
 true_y <- intercept + slope * x
-error <- rnorm(length(x), sd = .1)
+
+plot(x, true_y, 'l')
+```
+
+
+```{r}
+error <- rnorm(length(x), sd = 10)
 simulated_y <- true_y + error
 ```
 
@@ -89,15 +95,44 @@ points(x, simulated_y)
 ```
 
 ```{r}
-lm_out <- lm(simulated_y ~ x)
+(lm_out <- lm(simulated_y ~ x))
 ```
 
 ```{r}
-plot(x, true_y, type = 'l')
-points(x, simulated_y)
-abline(lm_out, col = "red")
+(bias <- lm_out$coefficients[2] - slope)
 ```
 
+```{r}
+alpha <- .1
+ci <- lm_out$coefficients[2] + c(-1, 1) * qt(1 - alpha, df = lm_out$df.residual) * summary(lm_out)$coefficients[2, "Std. Error"]
+c(
+  lower = ci[1],
+  estimate = lm_out$coefficients[2],
+  upper = ci[2]
+)
+```
+
+```{r, eval = FALSE}
+library(tidyverse)
+library(gganimate)
+
+animation_data <- tibble(
+  x = rep(x, 10),
+  true_y = intercept + slope * x,
+  y = intercept + slope * x + rnorm(length(x), sd = 50),
+  simulation = rep(1:10, each = length(x) / 10)
+) 
+
+animation_data %>% 
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  geom_abline(slope = slope, intercept = intercept, col = "blue") +
+  geom_smooth(method = "lm", se = FALSE, col = "red") +
+  transition_states(states = simulation) +
+  theme_bw()
+```
+
+![](regression_animation.gif)
 
 ```{r}
 slope_simulation <- function(
@@ -211,8 +246,8 @@ phenomenon makes it go away?
 ```{r}
 simulation <- function(
   x, 
-  intercept = 3, 
-  slope = 2, 
+  intercept = 7, 
+  slope = 0.5, 
   n_reps = 5000, 
   alpha1 = 0.10, 
   alpha2 = 0.05) {
@@ -228,7 +263,6 @@ simulation(x = seq(-2, 2, length = 50))
 ```
 
 ```{r}
-simulation(x = seq(-2, 2, length = 5))
+simulation(x = seq(-2, 2, length = 3))
 ```
-
 
