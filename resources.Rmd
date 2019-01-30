@@ -24,6 +24,9 @@ R.
 ### [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
 + New resource that teaches basic R programming in a very aproachable manner.
 
+### [Modern Dive](https://moderndive.com/index.html)
++ An Introduction to Statistical and Data Sciences via R
+
 ### [R for Data Science](http://r4ds.had.co.nz)
 * Great resource for learning modern data science techniques using R.
 * Focusses on the [tidyverse](https://www.tidyverse.org) and how various tools
