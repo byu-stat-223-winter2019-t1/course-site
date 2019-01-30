@@ -7,7 +7,7 @@ output: html_document
 ### [Setup](setup.html)
 + Reference for setting up git and GitHub.
 
-### [Happy Git and GitHub for the UseR](https://happygitwithr.com/)
+### [Happy Git and GitHub for the UseR](https://happygitwithr.com/){target="_blank"}
 + In depth resource for using git and GitHub with R.
 
 ### [Confidence Interval Formulas](ci_formulas.html)
@@ -21,26 +21,26 @@ estimates.
 While not required, these resources will help you grow in your understanding of
 R.
 
-### [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
+### [Hands-On Programming with R](https://rstudio-education.github.io/hopr/){target="_blank"}
 + New resource that teaches basic R programming in a very aproachable manner.
 
-### [Modern Dive](https://moderndive.com/index.html)
+### [Modern Dive](https://moderndive.com/index.html){target="_blank"}
 + An Introduction to Statistical and Data Sciences via R
 
-### [R for Data Science](http://r4ds.had.co.nz)
+### [R for Data Science](http://r4ds.had.co.nz){target="_blank"}
 * Great resource for learning modern data science techniques using R.
 * Focusses on the [tidyverse](https://www.tidyverse.org) and how various tools
 enable different aspects of the Data Science process.
 
-### [Introduction to R](https://colinfay.me/intro-to-r/)
+### [Introduction to R](https://colinfay.me/intro-to-r/){target="_blank"}
 + Generally approachable introduction to the R language.
 
-### [Efficient R Programming](https://csgillespie.github.io/efficientR/)
+### [Efficient R Programming](https://csgillespie.github.io/efficientR/){target="_blank"}
 * Great resource for becoming more familiar with R and using it more effectively.
 
-### [Advanced R](https://adv-r.hadley.nz)
+### [Advanced R](https://adv-r.hadley.nz){target="_blank"}
 * Work in progress 2nd edition.
 * Great for a deep dive into R.
 
-### [DataCamp](https://www.datacamp.com)
+### [DataCamp](https://www.datacamp.com){target="_blank"}
 * Interactive code lessons in various languages / technologies.
