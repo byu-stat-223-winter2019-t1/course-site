@@ -174,34 +174,34 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com)
 + [Homework 4](hw4.html) Questions
 + [Exam Review](practice-midterm.html) | [Solutions](practice-midterm-solutions.html)
+-->
 
 #### 2018-11-15
 
-*Thus we may see that the Lord is merciful unto all who will, in the sincerity of
-their hearts, call upon his holy name.
-Yea, thus we see that the gate of heaven is open unto all, even to those who will 
-believe on the name of Jesus Christ, who is the Son of God.*
+*...Alma noted, “Time only is measured unto men.” Because speed is a measure of
+distance over time, if time becomes less relevant, so does speed. Thus, in
+eternal things, such as our ongoing progress in becoming like God, direction is
+more important than speed. In the long run, the direction we are headed matters
+much more than the rate at which we are moving.*
 
-\- [Helaman 3:27-28](https://www.lds.org/languages/eng/content/scriptures/bofm/hel/3)
+\- Kevin J. Worthen ([BYU Devotional January 8,
+2019](https://speeches.byu.edu/talks/kevin-j-worthen_knowing-who-you-are/){target="_blank"})
 
 + Announcements:
-  + First exam starts at 7:00pm after class on Tuesday (2018-11-27)
-    + In class review on Tuesday (2018-11-27)
+  + First exam starts at 6:00pm on Monday (2019-02-04)
+    + In class review on Monday (2019-02-04)
     + Exam administered and submitted through GitHub
     + Commit and push early and often
     + Open notes, open internet - not open neighbor
-    + Due 11:59pm on Thursday (2018-11-29) (No late submissions accepted)
+    + Due 11:59pm on Wednesday (2019-02-06) (No late submissions accepted)
     + Plan on ~2-3 hours
-    + No class Thursday (2018-11-29)
-+ R Moment: [blogdown](https://bookdown.org/yihui/blogdown/)  
-+ [Homework 3](hw3.html) Questions
-+ [Simulation study for simple linear regression](l06_regression.nb.html)
+    + No class Wednesday (2019-02-06)
++ R Moment: [blogdown](https://bookdown.org/yihui/blogdown/){target="_blank"}
++ [Homework 4](hw4.html) Questions
 + Simulation studies for hypothesis testing:
   + [Z-test on proportions](l07_ztest_prop.nb.html)
   + [M&M Experiment](l07_mm.nb.html)
-+ [Homework 4](hw4.html) Assigned (Due 2018-11-29 at 11:59pm)
 + [Practice Midterm](practice-midterm.html)
--->
 
 #### 2019-01-28
 
