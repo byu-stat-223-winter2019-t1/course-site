@@ -165,6 +165,7 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
     + Due 11:59pm on Wednesday (2019-02-06) (No late submissions accepted)
     + Plan on ~2-3 hours
     + No class Wednesday (2019-02-06)
+  + I will not have office hours on Wednesday but I will be availale via email
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com){target="_blank"}
 + [Homework 4](hw4.html) Questions
 + [Exam Review](practice-midterm.html)
