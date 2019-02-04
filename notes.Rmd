@@ -148,35 +148,29 @@ salvation of God, and for his arm to be revealed.*
   + [Memory loss](l08_memory.nb.html)
   + [Confidence interval](l08_ci.nb.html)
 + [Homework 5](hw5.html) Assigned (Due 2018-12-11 at 11:59pm)
+-->
 
-#### 2018-11-27
+#### 2019-02-04
 
 *In coming days, it will not be possible to survive spiritually without the 
 guiding, directing, comforting, and constant influence of the Holy Ghost.*
 
 \- Russel M. Nelson ([GC April 2018](https://www.lds.org/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng))
 
-+ Announcements
-  + First exam starts at 7:00pm after class today
++ Announcements:
+  + First exam starts at 6:00pm after class today
     + Exam administered and submitted through GitHub
-    + Commit and push early, and often
+    + Commit and push early and often
     + Open notes, open internet - not open neighbor
-    + Due 11:59pm on Thursday (2018-11-29)
-    + Plan on ~2 hours
-    + No class Thursday (2018-11-29)
-  + Reminders:
-    + Ensure that you double check your assignments in a clean environment before submitting
-    + If you're using RStudio Projects (as recommended) there is no need for `setwd()`
-    + Make sure you know when to use the mean confidence interval formula and when 
-    to use the proportion confidence interval formula.
-    + If you find yourself copying and pasting code, think about whether or not
-    you can create a function for what you're trying to do.
+    + Due 11:59pm on Wednesday (2019-02-06) (No late submissions accepted)
+    + Plan on ~2-3 hours
+    + No class Wednesday (2019-02-06)
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com)
 + [Homework 4](hw4.html) Questions
-+ [Exam Review](practice-midterm.html) | [Solutions](practice-midterm-solutions.html)
--->
++ [Exam Review](practice-midterm.html)
 
-#### 2018-11-15
+
+#### 2019-01-30
 
 *...Alma noted, “Time only is measured unto men.” Because speed is a measure of
 distance over time, if time becomes less relevant, so does speed. Thus, in
