@@ -1,5 +1,5 @@
 ---
-title: "Practice Exam Solutions"
+title: "Practice Midterm Solutions"
 output: html_document
 ---
 
@@ -7,5 +7,5 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ [Drips](exam1_drips_sol.R)
-+ [March Madness](exam1_march_sol.R)
++ [Late](exam1_late_sol.R)
++ [Bikes](exam1_bikes_sol.R)

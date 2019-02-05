@@ -168,7 +168,7 @@ guiding, directing, comforting, and constant influence of the Holy Ghost.*
   + I will not have office hours on Wednesday but I will be availale via email
 + R Moment: [TensorFlow](https://tensorflow.rstudio.com){target="_blank"}
 + [Homework 4](hw4.html) Questions
-+ [Exam Review](practice-midterm.html)
++ [Exam Review](practice-midterm.html) ([Solutions](practice-midterm-solutions.html))
 
 
 #### 2019-01-30
