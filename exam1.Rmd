@@ -1,6 +1,6 @@
 ---
 title: "Exam 1"
-date: "Due 2018-11-29 at 11:59pm"
+date: "Due 2019-02-06 at 11:59pm"
 output: html_document
 ---
 
@@ -8,21 +8,21 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ Follow [this link](https://classroom.github.com/a/SNOajqnN) to create your 
++ Follow [this link](https://classroom.github.com/a/PS6smBWu) to create your 
 repository for Exam 1.
 
 + Once your repository is created, create a new RStudio project based on that
 repository.
 
 + There are two questions for this exam, each with multiple parts. Please look
-through each question to make sure you understand what is being asked. If you need
-further clarification, please reach out to James or one of the TAs.
+through each question to make sure you understand what is being asked. If you
+need further clarification, please reach out to James or one of the TAs.
 
 + Before you start, please do the following to ensure that everything is working
 properly with git and GitHub:
     + Create the following files your repository:
-        + `late.R` or `late.Rmd`
-        + `bikes.R` or `bikes.Rmd`
+        + `orchard.R` or `orchard.Rmd`
+        + `spinner.R` or `spinner.Rmd`
     + Add a single comment to the top of each file (ie `# This is exam 1` or 
     something like that)
     + Save your files and commit the changes to git using RStudio
@@ -36,97 +36,89 @@ properly with git and GitHub:
 Pay particularly close attention to code formatting (it should look nice) and
 don't duplicate code - look to create functions whenever you can.
     
-## Late (55 points)
-I want to know if I will make it to my 9:00am class on time at least 70% of the
-time. I decided that if I’m on time less than 70% of the time, then I will need
-to wake up earlier. I want to run a simulation based on my current process for
-getting to school to see how often I make it on time.
+## Orchard (60 points)
+For Christmas my daughters received the game [First
+Orchard](https://www.habausa.com/my-very-first-games-first-orchard/){target="_blank"}.
+The premise of the game is as follows:
 
-First, I walk to the bus station. I leave my apartment between 8:30am and
-8:35am. The time I leave my apartment is completely random and follows a uniform
-distribution. It takes me 5 minutes to walk to the bus station.
+* There is an orchard of 4 unique fruit trees, each of which has 4 pieces of
+fruit (each tree contains only one type of fruit, so there are 4 different types
+of fruit in the game)
+* There is a raven trying to make it to the orchard before all the fruit is
+harvested into a fruit basket
 
-  + Random uniform numbers can be found using `runif()`
-  
-Second, the bus arrives around 8:39am, but it’s random when it arrives. In fact,
-it arrives randomly based on a normal distribution with a mean at 8:39am and a
-standard deviation of 2 minutes. After the bus arrives, it waits 30 seconds
-until it leaves, with or without me (rude, right?). *If I miss the bus, I will
-definitely be late to class.*
+Each turn of the game, a player rolls a six sided die. Four of the sides of the
+die correspond to the four different fruit trees in the orchard. One side of the
+die shows a fruit basket, and the remaining side shows a raven. If a player
+rolls a fruit, they select one fruit from that tree and place it in the fruit
+basket. If the tree that was rolled doesn't have any fruit left, nothing happens
+and the turn ends. If a player rolls the fruit basket, they choose a single
+fruit from any tree and place it in the fruit basket. If a player rolls the
+raven, the raven moves one step closer to the orchard.
 
-  + Random values from a normal distribution can be found using `rnorm()`
-  
-Third, the bus takes 10 minutes to get to campus with no red lights. However,
-there are four traffic lights, each with a 30% chance of being red when we get
-to it. For each light that is red, it adds 2 minutes to the bus ride time to
-campus (if all four happened to be red, then that would add 8 minutes to the
-time and the total bus ride would take 18 minutes).
+The game ends when one of two things happen: Either all of the fruit is
+harvested into the fruit basket **or** the raven reaches the orchard. The raven
+must be rolled 6 times in order to each the orchard. If the raven reaches the
+orchard before all the fruit is harvested, the game is considered lost.
 
-Finally, once I get to campus, it takes 5 minutes to walk to class.
+Most of this game is luck based only on the roll of the die. However, there is
+some small strategy involved when the fruit basket is rolled. We'll consider the
+following two strategies:
 
-1. Create a function called `on_time`. This function should simulate a single
-instance of going to class and return either `TRUE` or `FALSE`, indicating
-whether or not I was on time to class. (20 points)
-2. Use the `on_time` function you just created and run this simulation 10,000
-times. Store the results in a vector called `on_time_results`. (10 points)
-3. Using the `on_time_results` vector you just created, calculate the proportion
-of times that you will be on time. (10 points)
-4. Build a 95% confidence interval around the value you calculated in step 3.
-(10 points)
-5. Do I need to wake up earlier? (5 points)
+* Highest: When the fruit basket is rolled, the player choose a fruit from the
+tree with the most remaining fruits and places it in the fruit basket.
+* Random: When the fruit basket is rolled, the player randomly selects one of
+the remaining fruit and places it in the fruit basket.
 
-## Bikes (50 points)
-You work as a supply chain manager at a up-and-coming bicycle manufacturing
-company. One of the main functions of your job is to forecast the demand for
-your bicycles so you can purchase enough tires from your suppliers in time to
-sell the completed bikes to your distributors. The function that the supply
-chain team has derived for forecasting an arbitrary month's bicycle demand is:
-$$
-FD_m = (1 + (G / 12)) * (AD_{m-1} + AD_{m-12}) / 2
-$$
-
-  + $FD_m$ is the forecasted demand for the month in question
-  + $G$ is the forecasted yearly growth rate
-  + $AD_{m-1}$ is the previous month's actual demand
-  + $AD_{m-12}$ is the month in question's actual demand from the previous year
-  
-It is now December 2018 and you are preparing to forecast the demand for January
-2019. The actual monthly demand for 2018 was as follows:
-
-```{r, eval = FALSE}
-actual_2018 <- c(
-  jan = 200,
-  feb = 305,
-  mar = 352,
-  apr = 327,
-  may = 375,
-  jun = 407,
-  jul = 330,
-  aug = 295,
-  sep = 275,
-  oct = 255,
-  nov = 230,
-  dec = 450
-)
-```
-
-You know that $G$ (the yearly growth rate) is impossible to predict due to
-recent volatile growth. However, you know that $G$ has historically followed a
-normal distribution with $\mu = 0.25$ and $\sigma = 0.15$.
-
-Your team would like to estimate the forecasted demand for January 2019 and find
-a 95% confidence interval on the estimate.
-
-1. Write a function called `jan_pred` that returns a single estimate for the
-forecasted demand in January 2019. You'll use the forecasting function defined
-above. (10 points) 
-2. Use the `jan_pred` function you just created and run this simulation 10,000
-times. Store the results in a vector called `jan_forecasts`. (10 points)
-3. Using the `jan_forecasts` vector, calculate the estimated forecast for
-January 2019. (10 points)
-4. Build a 95% confidence interval on the estimate you just calculated. (10
+1. Create a function called `orchard`. This function should take a single
+argument `strategy` that is either `"random"` or `"highest"`, indicating which
+of the above strategies will be used. The function should simulate playing the
+game one time using the given strategy and return either `TRUE` or `FALSE` based
+on whether or not the players won the game. In other words, if all the fruit is
+harvested, the function should return `TRUE`. If the raven advances six spaces
+before all the fruit is harvested the function should return `FALSE`. (20
 points)
-5. What is the anticipated growth percentage (January 2019 prediction / January
-2018 actual) and its 95% confidence interval? (10 points)
+2. Using the `orchard` function from the previous step, simulate playing this
+game with each strategy 10,000 times and store the results. (15 points)
+3. Based on the results obtained in step 2, calculate an estimate for the
+likelihood of winning (collecting all the fruit before the raven reaches the
+orchard) for each strategy. (10 points)
+4. Build a 95% confidence interval on the estimates you calculated in step 3.
+(10 points)
+5. Based on your estimates and associated confidence intervals, is one strategy
+better than the other? Explain your reasoning. (5 points)
+
+## Spin the Wheel (45 points)
+You are at a carnival playing a "Spin the Wheel" type game. Eager to win a
+stuffed rat, you wait over an hour in line to play. The rules of the game are as
+follows:
+
+* You pay 1 ticket to play
+* You spin a fair spinner divided into 10 parts
+* You keep spinning until you land on a number other than 1, 5, 7 or until
+you've spun 50 times
+* If the first spin results in number other than 1, 5, or 7, you lose and win
+nothing
+* If you land on a 1, 5, or 7 you win 5 tickets and spin again
+* If the second spin results in a number other than 1, 5, or 7 you lose and take
+your 5 tickets. Otherwise, you win $(5 * 2) + 1 = 11$ tickets. This pattern of
+earnings up to spin 50 can be represented with the following equation:
+
+$$
+earnings = 5n + (n - 1)\substack{n\,\in\{1,2,3,...,50\}}
+$$
+
+According to this formula, the maximum tickets you could earn would be 299. The
+stuffed rat you have your eye on costs only 20 tickets. Using a simulation
+study, determine the likelihood that you'll be able to afford the stuffed rat
+after playing the game.
+
+1. Create a function called `spinner`. This function should simulate playing
+this carnival game 1 time and return the number of tickets you won. (15 points)
+2. Using the function defined above, simulate the game 10,000 times and store
+the results. (10 points)
+3. Using the values calculated in step 2, calculate an estimate of the
+likelihood that you win enough tickets to get the stuffed rat. (10 points)
+4. Build a 95% confidence interval on the estimate you calculated. (10 points)
 
 #### **Make sure you commit your changes to git and push to GitHub**
