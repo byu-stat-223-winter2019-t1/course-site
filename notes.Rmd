@@ -123,39 +123,42 @@ The Savior’s meekness in this eternally essential and excruciating experience 
   + [Faithful](l10_faithful.nb.html)
   + [GPA](l10_gpa.nb.html)
 + [Homework 6](hw6.html) Assigned (Due 2018-12-13 at 11:59pm)
-  
-#### 2018-12-04
+-->
+
+#### 2019-02-11
 
 *Therefore, dearly beloved brethren, let us cheerfully do all things that lie in
 our power; and then may we stand still, with the utmost assurance, to see the 
 salvation of God, and for his arm to be revealed.*
 
-\- [Doctrine and Covenants 123:17](https://www.lds.org/scriptures/dc-testament/dc/123.17)
+\- [Doctrine and Covenants 123:17](https://www.lds.org/scriptures/dc-testament/dc/123.17){target="_blank"}
 
 + Announcements
-  + [CAPS Resources](https://caps.byu.edu/walk-in-options)
-  + Schedule updates | [Assignments](assignments.html)
-+ R Moment: [reticulate](https://rstudio.github.io/reticulate/)
-+ [Homework 4](hw4_solutions.html) Walkthrough
+  + No class next Monday in honor of Presidents Day. Class will be held on
+  Tuesday (2019-02-19)
+  + First [Utah County R User Group (UC
+  RUG)](https://www.meetup.com/utah-county-rug/events/258603714/){target="_blank"} is Tuesday,
+  2019-02-19 from 7-8 in W110 TNRB
+  + Exam 1 feedback and discussion on Wednesday (2019-02-13)
++ R Moment: [reticulate](https://rstudio.github.io/reticulate/){target="_blank"}
 + Introduction to [Bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
 
     "Bootstrapping is the practice of estimating properties of an estimator
     (such as its variance) by measuring those properties when sampling from an
     approximating distribution." -
-    [Wikipedia](https://en.wikipedia.org/wiki/Bootstrapping_(statistics))
+    [Wikipedia](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)){target="_blank"}
 
   + [Bootstrap confidence interval on mean](l08_mean.nb.html)
   + [Memory loss](l08_memory.nb.html)
   + [Confidence interval](l08_ci.nb.html)
-+ [Homework 5](hw5.html) Assigned (Due 2018-12-11 at 11:59pm)
--->
++ [Homework 5](hw5.html) Assigned (Due 2019-02-19 at 11:59pm)
 
 #### 2019-02-04
 
 *In coming days, it will not be possible to survive spiritually without the 
 guiding, directing, comforting, and constant influence of the Holy Ghost.*
 
-\- Russel M. Nelson ([GC April 2018](https://www.lds.org/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng))
+\- Russel M. Nelson ([GC April 2018](https://www.lds.org/general-conference/2018/04/revelation-for-the-church-revelation-for-our-lives?lang=eng){target="_blank"})
 
 + Announcements:
   + First exam starts at 6:00pm after class today
