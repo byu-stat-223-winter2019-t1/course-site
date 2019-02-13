@@ -34,7 +34,7 @@ mine enemies, unto the causing of them to quake before me.*
   + [NBA EDA](https://github.com/byu-stat-223/nba-players)
   + [Google Playstore EDA](https://github.com/byu-stat-223/google-playstore)
 
-#### 2018-10-16
+#### 2019-02-25
 
 *Considering the Savior’s great promise for peace in this life and eternal life 
 in the life to come, discipleship is a price worth paying. It is a price we cannot 
@@ -43,21 +43,17 @@ less than the promised blessings.*
 
 \- James E. Faust ([GC October 2006](https://www.lds.org/general-conference/2006/10/discipleship?lang=eng))
 
-+ Announcements
-  + Final exam starts Friday at 8am and is due Monday (2018-10-22) at 11:59pm
++ Announcements:
+  + Final exam opens 8:00am Saturday, 2018-12-15
+    + Exam administered and submitted through GitHub
+    + Commit and push early, and often
+    + Open notes, open internet - not open neighbor
+    + Due 11:59pm on Tuesday (2018-12-18)
+    + Plan on ~2-3 hours
 + [Homework 6](hw6.html) questions
-+ Regular Expressions
-  + [Goldman Sachs Poster](l11_gs_poster.jpg)
-  + [Helpful resources](https://www.regular-expressions.info/) for regular expressions.
-  + [Online tool](https://regexr.com/) for regular expressions
-  + Web Scraping (baseball scores) ([Data](azd.html) | [Code](l11_baseball.R))
-  + Centroids ([Data](EEH_clus4_331.rpt) | [R Code](l11_centroids.R) | [VIM](l11_centroids.vim))
-  + Food ([Data](FOOD_DES.txt) | [Code](l11_food.R))
-  + Hotdog ([Data](hotdog.txt) | [Code](l11_hotdog.R))
-  + f1a9we_.ain ([Data](f1a9we_.ain.afasta) | [Code](l11_fasta.R))
-  + Version Number ([lib1.jar](lib1.jar) | [lib2.jar](lib2.jar) | [Code](l11_version_number.R))
++ 
 
-#### 2018-12-13
+#### 2019-02-20
 
 *The Lord is with us, mindful of us and blessing us in ways only He can do.
 Prayer can call down the strength and the revelation that we need to center our
@@ -69,25 +65,6 @@ fear.”*
 \- Ronald A. Rasband ([GC October
 2018](https://www.lds.org/general-conference/2018/10/be-not-troubled?lang=eng))
 
-+ Announcements
-  + [Department Christmas Breakfast](department-christmas-breakfast.jpg): Tomorrow, December 14 at 8:30am
-+ R Moment: [h2o](https://www.h2o.ai/)
-+ [Enter the Tidyverse](https://www.tidyverse.org/)
-  + [Tidy Tuesday Data](https://github.com/rfordatascience/tidytuesday)
-    + [Cats vs. Dogs & College Majors](dogs-and-majors.nb.html)
-    + [Russian Troll
-    Tweets](https://github.com/byu-stat-223-fall2018-t2/russian-troll-tweets) |
-    [RMarkdown
-    Notebook](https://github.com/byu-stat-223-fall2018-t2/russian-troll-tweets/blob/master/tweets-eda.Rmd)
-
-#### 2018-12-11
-
-*“All that we call human history -- money, poverty, ambition, war, prostitution, 
-classes, empires, slavery -- [is] the long terrible story of man trying to find 
-something other than God which will make him happy.”*
-
-\- C.S. Lewis ([Mere Christianity](https://www.goodreads.com/quotes/401009-all-that-we-call-human-history--money-poverty-ambition-war-prostitution))
-
 + Announcements:
   + Final exam opens 8:00am Saturday, 2018-12-15
     + Exam administered and submitted through GitHub
@@ -95,35 +72,48 @@ something other than God which will make him happy.”*
     + Open notes, open internet - not open neighbor
     + Due 11:59pm on Tuesday (2018-12-18)
     + Plan on ~2-3 hours
++ R Moment: [h2o](https://www.h2o.ai/)
++ [Enter the Tidyverse](https://www.tidyverse.org/)
+
+    ![](data-science-workflow.png)
+
+  + [Tidy Tuesday Data](https://github.com/rfordatascience/tidytuesday)
+
+#### 2019-02-19
+
+*“All that we call human history -- money, poverty, ambition, war, prostitution, 
+classes, empires, slavery -- [is] the long terrible story of man trying to find 
+something other than God which will make him happy.”*
+
+\- C.S. Lewis ([Mere Christianity](https://www.goodreads.com/quotes/401009-all-that-we-call-human-history--money-poverty-ambition-war-prostitution))
+
 + R Moment: [RStudio Connect](https://www.rstudio.com/products/connect/)
-+ [Homework 5](hw5.html) and [Homework 6](hw6.html) questions
-+ Permutation Tests Continued
-  + [Faithful](l10_faithful.nb.html)
-+ [Practice Final Exam](practice-final.html) | [Solutions](practice-final-solutions.html)
-
-#### 2018-12-06
-
-*Jesus provides the ultimate example of righteous responsiveness and willing submission as He suffered intense agony in Gethsemane.
-“And when he was at the place, he said unto [His disciples], Pray that ye enter not into temptation.
-“And he … kneeled down, and prayed,
-“Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done.”
-The Savior’s meekness in this eternally essential and excruciating experience demonstrates for each of us the importance of putting the wisdom of God above our own wisdom.*
-
-\- David A. Bednar ([GC April 2018](https://www.lds.org/general-conference/2018/04/meek-and-lowly-of-heart?lang=eng))
-
-+ Announcements
-  + [Department Christmas Breakfast](department-christmas-breakfast.jpg): Friday, December 14 at 8:30am
-  + [Midterm Solutions](exam1_solutions.html)
-+ R Moment: [plumber](https://www.rplumber.io/)
-+ Bootstrap Continued
-  + [Bootstrap coverage](l09_bs_coverage.nb.html)
-  + [Bootstrap troubles](l09_bs_troubles.nb.html)
 + Introduction to [Permutation Tests](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests)
   + [Brothers](l10_brothers.nb.html)
   + [Faithful](l10_faithful.nb.html)
   + [GPA](l10_gpa.nb.html)
-+ [Homework 6](hw6.html) Assigned (Due 2018-12-13 at 11:59pm)
++ [Homework 6](hw6.html) Assigned (Due 2019-02-25 at 11:59pm)
 -->
+
+#### 2019-02-13
+
+*Faith is for the future. Faith builds on the past but never longs to stay
+there. Faith trusts that God has great things in store for each of us and that
+Christ truly is the “high priest of good things to come.”*
+
+\- Jeffrey R. Holland ([BYU Devotional January 13,
+2009](https://speeches.byu.edu/talks/jeffrey-r-holland_remember-lots-wife/){target="_blank"})
+
++ Announcements
+  + [Midterm Solutions](exam1_solutions.html)
+  
+  ![](exam1-grade-distribution.png)
+  
++ R Moment: [plumber](https://www.rplumber.io/)
++ Bootstrap Continued
+  + [Bootstrap coverage](l09_bs_coverage.nb.html)
+  + [Bootstrap troubles](l09_bs_troubles.nb.html)
++ [Homework 5](hw5.html) Questions
 
 #### 2019-02-11
 
