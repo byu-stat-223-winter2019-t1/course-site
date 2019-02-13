@@ -109,7 +109,7 @@ Christ truly is the “high priest of good things to come.”*
   
   ![](exam1-grade-distribution.png)
   
-+ R Moment: [plumber](https://www.rplumber.io/)
++ R Moment: [plumber](https://www.rplumber.io/){target="_blank"}
 + Bootstrap Continued
   + [Bootstrap coverage](l09_bs_coverage.nb.html)
   + [Bootstrap troubles](l09_bs_troubles.nb.html)
