@@ -1,0 +1,58 @@
+---
+title: "Reticulate Demo"
+output: html_notebook
+---
+
+```{r setup}
+# Packages ----
+library(reticulate)
+library(tidyverse)
+```
+
+```{r}
+mtcars
+```
+
+```{python}
+print(r.mtcars)
+```
+
+```{python}
+new_cars = r.mtcars[['mpg', 'cyl', 'hp']].loc[r.mtcars['cyl'] > 4]
+print(new_cars)
+```
+
+```{r}
+py$new_cars %>% 
+  ggplot(aes(x = mpg, y = hp, col = cyl)) +
+  geom_point()
+```
+
+
+```{r}
+py$sub_cars %>% 
+  ggplot(aes(x = mpg, y = hp, col = cyl)) +
+  geom_point()
+```
+
+```{r}
+np <- import("numpy")
+np$random$normal(size = 10L)
+np$random$normal(size = 10L)
+```
+
+```{r}
+os <- import("os")
+os$listdir(".")
+```
+
+
+```{r}
+source_python("add.py")
+```
+
+```{r}
+py_add(2, 3)
+```
+
+
