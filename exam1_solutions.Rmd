@@ -1,6 +1,6 @@
 ---
 title: "Exam 1 Solutions"
-date: "Due 2018-11-29 at 11:59pm"
+date: "Due 2019-02-06 at 11:59pm"
 output: html_document
 ---
 
@@ -8,5 +8,5 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ [Late](exam1_late_sol.R)
-+ [Bikes](exam1_bikes_sol.R)
++ [Orchard](exam1_orchard_sol.R)
++ [Spinner](exam1_spinner_sol.R)
