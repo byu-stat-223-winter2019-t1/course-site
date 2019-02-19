@@ -92,6 +92,7 @@ something other than God which will make him happy.”*
   + First [Utah County R User Group (UC
   RUG)](https://www.meetup.com/utah-county-rug/events/258603714/){target="_blank"} is today from 7-8 in W110 TNRB
 + R Moment: [RStudio Connect](https://www.rstudio.com/products/connect/){target="_blank"}
+  + [RStudio Quickstart](https://www.rstudio.com/products/quickstart/){target="_blank"}
 + Introduction to [Permutation Tests](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests){target="_blank"}
 ![](hypothesis-testing.png)
   + [Brothers](l10_brothers.nb.html)
