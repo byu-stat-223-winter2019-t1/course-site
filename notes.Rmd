@@ -78,6 +78,7 @@ fear.”*
     ![](data-science-workflow.png)
 
   + [Tidy Tuesday Data](https://github.com/rfordatascience/tidytuesday)
+-->
 
 #### 2019-02-19
 
@@ -89,11 +90,11 @@ something other than God which will make him happy.”*
 
 + R Moment: [RStudio Connect](https://www.rstudio.com/products/connect/)
 + Introduction to [Permutation Tests](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests)
+![](hypothesis-testing.png)
   + [Brothers](l10_brothers.nb.html)
   + [Faithful](l10_faithful.nb.html)
   + [GPA](l10_gpa.nb.html)
 + [Homework 6](hw6.html) Assigned (Due 2019-02-25 at 11:59pm)
--->
 
 #### 2019-02-13
 
