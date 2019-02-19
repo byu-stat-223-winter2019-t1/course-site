@@ -25,8 +25,7 @@ plot(waiting, type = "b")
 
 Now, to estimate autocorrelation, we can do the following:
 ```{r}
-observed_cor <- cor(waiting[-length(waiting)], waiting[-1])
-observed_cor
+(observed_cor <- cor(waiting[-length(waiting)], waiting[-1]))
 ```
 
 Now, in order to determine if this value is significant, we need some way to 
@@ -52,15 +51,14 @@ plot(density(results))
 Now, let's look at our `observed_cor` value in light of these results.
 
 ```{r}
-plot(density(results))
+plot(density(results), xlim = c(observed_cor, max(results)))
 abline(v = observed_cor, col = "red")
 ```
 
 Given our `observed_cor` and the values contained in `results`, we can caluclate
 a p value and associated confidence interval as follows:
 ```{r}
-p_value <- mean(abs(results) >= abs(observed_cor))
-p_value
+(p_value <- mean(abs(results) >= abs(observed_cor)))
 ```
 
 ```{r}
