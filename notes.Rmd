@@ -88,6 +88,9 @@ something other than God which will make him happy.”*
 
 \- C.S. Lewis ([Mere Christianity](https://www.goodreads.com/quotes/401009-all-that-we-call-human-history--money-poverty-ambition-war-prostitution))
 
++ Announcements:
+  + First [Utah County R User Group (UC
+  RUG)](https://www.meetup.com/utah-county-rug/events/258603714/){target="_blank"} is today from 7-8 in W110 TNRB
 + R Moment: [RStudio Connect](https://www.rstudio.com/products/connect/)
 + Introduction to [Permutation Tests](https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests)
 ![](hypothesis-testing.png)
