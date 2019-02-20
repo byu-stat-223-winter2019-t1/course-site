@@ -1,5 +1,7 @@
 ---
 title: "Syllabus"
+subtitle: "Stat 223, Winter 2019"
+author: "James Blair"
 output: html_document
 ---
 
