@@ -1,0 +1,122 @@
+---
+title: "Incarceration EDA"
+output: html_notebook
+---
+
+```{r setup}
+# Packages ----
+library(tidyverse)
+```
+
+```{r data}
+incar <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-01-22/incarceration_trends.csv")
+```
+
+# Let's Explore
+```{r}
+spec(incar)
+```
+
+
+```{r}
+dim(incar)
+```
+
+```{r}
+incar %>% 
+  count(state,
+        county_name,
+        year, sort = TRUE) %>% 
+  count(n)
+```
+
+```{r}
+incar %>% 
+  count(urbanicity) %>% 
+  mutate(p = n / sum(n)) %>% 
+  ggplot(aes(x = urbanicity, y = p)) +
+  geom_col()
+```
+
+```{r}
+incar %>% 
+  group_by(urbanicity) %>% 
+  summarise(
+    min = min(total_prison_pop),
+    median = median(total_prison_pop),
+    max = max(total_prison_pop)
+  )
+```
+
+What missing data do I have?
+```{r}
+map_df(incar, ~mean(is.na(.))) %>% 
+  gather(value = "missingness") %>% 
+  arrange(desc(missingness))
+```
+
+Is missingness related to year?
+```{r}
+incar %>% 
+  group_by(year) %>% 
+  summarise_all(~mean(is.na(.))) %>% 
+  gather(key = column, value = missingness, -year) %>% 
+  group_by(year) %>% 
+  summarise(missingness = mean(missingness)) %>% 
+  ggplot(aes(x = year, y = missingness)) +
+  geom_col() +
+  scale_y_continuous(labels = scales::percent) +
+  theme_bw()
+```
+
+```{r}
+incar %>% 
+  group_by(urbanicity) %>% 
+  summarise(
+    min = min(total_prison_pop, na.rm = TRUE),
+    median = median(total_prison_pop, na.rm = TRUE),
+    max = max(total_prison_pop, na.rm = TRUE)
+  )
+```
+
+```{r}
+incar %>% 
+  ggplot(aes(x = urbanicity, y = total_prison_pop)) +
+  geom_boxplot()
+```
+
+Which counties have the highest prison population per capita
+```{r}
+top_texas_counties <- incar %>% 
+  filter(year >= 2000, state == "TX") %>% 
+  group_by(county_name) %>% 
+  summarise(max_pop = max(total_pop, na.rm = TRUE)) %>% 
+  top_n(10, max_pop) %>% 
+  select(county_name)
+```
+
+
+```{r}
+incar %>% 
+  filter(year >= 2000, state == "TX") %>%
+  inner_join(top_texas_counties) %>% 
+  select(year, state, county_name, total_prison_pop, total_pop) %>% 
+  mutate(prison_pop_per_capita = total_prison_pop / total_pop) %>% 
+  ggplot(aes(x = year, y = prison_pop_per_capita, col = county_name)) +
+  geom_line(show.legend = FALSE) +
+  scale_y_continuous(labels = scales::percent) +
+  facet_wrap(~county_name, scales = "free") +
+  theme_bw()
+  
+```
+
+Which county's have the biggest change?
+```{r}
+incar %>% 
+  filter(year >= 2000) %>% 
+  mutate(prison_pop_per_capita = total_prison_pop / total_pop) %>% 
+  group_by(county_name, state) %>% 
+  summarise(variance = var(prison_pop_per_capita, na.rm = TRUE),
+            spread = max(prison_pop_per_capita, na.rm = TRUE) - min(prison_pop_per_capita, na.rm = TRUE))
+```
+

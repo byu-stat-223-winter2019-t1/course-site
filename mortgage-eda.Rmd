@@ -1,0 +1,73 @@
+---
+title: "Mortgage EDA"
+output: html_notebook
+---
+
+```{r setup}
+# Packages ----
+library(tidyverse)
+library(geofacet)
+```
+
+# Data
+```{r data}
+state_hpi <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-02-05/state_hpi.csv")
+mortgage_rates <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-02-05/mortgage.csv",
+                                  col_types = c("Ddddddddd"))
+recession_dates <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-02-05/recessions.csv")
+```
+
+
+```{r}
+problems(mortgage_rates) %>% 
+  count(col, expected)
+```
+
+```{r}
+mortgage_rates %>% 
+  filter(!is.na(fixed_rate_15_yr)) %>% 
+  select(fixed_rate_15_yr)
+```
+
+# Clean Data
+## Recession
+```{r}
+# Create start and end dates
+recession_dates <- recession_dates %>% 
+  mutate(
+    start_date = str_extract(period_range, "[A-Z][a-z]{2,4} [0-9]{4}") %>% 
+      str_replace(" ", " 1, ") %>% 
+      lubridate::mdy(),
+    end_date = str_extract(period_range, "[A-Z][a-z]{2,4} [0-9]{4}$") %>% 
+      str_replace(" ", " 1, ") %>% 
+      lubridate::mdy()
+  ) %>% 
+  select(period_range, start_date, end_date, characteristics)
+```
+
+# Explore the Data
+```{r}
+mortgage_rates %>% 
+  mutate(year = lubridate::year(date)) %>% 
+  ggplot() +
+  geom_line(aes(x = date, y = fixed_rate_30_yr)) +
+  geom_rect(data = filter(recession_dates, start_date >= "1971-01-01"), aes(xmin = start_date, xmax = end_date, ymin = 0, ymax = Inf), alpha = 0.3)
+```
+
+```{r}
+state_hpi %>% 
+  count(year, state) %>% 
+  filter(n == 11)
+```
+
+```{r}
+state_hpi %>% 
+  mutate(state_diff = price_index - us_avg) %>% 
+  group_by(year, state) %>% 
+  summarise(
+    avg_diff = mean(state_diff, na.rm = TRUE)
+  ) %>% 
+  ggplot(aes(x = year, y = avg_diff)) +
+  geom_col() +
+  facet_geo(~state)
+```

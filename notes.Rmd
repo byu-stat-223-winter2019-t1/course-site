@@ -79,6 +79,8 @@ fear.”*
     ![](data-science-workflow.png)
 
   + [Tidy Tuesday Data](https://github.com/rfordatascience/tidytuesday){target="_blank"}
+    + [Incarceration EDA](incarceration-eda.nb.html)
+    + [Mortgage EDA](mortgage-eda.nb.html)
 + [Practice Final](practice-final.html)
 
 #### 2019-02-19
