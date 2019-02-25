@@ -21,7 +21,7 @@ better fishing spot.
 
 ![](grandpa-j.jpeg)
 
-1. Using the data provided in `fishing.csv`, calculate the observed difference 
+1. Using the data provided in [`fishing.csv`](fishing.csv), calculate the observed difference 
 in medians between the two fishing locations (5 points).
 2. Using bootstrap sampling with 10,000 samples, calculate a 95% confidence 
 interval on the observed difference in medians (15 points).
@@ -48,7 +48,7 @@ $$
 
 Use the mean difference in k/9 as your test statistic.
 
-1. Using the data provided in `tj.csv`, calculate the observed test statistic (5
+1. Using the data provided in [`tj.csv`](tj.csv), calculate the observed test statistic (5
 points).
 2. Perform a permutation test with 10,000 repetitions and store the results in a
 vector (10 points).
