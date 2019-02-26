@@ -315,14 +315,14 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Exam 2</h1>
-<h4 class="date"><em>Due 2018-12-18 at 11:59pm</em></h4>
+<h4 class="date"><em>Due 2019-02-27 at 11:59pm</em></h4>
 
 </div>
 
 
 <ul>
-<li><p>Follow <a href="https://classroom.github.com/a/Kbc4Q27I">this link</a> to create your repository for Exam 2.</p></li>
-<li><p>Once your repository is created, create a new RStudio project based on that repository. Note: There will be two files already in your repository - <code>fishing.csv</code> and <code>tj.csv</code>. Since these files are already in your repository, you will need to click on <img src="clone-or-download.png" /> in order to get the URL to create your RStudio project with.</p></li>
+<li><p>Follow <a href="https://classroom.github.com/a/B9VDReiK">this link</a> to create your repository for Exam 2.</p></li>
+<li><p>Once your repository is created, create a new RStudio project based on that repository. Note: There will be two files already in your repository - <code>oil-temp.csv</code> and <code>brady.csv</code>. Since these files are already in your repository, you will need to click on <img src="clone-or-download.png" /> in order to get the URL to create your RStudio project with.</p></li>
 <li><p>There are three questions for this exam, each with multiple parts. Please look through each question to make sure you understand what is being asked. If you need further clarification, please reach out to James or one of the TAs.</p></li>
 <li>Before you start, please do the following to ensure that everything is working properly with git and GitHub:
 <ul>
@@ -335,53 +335,64 @@ $(document).ready(function () {
 </ul></li>
 <li><p>Make sure that you follow proper <a href="coding-standards.html">coding standards</a>. Pay particularly close attention to code formatting (it should look nice) and don’t duplicate code - look to create functions whenever you can.</p></li>
 </ul>
-<div id="fishing-50-points" class="section level2">
-<h2>Fishing (50 points)</h2>
-<p>My Grandpa Jasperson (Grandpa J as I’ve always known him) is an avid fisherman, and he’s passed that love along to me. We both agree that <a href="http://www.utahfishinginfo.com/utahlakes/uintas/mirrorlake.php">Mirror Lake</a> and <a href="http://www.utahfishinginfo.com/utahlakes/strawberry.php">Strawberry Reservoir</a> are two of the best places in Utah to go fishing. However, we weren’t certain which place was the best. This past year, we decided to perform a little experiment. We went fishing 20 times over the summer, and each time we went, one of us went to Mirror Like while the other went to Strawberry. We counted the number of fish we caught each trip, and now we’d like to know which is the better fishing spot.</p>
-<p><img src="grandpa-j.jpeg" /></p>
-<ol style="list-style-type: decimal">
-<li>Using the data provided in <code>fishing.csv</code>, calculate the observed difference in medians between the two fishing locations (5 points).</li>
-<li>Using bootstrap sampling with 10,000 samples, calculate a 95% confidence interval on the observed difference in medians (15 points).</li>
-<li>Based on your results, which fishing spot is the best (5 points)?</li>
-<li>Based on bootstrap sampling, who is the better fisherman (25 points)?</li>
-</ol>
-</div>
-<div id="tommy-john-30-points" class="section level2">
-<h2>Tommy John (30 points)</h2>
-<p>You work in the front office of a professional baseball team. You are faced with the task of deciding whether to sign a pitcher who recently underwent <a href="https://en.wikipedia.org/wiki/Ulnar_collateral_ligament_reconstruction">Tommy John</a> surgery. Because your team values strikeouts, you wish to perform a study on the impact of Tommy John surgery on the Strikeout per 9 inning (k/9) statistic of a pitcher. You have the k/9 statistic both 2 years before surgery and 2 years after surgery for 15 pitchers.</p>
-<p>Perform a a permutation test under the null hypothesis that Tommy John surgery has no effect on a pitcher’s strikeout statistics and the alternative hypothesis that having the surgery makes pitchers worse.</p>
-<p><span class="math display">\[
-H_0 = \text{k9}_{pre} = \text{k9}_{post}\\
-H_a = \text{k9}_{pre} &gt; \text{k9}_{post}
+<!--
+120 Points Total
+-->
+<div id="climate-change-45-points" class="section level2">
+<h2>Climate Change (45 points)</h2>
+<p>Climate change is an ongoing issue that scientists frequently debate about. Though there are many factors which contribute to rising average temperatures across the United States, one claim is that crude oil consumption directly affects the rising temperatures. As statisticians, we understand that both variables are observational, meaning that there can be correlation between the two variables, but causation cannot be concluded. Thus, for this study, we are interested in discovering whether there is significant correlation between crude oil consumption levels and average temperature readings. The dataset <code>oil-temp.csv</code> has been provided and contains the following variables:</p>
+<ul>
+<li><code>year</code>: Measurement year</li>
+<li><code>crude_oil_consumption</code><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>: Total annual US crude oil imports measured in thousands of barrels</li>
+<li><code>temp_change</code><a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>: Average change in US temperatures by degrees Fahrenheit</li>
+</ul>
+<p>Given this data, our hypotheses are as follows: <span class="math display">\[
+H_0: \text{cor} = 0\\
+H_a: \text{cor} \ne 0
 \]</span></p>
-<p>Use the mean difference in k/9 as your test statistic.</p>
 <ol style="list-style-type: decimal">
-<li>Using the data provided in <code>tj.csv</code>, calculate the observed test statistic (5 points).</li>
-<li>Perform a permutation test with 10,000 repetitions and store the results in a vector (10 points).</li>
-<li>Plot a histogram of your results from step 2 with a vertical red line that represents the result from part 1 (5 points).</li>
-<li>Calculate the P value for the observed test statistic and its 95% confidence interval (5 points).</li>
-<li>Based on your results, is it worth it to sign a pitcher coming off of Tommy John surgery (5 points)?</li>
+<li>Calculate the actual correlation coefficient between <code>crude_oil_consumption</code> and <code>temp_change</code> (5 points)</li>
+<li>Perform a permutation test with 10,000 samples and store the results in a vector (15 points)</li>
+<li>Create a histogram of your permutation test results and include a red line for the actual correlation value (10 points)</li>
+<li>Calculate the p value for the observed correlation coefficient and its 95% confidence interval (10 points)</li>
+<li>What do you conclude? (5 points)</li>
 </ol>
 </div>
-<div id="bootstrapped-coverage-40-points" class="section level2">
-<h2>Bootstrapped Coverage (40 points)</h2>
-<p>The <code>USArrests</code> data built into R contains arrest statistics for each of the 50 US states in 1973. In this problem, we’re interested in looking at the <code>Assault</code> column, which can be extracted with the following code:</p>
-<pre class="r"><code>assault &lt;- USArrests$Assault</code></pre>
-<p>We’re going to treat these 50 observations as the population. The population mean can be calculated with <code>mean(assault)</code> and is 170.76. We want to determine the coverage of a 90% bootstrapped confidence interval built on a random sample of 10 observations from the <code>assault</code> data.</p>
+<div id="tom-brady-35-points" class="section level2">
+<h2>Tom Brady (35 points)</h2>
+<p>Tom Brady recently won his 6th Superbowl as the quarterback of the New England Patriots. Many have speculated that what makes Brady so good is his performance in the biggest situations, like the playoffs. We want to check if Brady actually throws for more yards in playoff games than he does in regular season games.</p>
+<p>The <code>brady.csv</code><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> file contains data from all of Brady’s games and includes the following columns</p>
+<ul>
+<li><code>game_type</code>: Either “Regular” or “Playoff” indicating which type of game was played</li>
+<li><code>yards</code>: Number of yards Tom Brady threw for in the game</li>
+</ul>
+<p>Given this data, we have the following hypotheses: <span class="math display">\[
+H_0: \mu_{\text{playoff}} = \mu_{\text{regular}}\\
+H_a: \mu_{\text{playoff}} &gt; \mu_{\text{regular}}
+\]</span> 1. Find the difference in the average yards thrown for in playoff vs regular season games (5 points) 2. Perform a permutation test with 10,000 samples and store the results in a vector (15 points) 3. Calculate the p value for the observed difference in average yards thrown and its 95% confidence interval (10 points) 4. Based on your results, does Tom Brady pass for more yards per game in the playoffs when compared to the regular season? (5 points)</p>
+</div>
+<div id="seatbelts-40-points" class="section level2">
+<h2>Seatbelts (40 points)</h2>
+<p>The built-in R dataset <code>Seatbelts</code> contains details about driver deaths and injuries in Great Britain from Jan 1969 to Dec 1984. More information about the data can be accessed by running <code>?Seatbelts</code>. Use the following line of code to load this data into R as a data.frame:</p>
+<pre class="r"><code>seatbelts &lt;- as.data.frame(Seatbelts)</code></pre>
+<p>This data contains 8 columns and 192 rows of data. The <code>law</code> column is either a 0 or 1 indicating whether or not a law was in place requiring a seatbelt to be worn. We want to know if this law had an impact on the proportion of drivers who were killed out of those who were seriously injured. This proportion is calculated by dividing <code>DriversKilled</code> by <code>drivers</code>.</p>
 <ol style="list-style-type: decimal">
-<li>Create a function that takes in a vector (<code>p</code>) and returns a 90% bootstrapped confidence interval on the mean using a random sample of size 10 taken from the vector <code>p</code>. Use 1,000 bootstrap samples (10 points). This function should do two things:
-<ol style="list-style-type: decimal">
-<li>Sample 10 random values from <code>p</code>.</li>
-<li>Using those 10 random values, calculate and return a 90% bootstrapped confidence interval on the mean of <code>p</code>.</li>
-</ol></li>
-<li>Using the function defined above, calculate 5,000 bootstrapped confidence intervals and store the results (10 points).</li>
-<li>Using the results from step 2, calculate the coverage of the bootstrapped confidence interval (5 points).</li>
-<li>Calculate a 95% confidence interval on your estimate of coverage (5 points).</li>
-<li>Interpret your results. If coverage is not what you would expect, what could be done differently to improve the results (10 points)?</li>
+<li>Calculate the observed difference in proportion of drivers killed when the law was in effect and when it was not in effect (10 points)</li>
+<li>Calculate 10,000 bootstrapped differences in proportions and store the results in a vector (15 points)</li>
+<li>Based on the results from step 2, calculate a 95% confidence interval on the difference in proportion of drivers killed (10 points)</li>
+<li>Based on your results, did the law improve the proportion of injured drivers who were killed? (5 points)</li>
 </ol>
 <div id="make-sure-you-commit-your-changes-to-git-and-push-to-github" class="section level4">
 <h4><strong>Make sure you commit your changes to git and push to GitHub</strong></h4>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Data from EIA.gov<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Data from EPA.gov<a href="#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p>Data from <a href="https://www.pro-football-reference.com/players/B/BradTo00/gamelog/" class="uri">https://www.pro-football-reference.com/players/B/BradTo00/gamelog/</a><a href="#fnref3" class="footnote-back">↩</a></p></li>
+</ol>
 </div>
 
 

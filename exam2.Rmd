@@ -1,6 +1,6 @@
 ---
 title: "Exam 2"
-date: "Due 2018-12-18 at 11:59pm"
+date: "Due 2019-02-27 at 11:59pm"
 output: html_document
 ---
 
@@ -8,12 +8,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-+ Follow [this link](https://classroom.github.com/a/Kbc4Q27I) to create your 
++ Follow [this link](https://classroom.github.com/a/B9VDReiK) to create your 
 repository for Exam 2.
 
 + Once your repository is created, create a new RStudio project based on that
 repository. Note: There will be two files already in your repository -
-`fishing.csv` and `tj.csv`. Since these files are already in your repository,
+`oil-temp.csv` and `brady.csv`. Since these files are already in your repository,
 you will need to click on ![](clone-or-download.png) in order to get the URL
 to create your RStudio project with.
 
@@ -37,82 +37,95 @@ properly with git and GitHub:
 + Make sure that you follow proper [coding standards](coding-standards.html).
 Pay particularly close attention to code formatting (it should look nice) and
 don't duplicate code - look to create functions whenever you can.
+
+<!--
+120 Points Total
+-->
+## Climate Change (45 points)
+Climate change is an ongoing issue that scientists frequently debate about.
+Though there are many factors which contribute to rising average temperatures
+across the United States, one claim is that crude oil consumption directly
+affects the rising temperatures. As statisticians, we understand that both
+variables are observational, meaning that there can be correlation between the
+two variables, but causation cannot be concluded. Thus, for this study, we are
+interested in discovering whether there is significant correlation between crude
+oil consumption levels and average temperature readings.
+The dataset `oil-temp.csv` has been provided and contains the following
+variables:
+
++ `year`: Measurement year
++ `crude_oil_consumption`[^1]: Total annual US crude oil imports measured in
+thousands of barrels
++ `temp_change`[^2]: Average change in US temperatures by degrees Fahrenheit
     
-## Fishing (50 points)
-My Grandpa Jasperson (Grandpa J as I've always known him) is an avid fisherman,
-and he's passed that love along to me. We both agree that [Mirror
-Lake](http://www.utahfishinginfo.com/utahlakes/uintas/mirrorlake.php) and
-[Strawberry Reservoir](http://www.utahfishinginfo.com/utahlakes/strawberry.php)
-are two of the best places in Utah to go fishing. However, we weren't certain
-which place was the best. This past year, we decided to perform a little
-experiment. We went fishing 20 times over the summer, and each time we went, one
-of us went to Mirror Like while the other went to Strawberry. We counted the
-number of fish we caught each trip, and now we'd like to know which is the
-better fishing spot.
-
-![](grandpa-j.jpeg)
-
-1. Using the data provided in `fishing.csv`, calculate the observed difference 
-in medians between the two fishing locations (5 points).
-2. Using bootstrap sampling with 10,000 samples, calculate a 95% confidence 
-interval on the observed difference in medians (15 points).
-3. Based on your results, which fishing spot is the best (5 points)?
-4. Based on bootstrap sampling, who is the better fisherman (25 points)?
-
-## Tommy John (30 points)
-You work in the front office of a professional baseball team. You are faced with
-the task of deciding whether to sign a pitcher who recently underwent [Tommy
-John](https://en.wikipedia.org/wiki/Ulnar_collateral_ligament_reconstruction)
-surgery. Because your team values strikeouts, you wish to perform a study on the
-impact of Tommy John surgery on the Strikeout per 9 inning (k/9) statistic of a
-pitcher. You have the k/9 statistic both 2 years before surgery and 2 years
-after surgery for 15 pitchers.
-
-Perform a a permutation test under the null hypothesis that Tommy John surgery
-has no effect on a pitcher's strikeout statistics and the alternative hypothesis
-that having the surgery makes pitchers worse.
-
+Given this data, our hypotheses are as follows:
 $$
-H_0 = \text{k9}_{pre} = \text{k9}_{post}\\
-H_a = \text{k9}_{pre} > \text{k9}_{post}
+H_0: \text{cor} = 0\\
+H_a: \text{cor} \ne 0
 $$
+    
+1. Calculate the actual correlation coefficient between `crude_oil_consumption`
+and `temp_change` (5 points)
+2. Perform a permutation test with 10,000 samples and store the results in a
+vector (15 points)
+3. Create a histogram of your permutation test results and include a red line
+for the actual correlation value (10 points)
+4. Calculate the p value for the observed correlation coefficient and its 95%
+confidence interval (10 points)
+5. What do you conclude? (5 points)
 
-Use the mean difference in k/9 as your test statistic.
+## Tom Brady (35 points)
+Tom Brady recently won his 6th Superbowl as the quarterback of the
+New England Patriots. Many have speculated that what makes Brady
+so good is his performance in the biggest situations, like the playoffs.
+We want to check if Brady actually throws for more yards in playoff
+games than he does in regular season games.
 
-1. Using the data provided in `tj.csv`, calculate the observed test statistic (5
-points).
-2. Perform a permutation test with 10,000 repetitions and store the results in a
-vector (10 points).
-3. Plot a histogram of your results from step 2 with a vertical red line that
-represents the result from part 1 (5 points).
-4. Calculate the P value for the observed test statistic and its 95% confidence
-interval (5 points).
-5. Based on your results, is it worth it to sign a pitcher coming off of Tommy
-John surgery (5 points)?
+The `brady.csv`[^3] file contains data from all of Brady's games and includes
+the following columns
 
-## Bootstrapped Coverage (40 points)
-The `USArrests` data built into R contains arrest statistics for each of the 50 US states in 1973. In this problem, we're interested in looking at the `Assault` column, which can be extracted with the following code:
++ `game_type`: Either "Regular" or "Playoff" indicating which type of game was played
++ `yards`: Number of yards Tom Brady threw for in the game
 
+Given this data, we have the following hypotheses:
+$$
+H_0: \mu_{\text{playoff}} = \mu_{\text{regular}}\\
+H_a: \mu_{\text{playoff}} > \mu_{\text{regular}}
+$$
+1. Find the difference in the average yards thrown for in playoff vs
+regular season games (5 points)
+2. Perform a permutation test with 10,000 samples and store the results in a
+vector (15 points)
+3. Calculate the p value for the observed difference in average yards thrown and
+its 95% confidence interval (10 points)
+4. Based on your results, does Tom Brady pass for more yards per game in the playoffs when compared to the regular season? (5 points)
+
+## Seatbelts (40 points)
+The built-in R dataset `Seatbelts` contains details about driver deaths and
+injuries in Great Britain from Jan 1969 to Dec 1984. More information about the
+data can be accessed by running `?Seatbelts`. Use the following line of code to
+load this data into R as a data.frame:
 ```{r}
-assault <- USArrests$Assault
+seatbelts <- as.data.frame(Seatbelts)
 ```
 
-We're going to treat these 50 observations as the population. The population mean can be calculated with `mean(assault)` and is `r mean(assault)`. We want to determine the coverage of a 90% bootstrapped confidence interval built on a random sample of 10 observations from the `assault` data.
+This data contains `r ncol(seatbelts)` columns and `r nrow(seatbelts)` rows of
+data. The `law` column is either a 0 or 1 indicating whether or not a law was in
+place requiring a seatbelt to be worn. We want to know if this law had an impact
+on the proportion of drivers who were killed out of those who were seriously injured. This proportion is calculated by
+dividing `DriversKilled` by `drivers`.
 
-1. Create a function that takes in a vector (`p`) and returns a 90% bootstrapped
-confidence interval on the mean using a random sample of size 10 taken from the
-vector `p`. Use 1,000 bootstrap samples (10 points). This function should do two 
-things:
-    1. Sample 10 random values from `p`.
-    2. Using those 10 random values, calculate and return a 90% bootstrapped
-    confidence interval on the mean of `p`.
-
-2. Using the function defined above, calculate 5,000 bootstrapped confidence
-intervals and store the results (10 points).
-3. Using the results from step 2, calculate the coverage of the bootstrapped
-confidence interval (5 points).
-4. Calculate a 95% confidence interval on your estimate of coverage (5 points).
-5. Interpret your results. If coverage is not what you would expect, what could
-be done differently to improve the results (10 points)?
+1. Calculate the observed difference in proportion of drivers killed when the
+law was in effect and when it was not in effect (10 points)
+2. Calculate 10,000 bootstrapped differences in proportions and store the
+results in a vector (15 points)
+3. Based on the results from step 2, calculate a 95% confidence interval on the
+difference in proportion of drivers killed (10 points)
+4. Based on your results, did the law improve the proportion of injured drivers who were killed?
+(5 points)
 
 #### **Make sure you commit your changes to git and push to GitHub**
+
+[^1]: Data from EIA.gov
+[^2]: Data from EPA.gov
+[^3]: Data from https://www.pro-football-reference.com/players/B/BradTo00/gamelog/
