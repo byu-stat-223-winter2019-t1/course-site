@@ -53,7 +53,7 @@ less than the promised blessings.*
     + Plan on ~2-3 hours
 + R Moment: [gt](https://gt.rstudio.com/){target="_blank"}
 + [Homework 6](hw6.html) questions
-+ [Practice Final](practice-final.html)
++ [Practice Final](practice-final.html) ([Solutions](practice-final-solutions.html))
 
 #### 2019-02-20
 
