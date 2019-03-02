@@ -11,6 +11,11 @@ In this example we're going to use the built in `faithful` dataset which contain
 two columns: `eruptions` and `waiting`. We want to determine of the waiting times
 between Old Faithful eruptions are autocorrelated.
 
+```{r}
+waiting <- faithful$waiting
+```
+
+
 $$
 H_0: \text{there is no correlation} \\
 H_a: \text{there is a correlation}
@@ -20,10 +25,25 @@ First, let's look at the data for Old Faithful waiting times.
 
 ```{r}
 waiting <- faithful$waiting
-plot(waiting, type = "b")
+plot(waiting[10:75], type = "b")
 ```
 
 Now, to estimate autocorrelation, we can do the following:
+
+```{r}
+data.frame(waiting[-length(waiting)], waiting[-1])
+
+waiting[-1]
+waiting[-length(waiting)]
+```
+
+
+
+
+
+
+
+
 ```{r}
 (observed_cor <- cor(waiting[-length(waiting)], waiting[-1]))
 ```
@@ -34,11 +54,21 @@ distribution of values under the null hypothesis and then compare our observed
 value to that distribution.
 
 ```{r}
+new_waiting <- sample(waiting)
+cor(new_waiting[-length(new_waiting)], new_waiting[-1])
+
+plot(new_waiting[1:50], type = "b")
+```
+
+
+```{r}
 n_permutations <- 10000
 results <- replicate(n_permutations, {
   new_waiting <- sample(waiting)
   cor(new_waiting[-length(new_waiting)], new_waiting[-1])
 })
+
+head(results)
 ```
 
 Now that we have `results`, which contains 10000 autocorrelation values under the
