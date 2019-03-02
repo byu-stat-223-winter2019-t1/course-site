@@ -97,9 +97,11 @@ results
 ```{r ci}
 ci <- qnorm(0.975) * sqrt(est * (1 - est)/n_reps)
 lower <- est - ci
+upper <- est + ci
 
 alpha <- 0.05
-lower > alpha
+upper
+lower > alpha | upper < alpha
 ```
 
 

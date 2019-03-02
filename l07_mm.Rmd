@@ -95,11 +95,11 @@ mean(h0_dist_1 >= crit_val_1)
 # Critical value
 (crit_val_2 <- quantile(h0_dist_2, probs = 1 - alpha, type = 1))
 # Size (probability of Type I error (false rejection of null hypothesis))
-mean(h0_dist_2 > crit_val_2)
+mean(h0_dist_2 >= crit_val_2)
 ```
 
 Statistical power is "the probability the test correctly rejects $H_0$ for a given
-$H_A$.
+$H_A$."
 
 ```{r}
 prop_ci <- function(x) {
