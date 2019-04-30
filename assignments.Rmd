@@ -9,8 +9,8 @@ output: html_document
 #### [Homework 4](hw4.html) | *Due 2019-02-04 at 11:59pm* | [Solutions](hw4_solutions.html)
 #### [Midterm Exam](exam1.html) | *Due 2019-02-06 at 11:59pm* | [Solutions](exam1_solutions.html)
 #### [Homework 5](hw5.html) | *Due 2019-02-19 at 11:59pm* | [Solutions](hw5_solutions.html)
-#### [Homework 6](hw6.html) | *Due 2019-02-25 at 11:59pm*
-#### [Final Exam](exam2.html) | *Due 2019-02-27 at 11:59pm*
+#### [Homework 6](hw6.html) | *Due 2019-02-25 at 11:59pm* | [Solutions](hw6_solutions.html)
+#### [Final Exam](exam2.html) | *Due 2019-02-27 at 11:59pm* | [Solutions](exam2_solutions.html)
 
 ---
 <details>
